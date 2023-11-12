@@ -78,4 +78,8 @@ Public Class Dashboard
         booksTable.DataSource = table
         con.Close()
     End Sub
+
+    Private Sub bogart()
+
+    End Sub
 End Class
