@@ -110,3 +110,4 @@ C:\Users\Rhaine Hdart\Documents\GitHub\ReadHub-VB\ReadHub\ReadHub\obj\Debug\net7
 C:\Users\Rhaine Hdart\Documents\GitHub\ReadHub-VB\ReadHub\ReadHub\obj\Debug\net7.0-windows\ReadHub.pdb
 C:\Users\Rhaine Hdart\Documents\GitHub\ReadHub-VB\ReadHub\ReadHub\obj\Debug\net7.0-windows\ReadHub.genruntimeconfig.cache
 C:\Users\Rhaine Hdart\Documents\GitHub\ReadHub-VB\ReadHub\ReadHub\obj\Debug\net7.0-windows\ref\ReadHub.dll
+C:\Users\Rhaine Hdart\Documents\GitHub\ReadHub-VB\ReadHub\ReadHub\obj\Debug\net7.0-windows\ReadHub.ForgotPassword.resources

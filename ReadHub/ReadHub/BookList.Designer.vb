@@ -32,6 +32,13 @@ Partial Class BookList
         bookButton = New FontAwesome.Sharp.IconButton()
         dashButton = New FontAwesome.Sharp.IconButton()
         Panel2 = New Panel()
+        IconButton7 = New FontAwesome.Sharp.IconButton()
+        IconButton6 = New FontAwesome.Sharp.IconButton()
+        IconButton5 = New FontAwesome.Sharp.IconButton()
+        IconButton4 = New FontAwesome.Sharp.IconButton()
+        IconButton3 = New FontAwesome.Sharp.IconButton()
+        IconButton2 = New FontAwesome.Sharp.IconButton()
+        IconButton1 = New FontAwesome.Sharp.IconButton()
         BTB = New TextBox()
         TTB = New TextBox()
         ATB = New TextBox()
@@ -197,6 +204,13 @@ Partial Class BookList
         ' 
         ' Panel2
         ' 
+        Panel2.Controls.Add(IconButton7)
+        Panel2.Controls.Add(IconButton6)
+        Panel2.Controls.Add(IconButton5)
+        Panel2.Controls.Add(IconButton4)
+        Panel2.Controls.Add(IconButton3)
+        Panel2.Controls.Add(IconButton2)
+        Panel2.Controls.Add(IconButton1)
         Panel2.Controls.Add(BTB)
         Panel2.Controls.Add(TTB)
         Panel2.Controls.Add(ATB)
@@ -216,6 +230,132 @@ Partial Class BookList
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(1156, 1050)
         Panel2.TabIndex = 13
+        ' 
+        ' IconButton7
+        ' 
+        IconButton7.BackColor = Color.Tomato
+        IconButton7.Cursor = Cursors.Hand
+        IconButton7.FlatAppearance.BorderSize = 0
+        IconButton7.FlatStyle = FlatStyle.Flat
+        IconButton7.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        IconButton7.IconChar = FontAwesome.Sharp.IconChar.None
+        IconButton7.IconColor = Color.Black
+        IconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto
+        IconButton7.Location = New Point(242, 132)
+        IconButton7.Margin = New Padding(4, 5, 4, 5)
+        IconButton7.Name = "IconButton7"
+        IconButton7.Size = New Size(107, 38)
+        IconButton7.TabIndex = 41
+        IconButton7.Text = "HORROR"
+        IconButton7.UseVisualStyleBackColor = False
+        ' 
+        ' IconButton6
+        ' 
+        IconButton6.BackColor = Color.Tomato
+        IconButton6.Cursor = Cursors.Hand
+        IconButton6.FlatAppearance.BorderSize = 0
+        IconButton6.FlatStyle = FlatStyle.Flat
+        IconButton6.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        IconButton6.IconChar = FontAwesome.Sharp.IconChar.None
+        IconButton6.IconColor = Color.Black
+        IconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto
+        IconButton6.Location = New Point(357, 132)
+        IconButton6.Margin = New Padding(4, 5, 4, 5)
+        IconButton6.Name = "IconButton6"
+        IconButton6.Size = New Size(114, 38)
+        IconButton6.TabIndex = 40
+        IconButton6.Text = "MYSTERY"
+        IconButton6.UseVisualStyleBackColor = False
+        ' 
+        ' IconButton5
+        ' 
+        IconButton5.BackColor = Color.Tomato
+        IconButton5.Cursor = Cursors.Hand
+        IconButton5.FlatAppearance.BorderSize = 0
+        IconButton5.FlatStyle = FlatStyle.Flat
+        IconButton5.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        IconButton5.IconChar = FontAwesome.Sharp.IconChar.None
+        IconButton5.IconColor = Color.Black
+        IconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto
+        IconButton5.Location = New Point(988, 132)
+        IconButton5.Margin = New Padding(4, 5, 4, 5)
+        IconButton5.Name = "IconButton5"
+        IconButton5.Size = New Size(107, 38)
+        IconButton5.TabIndex = 39
+        IconButton5.Text = "SCI-FI"
+        IconButton5.UseVisualStyleBackColor = False
+        ' 
+        ' IconButton4
+        ' 
+        IconButton4.BackColor = Color.Tomato
+        IconButton4.Cursor = Cursors.Hand
+        IconButton4.FlatAppearance.BorderSize = 0
+        IconButton4.FlatStyle = FlatStyle.Flat
+        IconButton4.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        IconButton4.IconChar = FontAwesome.Sharp.IconChar.None
+        IconButton4.IconColor = Color.Black
+        IconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto
+        IconButton4.Location = New Point(479, 132)
+        IconButton4.Margin = New Padding(4, 5, 4, 5)
+        IconButton4.Name = "IconButton4"
+        IconButton4.Size = New Size(119, 38)
+        IconButton4.TabIndex = 38
+        IconButton4.Text = "ROMANCE"
+        IconButton4.UseVisualStyleBackColor = False
+        ' 
+        ' IconButton3
+        ' 
+        IconButton3.BackColor = Color.Tomato
+        IconButton3.Cursor = Cursors.Hand
+        IconButton3.FlatAppearance.BorderSize = 0
+        IconButton3.FlatStyle = FlatStyle.Flat
+        IconButton3.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        IconButton3.IconChar = FontAwesome.Sharp.IconChar.None
+        IconButton3.IconColor = Color.Black
+        IconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto
+        IconButton3.Location = New Point(848, 132)
+        IconButton3.Margin = New Padding(4, 5, 4, 5)
+        IconButton3.Name = "IconButton3"
+        IconButton3.Size = New Size(132, 38)
+        IconButton3.TabIndex = 37
+        IconButton3.Text = "ACADEMICS"
+        IconButton3.UseVisualStyleBackColor = False
+        ' 
+        ' IconButton2
+        ' 
+        IconButton2.BackColor = Color.Tomato
+        IconButton2.Cursor = Cursors.Hand
+        IconButton2.FlatAppearance.BorderSize = 0
+        IconButton2.FlatStyle = FlatStyle.Flat
+        IconButton2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        IconButton2.IconChar = FontAwesome.Sharp.IconChar.None
+        IconButton2.IconColor = Color.Black
+        IconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto
+        IconButton2.Location = New Point(733, 132)
+        IconButton2.Margin = New Padding(4, 5, 4, 5)
+        IconButton2.Name = "IconButton2"
+        IconButton2.Size = New Size(107, 38)
+        IconButton2.TabIndex = 36
+        IconButton2.Text = "HISTORY"
+        IconButton2.UseVisualStyleBackColor = False
+        ' 
+        ' IconButton1
+        ' 
+        IconButton1.BackColor = Color.Tomato
+        IconButton1.Cursor = Cursors.Hand
+        IconButton1.FlatAppearance.BorderSize = 0
+        IconButton1.FlatStyle = FlatStyle.Flat
+        IconButton1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        IconButton1.IconChar = FontAwesome.Sharp.IconChar.None
+        IconButton1.IconColor = Color.Black
+        IconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto
+        IconButton1.Location = New Point(606, 132)
+        IconButton1.Margin = New Padding(4, 5, 4, 5)
+        IconButton1.Name = "IconButton1"
+        IconButton1.Size = New Size(119, 38)
+        IconButton1.TabIndex = 35
+        IconButton1.Text = "FANTASY"
+        IconButton1.UseVisualStyleBackColor = False
         ' 
         ' BTB
         ' 
@@ -340,7 +480,7 @@ Partial Class BookList
         discardButton.Name = "discardButton"
         discardButton.Size = New Size(107, 38)
         discardButton.TabIndex = 25
-        discardButton.Text = "DISCARD"
+        discardButton.Text = "ARCHIVE"
         discardButton.UseVisualStyleBackColor = False
         ' 
         ' appendButton
@@ -457,4 +597,11 @@ Partial Class BookList
     Friend WithEvents YTB As TextBox
     Friend WithEvents BTB As TextBox
     Friend WithEvents TTB As TextBox
+    Friend WithEvents IconButton7 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButton6 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButton5 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButton4 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButton3 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
 End Class

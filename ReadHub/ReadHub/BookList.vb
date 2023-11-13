@@ -91,14 +91,51 @@ Public Class BookList
 
         loadDataOnTable()
     End Sub
+    Private Sub ArchiveBook(bookID As String, title As String, author As String, categoryID As String, description As String, yearPublished As Integer)
+        Try
+            con.Open()
 
+            Dim archiveQuery As String = "INSERT INTO readhub.archive_books (Book_ID, Title, Author, Category_ID, Description, Year_Published) " &
+                                         "VALUES (@BookID, @Title, @Author, @CategoryID, @Description, @YearPublished)"
+            Dim archiveCommand As MySqlCommand = New MySqlCommand(archiveQuery, con)
+            archiveCommand.Parameters.AddWithValue("@BookID", bookID)
+            archiveCommand.Parameters.AddWithValue("@Title", title)
+            archiveCommand.Parameters.AddWithValue("@Author", author)
+            archiveCommand.Parameters.AddWithValue("@CategoryID", categoryID)
+            archiveCommand.Parameters.AddWithValue("@Description", description)
+            archiveCommand.Parameters.AddWithValue("@YearPublished", yearPublished)
+            archiveCommand.ExecuteNonQuery()
+
+            Dim deleteQuery As String = "DELETE FROM readhub.book_information WHERE Book_ID = @BookID"
+            Dim deleteCommand As MySqlCommand = New MySqlCommand(deleteQuery, con)
+            deleteCommand.Parameters.AddWithValue("@BookID", bookID)
+            deleteCommand.ExecuteNonQuery()
+
+            MessageBox.Show("Book with Book_ID " & bookID & " archived successfully.")
+        Catch ex As Exception
+            MessageBox.Show("Error archiving book: " & ex.Message)
+        Finally
+            con.Close()
+            loadDataOnTable()
+        End Try
+    End Sub
+
+    Private Sub ArchiveSelectedBook(bookID As String, title As String, author As String, categoryID As String, description As String, yearPublished As Integer)
+        ArchiveBook(bookID, title, author, categoryID, description, yearPublished)
+    End Sub
     Private Sub discardButton_Click(sender As Object, e As EventArgs) Handles discardButton.Click
         If booksTable.SelectedRows.Count > 0 Then
             Dim selectedRow As DataGridViewRow = booksTable.SelectedRows(0)
             Dim bookID As String = selectedRow.Cells("Book_ID").Value.ToString()
 
             If MessageBox.Show("Are you sure you want to discard the book with Book_ID " & bookID & "?", "Confirm Discard", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-                DeleteBook(bookID)
+                Dim title As String = selectedRow.Cells("Title").Value.ToString()
+                Dim author As String = selectedRow.Cells("Author").Value.ToString()
+                Dim categoryID As String = selectedRow.Cells("Category_ID").Value.ToString()
+                Dim description As String = selectedRow.Cells("Description").Value.ToString()
+                Dim yearPublished As Integer = Convert.ToInt32(selectedRow.Cells("Year_Published").Value)
+
+                ArchiveSelectedBook(bookID, title, author, categoryID, description, yearPublished)
             End If
         Else
             MessageBox.Show("Please select a row to discard.", "No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -164,5 +201,138 @@ Public Class BookList
             con.Close()
             loadDataOnTable()
         End Try
+    End Sub
+    Private Sub horror()
+        con.Open()
+        Dim Command As MySqlCommand
+        Dim sqlQuery As String
+        sqlQuery = "SELECT * FROM readhub.book_information WHERE Category_ID = 'CAT_1'"
+        Command = New MySqlCommand(sqlQuery, con)
+        Command.ExecuteNonQuery()
+        Dim table As New DataTable
+        Dim Adapter As New MySqlDataAdapter(Command)
+
+        Adapter.Fill(table)
+
+        booksTable.DataSource = table
+        con.Close()
+    End Sub
+    Private Sub mystery()
+        con.Open()
+        Dim Command As MySqlCommand
+        Dim sqlQuery As String
+        sqlQuery = "SELECT * FROM readhub.book_information WHERE Category_ID = 'CAT_2'"
+        Command = New MySqlCommand(sqlQuery, con)
+        Command.ExecuteNonQuery()
+        Dim table As New DataTable
+        Dim Adapter As New MySqlDataAdapter(Command)
+
+        Adapter.Fill(table)
+
+        booksTable.DataSource = table
+        con.Close()
+    End Sub
+    Private Sub romance()
+        con.Open()
+        Dim Command As MySqlCommand
+        Dim sqlQuery As String
+        sqlQuery = "SELECT * FROM readhub.book_information WHERE Category_ID = 'CAT_3'"
+        Command = New MySqlCommand(sqlQuery, con)
+        Command.ExecuteNonQuery()
+        Dim table As New DataTable
+        Dim Adapter As New MySqlDataAdapter(Command)
+
+        Adapter.Fill(table)
+
+        booksTable.DataSource = table
+        con.Close()
+    End Sub
+    Private Sub fantasy()
+        con.Open()
+        Dim Command As MySqlCommand
+        Dim sqlQuery As String
+        sqlQuery = "SELECT * FROM readhub.book_information WHERE Category_ID = 'CAT_4'"
+        Command = New MySqlCommand(sqlQuery, con)
+        Command.ExecuteNonQuery()
+        Dim table As New DataTable
+        Dim Adapter As New MySqlDataAdapter(Command)
+
+        Adapter.Fill(table)
+
+        booksTable.DataSource = table
+        con.Close()
+    End Sub
+    Private Sub history()
+        con.Open()
+        Dim Command As MySqlCommand
+        Dim sqlQuery As String
+        sqlQuery = "SELECT * FROM readhub.book_information WHERE Category_ID = 'CAT_5'"
+        Command = New MySqlCommand(sqlQuery, con)
+        Command.ExecuteNonQuery()
+        Dim table As New DataTable
+        Dim Adapter As New MySqlDataAdapter(Command)
+
+        Adapter.Fill(table)
+
+        booksTable.DataSource = table
+        con.Close()
+    End Sub
+    Private Sub academics()
+        con.Open()
+        Dim Command As MySqlCommand
+        Dim sqlQuery As String
+        sqlQuery = "SELECT * FROM readhub.book_information WHERE Category_ID = 'CAT_6'"
+        Command = New MySqlCommand(sqlQuery, con)
+        Command.ExecuteNonQuery()
+        Dim table As New DataTable
+        Dim Adapter As New MySqlDataAdapter(Command)
+
+        Adapter.Fill(table)
+
+        booksTable.DataSource = table
+        con.Close()
+    End Sub
+    Private Sub scifi()
+        con.Open()
+        Dim Command As MySqlCommand
+        Dim sqlQuery As String
+        sqlQuery = "SELECT * FROM readhub.book_information WHERE Category_ID = 'CAT_7'"
+        Command = New MySqlCommand(sqlQuery, con)
+        Command.ExecuteNonQuery()
+        Dim table As New DataTable
+        Dim Adapter As New MySqlDataAdapter(Command)
+
+        Adapter.Fill(table)
+
+        booksTable.DataSource = table
+        con.Close()
+    End Sub
+
+    Private Sub IconButton7_Click(sender As Object, e As EventArgs) Handles IconButton7.Click
+        horror()
+    End Sub
+
+    Private Sub IconButton6_Click(sender As Object, e As EventArgs) Handles IconButton6.Click
+        mystery()
+    End Sub
+
+    Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
+        romance()
+    End Sub
+
+    Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
+        fantasy()
+    End Sub
+
+    Private Sub IconButton2_Click(sender As Object, e As EventArgs) Handles IconButton2.Click
+        history()
+    End Sub
+
+    Private Sub IconButton3_Click(sender As Object, e As EventArgs) Handles IconButton3.Click
+        academics()
+    End Sub
+
+    Private Sub IconButton5_Click(sender As Object, e As EventArgs) Handles IconButton5.Click
+        scifi()
     End Sub
 End Class
