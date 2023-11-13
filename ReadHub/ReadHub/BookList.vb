@@ -1,6 +1,8 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class BookList
+    Dim sqlQuery As String
+    Dim Command As MySqlCommand
     Private Sub dashButton_Click(sender As Object, e As EventArgs) Handles dashButton.Click
         Me.Hide()
         Dashboard.Show()
@@ -335,5 +337,17 @@ Public Class BookList
 
     Private Sub IconButton5_Click(sender As Object, e As EventArgs) Handles IconButton5.Click
         scifi()
+    End Sub
+
+    Private Sub IconButton8_Click(sender As Object, e As EventArgs) Handles IconButton8.Click
+        con.Open()
+        Dim Time = Date.Now.ToString("hh:mm:ss")
+        Dim currDate = Date.Now.ToString("dd MMM yyyy")
+        sqlQuery = "INSERT INTO admin_out(Email, Logout_Time, Logout_Date) values ('" & Login.TextBox1.Text & "'" & "," & "'" & Time & "'" & "," & "'" & currDate & "'" & ")"
+        Command = New MySqlCommand(sqlQuery, con)
+        Command.ExecuteNonQuery()
+        con.Close()
+        Me.Hide()
+        Login.Show()
     End Sub
 End Class

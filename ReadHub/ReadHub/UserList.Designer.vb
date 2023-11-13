@@ -46,12 +46,15 @@ Partial Class UserList
         facultyTable = New DataGridView()
         studTable = New DataGridView()
         Label4 = New Label()
+        Panel3 = New Panel()
+        IconButton1 = New FontAwesome.Sharp.IconButton()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         userPanel.SuspendLayout()
         Panel2.SuspendLayout()
         CType(facultyTable, ComponentModel.ISupportInitialize).BeginInit()
         CType(studTable, ComponentModel.ISupportInitialize).BeginInit()
+        Panel3.SuspendLayout()
         SuspendLayout()
         ' 
         ' Panel1
@@ -60,9 +63,8 @@ Partial Class UserList
         Panel1.Controls.Add(PictureBox1)
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
-        Panel1.Margin = New Padding(4, 5, 4, 5)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(340, 182)
+        Panel1.Size = New Size(238, 109)
         Panel1.TabIndex = 6
         ' 
         ' Label1
@@ -70,25 +72,24 @@ Partial Class UserList
         Label1.AutoSize = True
         Label1.Font = New Font("Bebas Neue", 26.25F, FontStyle.Regular, GraphicsUnit.Point)
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(126, 58)
-        Label1.Margin = New Padding(4, 0, 4, 0)
+        Label1.Location = New Point(88, 35)
         Label1.Name = "Label1"
-        Label1.Size = New Size(174, 64)
+        Label1.Size = New Size(118, 45)
         Label1.TabIndex = 1
         Label1.Text = "READHUB"
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Location = New Point(44, 50)
-        PictureBox1.Margin = New Padding(4, 5, 4, 5)
+        PictureBox1.Location = New Point(31, 30)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(73, 83)
+        PictureBox1.Size = New Size(51, 50)
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
         ' 
         ' userPanel
         ' 
         userPanel.BackColor = SystemColors.Highlight
+        userPanel.Controls.Add(Panel3)
         userPanel.Controls.Add(borrowButton)
         userPanel.Controls.Add(archiveButton)
         userPanel.Controls.Add(userButton)
@@ -97,9 +98,8 @@ Partial Class UserList
         userPanel.Controls.Add(Panel1)
         userPanel.Dock = DockStyle.Left
         userPanel.Location = New Point(0, 0)
-        userPanel.Margin = New Padding(4, 5, 4, 5)
         userPanel.Name = "userPanel"
-        userPanel.Size = New Size(340, 1050)
+        userPanel.Size = New Size(238, 630)
         userPanel.TabIndex = 13
         ' 
         ' borrowButton
@@ -113,10 +113,9 @@ Partial Class UserList
         borrowButton.IconChar = FontAwesome.Sharp.IconChar.None
         borrowButton.IconColor = Color.Black
         borrowButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        borrowButton.Location = New Point(0, 510)
-        borrowButton.Margin = New Padding(4, 5, 4, 5)
+        borrowButton.Location = New Point(0, 305)
         borrowButton.Name = "borrowButton"
-        borrowButton.Size = New Size(340, 82)
+        borrowButton.Size = New Size(238, 49)
         borrowButton.TabIndex = 11
         borrowButton.Text = "BORROWED BOOKS"
         borrowButton.UseVisualStyleBackColor = True
@@ -132,10 +131,9 @@ Partial Class UserList
         archiveButton.IconChar = FontAwesome.Sharp.IconChar.None
         archiveButton.IconColor = Color.Black
         archiveButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        archiveButton.Location = New Point(0, 428)
-        archiveButton.Margin = New Padding(4, 5, 4, 5)
+        archiveButton.Location = New Point(0, 256)
         archiveButton.Name = "archiveButton"
-        archiveButton.Size = New Size(340, 82)
+        archiveButton.Size = New Size(238, 49)
         archiveButton.TabIndex = 10
         archiveButton.Text = "ARCHIVES"
         archiveButton.UseVisualStyleBackColor = True
@@ -151,10 +149,9 @@ Partial Class UserList
         userButton.IconChar = FontAwesome.Sharp.IconChar.None
         userButton.IconColor = Color.Black
         userButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        userButton.Location = New Point(0, 346)
-        userButton.Margin = New Padding(4, 5, 4, 5)
+        userButton.Location = New Point(0, 207)
         userButton.Name = "userButton"
-        userButton.Size = New Size(340, 82)
+        userButton.Size = New Size(238, 49)
         userButton.TabIndex = 9
         userButton.Text = "USER'S LIST"
         userButton.UseVisualStyleBackColor = True
@@ -170,10 +167,9 @@ Partial Class UserList
         bookButton.IconChar = FontAwesome.Sharp.IconChar.None
         bookButton.IconColor = Color.Black
         bookButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        bookButton.Location = New Point(0, 264)
-        bookButton.Margin = New Padding(4, 5, 4, 5)
+        bookButton.Location = New Point(0, 158)
         bookButton.Name = "bookButton"
-        bookButton.Size = New Size(340, 82)
+        bookButton.Size = New Size(238, 49)
         bookButton.TabIndex = 8
         bookButton.Text = "BOOK LIST"
         bookButton.UseVisualStyleBackColor = True
@@ -189,10 +185,9 @@ Partial Class UserList
         dashButton.IconChar = FontAwesome.Sharp.IconChar.None
         dashButton.IconColor = Color.Black
         dashButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        dashButton.Location = New Point(0, 182)
-        dashButton.Margin = New Padding(4, 5, 4, 5)
+        dashButton.Location = New Point(0, 109)
         dashButton.Name = "dashButton"
-        dashButton.Size = New Size(340, 82)
+        dashButton.Size = New Size(238, 49)
         dashButton.TabIndex = 7
         dashButton.Text = "DASHBOARD"
         dashButton.UseVisualStyleBackColor = True
@@ -214,10 +209,9 @@ Partial Class UserList
         Panel2.Controls.Add(studTable)
         Panel2.Controls.Add(Label4)
         Panel2.Dock = DockStyle.Fill
-        Panel2.Location = New Point(340, 0)
-        Panel2.Margin = New Padding(4, 5, 4, 5)
+        Panel2.Location = New Point(238, 0)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(1156, 1050)
+        Panel2.Size = New Size(809, 630)
         Panel2.TabIndex = 14
         ' 
         ' browseButton2
@@ -230,10 +224,9 @@ Partial Class UserList
         browseButton2.IconChar = FontAwesome.Sharp.IconChar.None
         browseButton2.IconColor = Color.Black
         browseButton2.IconFont = FontAwesome.Sharp.IconFont.Auto
-        browseButton2.Location = New Point(971, 905)
-        browseButton2.Margin = New Padding(4, 5, 4, 5)
+        browseButton2.Location = New Point(680, 543)
         browseButton2.Name = "browseButton2"
-        browseButton2.Size = New Size(107, 38)
+        browseButton2.Size = New Size(75, 23)
         browseButton2.TabIndex = 32
         browseButton2.Text = "BROWSE"
         browseButton2.UseVisualStyleBackColor = False
@@ -248,10 +241,9 @@ Partial Class UserList
         modButton2.IconChar = FontAwesome.Sharp.IconChar.None
         modButton2.IconColor = Color.Black
         modButton2.IconFont = FontAwesome.Sharp.IconFont.Auto
-        modButton2.Location = New Point(856, 905)
-        modButton2.Margin = New Padding(4, 5, 4, 5)
+        modButton2.Location = New Point(599, 543)
         modButton2.Name = "modButton2"
-        modButton2.Size = New Size(107, 38)
+        modButton2.Size = New Size(75, 23)
         modButton2.TabIndex = 31
         modButton2.Text = "MODIFY"
         modButton2.UseVisualStyleBackColor = False
@@ -266,10 +258,9 @@ Partial Class UserList
         remButton2.IconChar = FontAwesome.Sharp.IconChar.None
         remButton2.IconColor = Color.Black
         remButton2.IconFont = FontAwesome.Sharp.IconFont.Auto
-        remButton2.Location = New Point(740, 905)
-        remButton2.Margin = New Padding(4, 5, 4, 5)
+        remButton2.Location = New Point(518, 543)
         remButton2.Name = "remButton2"
-        remButton2.Size = New Size(107, 38)
+        remButton2.Size = New Size(75, 23)
         remButton2.TabIndex = 30
         remButton2.Text = "REMOVE"
         remButton2.UseVisualStyleBackColor = False
@@ -284,10 +275,9 @@ Partial Class UserList
         regButton2.IconChar = FontAwesome.Sharp.IconChar.None
         regButton2.IconColor = Color.Black
         regButton2.IconFont = FontAwesome.Sharp.IconFont.Auto
-        regButton2.Location = New Point(624, 905)
-        regButton2.Margin = New Padding(4, 5, 4, 5)
+        regButton2.Location = New Point(423, 543)
         regButton2.Name = "regButton2"
-        regButton2.Size = New Size(107, 38)
+        regButton2.Size = New Size(89, 23)
         regButton2.TabIndex = 29
         regButton2.Text = "REGISTER"
         regButton2.UseVisualStyleBackColor = False
@@ -302,10 +292,9 @@ Partial Class UserList
         browseButton1.IconChar = FontAwesome.Sharp.IconChar.None
         browseButton1.IconColor = Color.Black
         browseButton1.IconFont = FontAwesome.Sharp.IconFont.Auto
-        browseButton1.Location = New Point(989, 498)
-        browseButton1.Margin = New Padding(4, 5, 4, 5)
+        browseButton1.Location = New Point(680, 256)
         browseButton1.Name = "browseButton1"
-        browseButton1.Size = New Size(107, 38)
+        browseButton1.Size = New Size(75, 23)
         browseButton1.TabIndex = 28
         browseButton1.Text = "BROWSE"
         browseButton1.UseVisualStyleBackColor = False
@@ -320,10 +309,9 @@ Partial Class UserList
         modButton1.IconChar = FontAwesome.Sharp.IconChar.None
         modButton1.IconColor = Color.Black
         modButton1.IconFont = FontAwesome.Sharp.IconFont.Auto
-        modButton1.Location = New Point(874, 498)
-        modButton1.Margin = New Padding(4, 5, 4, 5)
+        modButton1.Location = New Point(600, 256)
         modButton1.Name = "modButton1"
-        modButton1.Size = New Size(107, 38)
+        modButton1.Size = New Size(75, 23)
         modButton1.TabIndex = 27
         modButton1.Text = "MODIFY"
         modButton1.UseVisualStyleBackColor = False
@@ -338,10 +326,9 @@ Partial Class UserList
         remButton1.IconChar = FontAwesome.Sharp.IconChar.None
         remButton1.IconColor = Color.Black
         remButton1.IconFont = FontAwesome.Sharp.IconFont.Auto
-        remButton1.Location = New Point(759, 498)
-        remButton1.Margin = New Padding(4, 5, 4, 5)
+        remButton1.Location = New Point(519, 256)
         remButton1.Name = "remButton1"
-        remButton1.Size = New Size(107, 38)
+        remButton1.Size = New Size(75, 23)
         remButton1.TabIndex = 26
         remButton1.Text = "REMOVE"
         remButton1.UseVisualStyleBackColor = False
@@ -356,10 +343,9 @@ Partial Class UserList
         regButton1.IconChar = FontAwesome.Sharp.IconChar.None
         regButton1.IconColor = Color.Black
         regButton1.IconFont = FontAwesome.Sharp.IconFont.Auto
-        regButton1.Location = New Point(632, 498)
-        regButton1.Margin = New Padding(4, 5, 4, 5)
+        regButton1.Location = New Point(423, 256)
         regButton1.Name = "regButton1"
-        regButton1.Size = New Size(119, 38)
+        regButton1.Size = New Size(90, 23)
         regButton1.TabIndex = 25
         regButton1.Text = "REGISTER"
         regButton1.UseVisualStyleBackColor = False
@@ -373,10 +359,9 @@ Partial Class UserList
         barButton.IconColor = Color.Black
         barButton.IconFont = FontAwesome.Sharp.IconFont.Auto
         barButton.IconSize = 25
-        barButton.Location = New Point(1089, 20)
-        barButton.Margin = New Padding(4, 5, 4, 5)
+        barButton.Location = New Point(762, 12)
         barButton.Name = "barButton"
-        barButton.Size = New Size(50, 62)
+        barButton.Size = New Size(35, 37)
         barButton.TabIndex = 24
         barButton.UseVisualStyleBackColor = True
         ' 
@@ -385,10 +370,9 @@ Partial Class UserList
         Label3.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         Label3.AutoSize = True
         Label3.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label3.Location = New Point(67, 567)
-        Label3.Margin = New Padding(4, 0, 4, 0)
+        Label3.Location = New Point(47, 340)
         Label3.Name = "Label3"
-        Label3.Size = New Size(111, 25)
+        Label3.Size = New Size(75, 16)
         Label3.TabIndex = 15
         Label3.Text = "FACULTY"
         Label3.TextAlign = ContentAlignment.MiddleCenter
@@ -398,10 +382,9 @@ Partial Class UserList
         Label2.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label2.Location = New Point(67, 87)
-        Label2.Margin = New Padding(4, 0, 4, 0)
+        Label2.Location = New Point(47, 52)
         Label2.Name = "Label2"
-        Label2.Size = New Size(129, 25)
+        Label2.Size = New Size(90, 16)
         Label2.TabIndex = 14
         Label2.Text = "STUDENTS"
         Label2.TextAlign = ContentAlignment.MiddleCenter
@@ -411,12 +394,11 @@ Partial Class UserList
         facultyTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         facultyTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         facultyTable.GridColor = Color.White
-        facultyTable.Location = New Point(67, 605)
-        facultyTable.Margin = New Padding(4, 5, 4, 5)
+        facultyTable.Location = New Point(47, 363)
         facultyTable.Name = "facultyTable"
         facultyTable.RowHeadersWidth = 62
         facultyTable.RowTemplate.Height = 25
-        facultyTable.Size = New Size(1029, 358)
+        facultyTable.Size = New Size(720, 215)
         facultyTable.TabIndex = 13
         ' 
         ' studTable
@@ -424,12 +406,11 @@ Partial Class UserList
         studTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         studTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         studTable.GridColor = Color.White
-        studTable.Location = New Point(67, 130)
-        studTable.Margin = New Padding(4, 5, 4, 5)
+        studTable.Location = New Point(47, 78)
         studTable.Name = "studTable"
         studTable.RowHeadersWidth = 62
         studTable.RowTemplate.Height = 25
-        studTable.Size = New Size(1029, 358)
+        studTable.Size = New Size(720, 215)
         studTable.TabIndex = 12
         ' 
         ' Label4
@@ -437,22 +418,46 @@ Partial Class UserList
         Label4.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         Label4.AutoSize = True
         Label4.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label4.Location = New Point(530, 32)
-        Label4.Margin = New Padding(4, 0, 4, 0)
+        Label4.Location = New Point(371, 19)
         Label4.Name = "Label4"
-        Label4.Size = New Size(85, 25)
+        Label4.Size = New Size(59, 16)
         Label4.TabIndex = 11
         Label4.Text = "USERS"
         Label4.TextAlign = ContentAlignment.MiddleCenter
         ' 
+        ' Panel3
+        ' 
+        Panel3.Controls.Add(IconButton1)
+        Panel3.Dock = DockStyle.Bottom
+        Panel3.Location = New Point(0, 586)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(238, 44)
+        Panel3.TabIndex = 12
+        ' 
+        ' IconButton1
+        ' 
+        IconButton1.Dock = DockStyle.Fill
+        IconButton1.FlatAppearance.BorderSize = 0
+        IconButton1.FlatStyle = FlatStyle.Flat
+        IconButton1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        IconButton1.ForeColor = Color.White
+        IconButton1.IconChar = FontAwesome.Sharp.IconChar.None
+        IconButton1.IconColor = Color.Black
+        IconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto
+        IconButton1.Location = New Point(0, 0)
+        IconButton1.Name = "IconButton1"
+        IconButton1.Size = New Size(238, 44)
+        IconButton1.TabIndex = 6
+        IconButton1.Text = "LOGOUT"
+        IconButton1.UseVisualStyleBackColor = True
+        ' 
         ' UserList
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1496, 1050)
+        ClientSize = New Size(1047, 630)
         Controls.Add(Panel2)
         Controls.Add(userPanel)
-        Margin = New Padding(4, 5, 4, 5)
         Name = "UserList"
         Text = "UserList"
         Panel1.ResumeLayout(False)
@@ -463,6 +468,7 @@ Partial Class UserList
         Panel2.PerformLayout()
         CType(facultyTable, ComponentModel.ISupportInitialize).EndInit()
         CType(studTable, ComponentModel.ISupportInitialize).EndInit()
+        Panel3.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
 
@@ -490,4 +496,6 @@ Partial Class UserList
     Friend WithEvents modButton2 As FontAwesome.Sharp.IconButton
     Friend WithEvents remButton2 As FontAwesome.Sharp.IconButton
     Friend WithEvents regButton2 As FontAwesome.Sharp.IconButton
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
 End Class

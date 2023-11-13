@@ -1,6 +1,8 @@
 ﻿Imports System.Windows.Documents
 Imports MySql.Data.MySqlClient
 Public Class BorrowedBooks
+    Dim sqlQuery As String
+    Dim Command As MySqlCommand
     Private Sub BorrowedBooks_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         BorStudTab()
         BorEmpTab()
@@ -37,10 +39,6 @@ Public Class BorrowedBooks
     Private Sub borrowedTable_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles borrowedstudTable.CellContentClick
 
     End Sub
-
-    Private Sub appendButton_Click(sender As Object, e As EventArgs) Handles appendButton.Click
-
-    End Sub
     Private Sub BorStudTab()
         con.Open()
         Dim Command As MySqlCommand
@@ -66,5 +64,17 @@ Public Class BorrowedBooks
         Adapter.Fill(table)
         BorrowedBooksEmployee.DataSource = table
         con.Close()
+    End Sub
+
+    Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
+        con.Open()
+        Dim Time = Date.Now.ToString("hh:mm:ss")
+        Dim currDate = Date.Now.ToString("dd MMM yyyy")
+        sqlQuery = "INSERT INTO admin_out(Email, Logout_Time, Logout_Date) values ('" & Login.TextBox1.Text & "'" & "," & "'" & Time & "'" & "," & "'" & currDate & "'" & ")"
+        Command = New MySqlCommand(sqlQuery, con)
+        Command.ExecuteNonQuery()
+        con.Close()
+        Me.Hide()
+        Login.Show()
     End Sub
 End Class
