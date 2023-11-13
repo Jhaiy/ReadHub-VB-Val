@@ -41,19 +41,11 @@ Partial Class Dashboard
         barButton = New FontAwesome.Sharp.IconButton()
         Label7 = New Label()
         Label6 = New Label()
-        favoritesButtonRight = New FontAwesome.Sharp.IconButton()
-        favoritesButtonLeft = New FontAwesome.Sharp.IconButton()
-        favoritesTableRight = New DataGridView()
+        ArchiveBooksTable = New DataGridView()
         favoritesTableLeft = New DataGridView()
-        exploreButton = New FontAwesome.Sharp.IconButton()
-        amendButton = New FontAwesome.Sharp.IconButton()
-        discardButton = New FontAwesome.Sharp.IconButton()
-        appendButton = New FontAwesome.Sharp.IconButton()
         Label5 = New Label()
         booksTable = New DataGridView()
         Label4 = New Label()
-        IconButton5 = New FontAwesome.Sharp.IconButton()
-        userMore = New FontAwesome.Sharp.IconButton()
         dashPanel.SuspendLayout()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -62,7 +54,7 @@ Partial Class Dashboard
         CType(facultyTable, ComponentModel.ISupportInitialize).BeginInit()
         CType(borrowedFacTab, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
-        CType(favoritesTableRight, ComponentModel.ISupportInitialize).BeginInit()
+        CType(ArchiveBooksTable, ComponentModel.ISupportInitialize).BeginInit()
         CType(favoritesTableLeft, ComponentModel.ISupportInitialize).BeginInit()
         CType(booksTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -78,8 +70,9 @@ Partial Class Dashboard
         dashPanel.Controls.Add(Panel1)
         dashPanel.Dock = DockStyle.Left
         dashPanel.Location = New Point(0, 0)
+        dashPanel.Margin = New Padding(4, 5, 4, 5)
         dashPanel.Name = "dashPanel"
-        dashPanel.Size = New Size(238, 632)
+        dashPanel.Size = New Size(340, 1050)
         dashPanel.TabIndex = 0
         ' 
         ' borrowButton
@@ -88,14 +81,15 @@ Partial Class Dashboard
         borrowButton.Dock = DockStyle.Top
         borrowButton.FlatAppearance.BorderSize = 0
         borrowButton.FlatStyle = FlatStyle.Flat
-        borrowButton.Font = New Font("Open Sans", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        borrowButton.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
         borrowButton.ForeColor = Color.White
         borrowButton.IconChar = FontAwesome.Sharp.IconChar.None
         borrowButton.IconColor = Color.Black
         borrowButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        borrowButton.Location = New Point(0, 305)
+        borrowButton.Location = New Point(0, 510)
+        borrowButton.Margin = New Padding(4, 5, 4, 5)
         borrowButton.Name = "borrowButton"
-        borrowButton.Size = New Size(238, 49)
+        borrowButton.Size = New Size(340, 82)
         borrowButton.TabIndex = 5
         borrowButton.Text = "BORROWED BOOKS"
         borrowButton.UseVisualStyleBackColor = True
@@ -106,14 +100,15 @@ Partial Class Dashboard
         archiveButton.Dock = DockStyle.Top
         archiveButton.FlatAppearance.BorderSize = 0
         archiveButton.FlatStyle = FlatStyle.Flat
-        archiveButton.Font = New Font("Open Sans", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        archiveButton.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
         archiveButton.ForeColor = Color.White
         archiveButton.IconChar = FontAwesome.Sharp.IconChar.None
         archiveButton.IconColor = Color.Black
         archiveButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        archiveButton.Location = New Point(0, 256)
+        archiveButton.Location = New Point(0, 428)
+        archiveButton.Margin = New Padding(4, 5, 4, 5)
         archiveButton.Name = "archiveButton"
-        archiveButton.Size = New Size(238, 49)
+        archiveButton.Size = New Size(340, 82)
         archiveButton.TabIndex = 4
         archiveButton.Text = "ARCHIVES"
         archiveButton.UseVisualStyleBackColor = True
@@ -124,14 +119,15 @@ Partial Class Dashboard
         userButton.Dock = DockStyle.Top
         userButton.FlatAppearance.BorderSize = 0
         userButton.FlatStyle = FlatStyle.Flat
-        userButton.Font = New Font("Open Sans", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        userButton.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
         userButton.ForeColor = Color.White
         userButton.IconChar = FontAwesome.Sharp.IconChar.None
         userButton.IconColor = Color.Black
         userButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        userButton.Location = New Point(0, 207)
+        userButton.Location = New Point(0, 346)
+        userButton.Margin = New Padding(4, 5, 4, 5)
         userButton.Name = "userButton"
-        userButton.Size = New Size(238, 49)
+        userButton.Size = New Size(340, 82)
         userButton.TabIndex = 3
         userButton.Text = "USER'S LIST"
         userButton.UseVisualStyleBackColor = True
@@ -142,14 +138,15 @@ Partial Class Dashboard
         bookButton.Dock = DockStyle.Top
         bookButton.FlatAppearance.BorderSize = 0
         bookButton.FlatStyle = FlatStyle.Flat
-        bookButton.Font = New Font("Open Sans", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        bookButton.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
         bookButton.ForeColor = Color.White
         bookButton.IconChar = FontAwesome.Sharp.IconChar.None
         bookButton.IconColor = Color.Black
         bookButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        bookButton.Location = New Point(0, 158)
+        bookButton.Location = New Point(0, 264)
+        bookButton.Margin = New Padding(4, 5, 4, 5)
         bookButton.Name = "bookButton"
-        bookButton.Size = New Size(238, 49)
+        bookButton.Size = New Size(340, 82)
         bookButton.TabIndex = 2
         bookButton.Text = "BOOK LIST"
         bookButton.UseVisualStyleBackColor = True
@@ -160,14 +157,15 @@ Partial Class Dashboard
         dashButton.Dock = DockStyle.Top
         dashButton.FlatAppearance.BorderSize = 0
         dashButton.FlatStyle = FlatStyle.Flat
-        dashButton.Font = New Font("Open Sans", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        dashButton.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
         dashButton.ForeColor = Color.White
         dashButton.IconChar = FontAwesome.Sharp.IconChar.None
         dashButton.IconColor = Color.Black
         dashButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        dashButton.Location = New Point(0, 109)
+        dashButton.Location = New Point(0, 182)
+        dashButton.Margin = New Padding(4, 5, 4, 5)
         dashButton.Name = "dashButton"
-        dashButton.Size = New Size(238, 49)
+        dashButton.Size = New Size(340, 82)
         dashButton.TabIndex = 1
         dashButton.Text = "DASHBOARD"
         dashButton.UseVisualStyleBackColor = True
@@ -178,8 +176,9 @@ Partial Class Dashboard
         Panel1.Controls.Add(PictureBox1)
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
+        Panel1.Margin = New Padding(4, 5, 4, 5)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(238, 109)
+        Panel1.Size = New Size(340, 182)
         Panel1.TabIndex = 0
         ' 
         ' Label1
@@ -187,56 +186,64 @@ Partial Class Dashboard
         Label1.AutoSize = True
         Label1.Font = New Font("Bebas Neue", 26.25F, FontStyle.Regular, GraphicsUnit.Point)
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(88, 35)
+        Label1.Location = New Point(126, 58)
+        Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(118, 45)
+        Label1.Size = New Size(174, 64)
         Label1.TabIndex = 1
         Label1.Text = "READHUB"
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Location = New Point(31, 30)
+        PictureBox1.Location = New Point(44, 50)
+        PictureBox1.Margin = New Padding(4, 5, 4, 5)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(51, 50)
+        PictureBox1.Size = New Size(73, 83)
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Open Sans", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label2.Location = New Point(30, 80)
+        Label2.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label2.Location = New Point(43, 133)
+        Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(78, 19)
+        Label2.Size = New Size(138, 25)
         Label2.TabIndex = 1
         Label2.Text = "USERS LIST"
         ' 
         ' studentTable
         ' 
         studentTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        studentTable.Location = New Point(30, 105)
+        studentTable.Location = New Point(43, 175)
+        studentTable.Margin = New Padding(4, 5, 4, 5)
         studentTable.Name = "studentTable"
+        studentTable.RowHeadersWidth = 62
         studentTable.RowTemplate.Height = 25
-        studentTable.Size = New Size(345, 86)
+        studentTable.Size = New Size(493, 143)
         studentTable.TabIndex = 2
         ' 
         ' borrowedStudTab
         ' 
         borrowedStudTab.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         borrowedStudTab.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        borrowedStudTab.Location = New Point(427, 105)
+        borrowedStudTab.Location = New Point(610, 175)
+        borrowedStudTab.Margin = New Padding(4, 5, 4, 5)
         borrowedStudTab.Name = "borrowedStudTab"
+        borrowedStudTab.RowHeadersWidth = 62
         borrowedStudTab.RowTemplate.Height = 25
-        borrowedStudTab.Size = New Size(345, 86)
+        borrowedStudTab.Size = New Size(493, 143)
         borrowedStudTab.TabIndex = 3
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Open Sans", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label3.Location = New Point(436, 80)
+        Label3.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label3.Location = New Point(623, 133)
+        Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(134, 19)
+        Label3.Size = New Size(222, 25)
         Label3.TabIndex = 4
         Label3.Text = "BORROWED BOOKS"
         ' 
@@ -244,20 +251,24 @@ Partial Class Dashboard
         ' 
         facultyTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         facultyTable.GridColor = Color.White
-        facultyTable.Location = New Point(30, 187)
+        facultyTable.Location = New Point(43, 312)
+        facultyTable.Margin = New Padding(4, 5, 4, 5)
         facultyTable.Name = "facultyTable"
+        facultyTable.RowHeadersWidth = 62
         facultyTable.RowTemplate.Height = 25
-        facultyTable.Size = New Size(345, 86)
+        facultyTable.Size = New Size(493, 143)
         facultyTable.TabIndex = 5
         ' 
         ' borrowedFacTab
         ' 
         borrowedFacTab.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         borrowedFacTab.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        borrowedFacTab.Location = New Point(427, 187)
+        borrowedFacTab.Location = New Point(610, 312)
+        borrowedFacTab.Margin = New Padding(4, 5, 4, 5)
         borrowedFacTab.Name = "borrowedFacTab"
+        borrowedFacTab.RowHeadersWidth = 62
         borrowedFacTab.RowTemplate.Height = 25
-        borrowedFacTab.Size = New Size(345, 86)
+        borrowedFacTab.Size = New Size(493, 143)
         borrowedFacTab.TabIndex = 6
         ' 
         ' Panel2
@@ -265,19 +276,11 @@ Partial Class Dashboard
         Panel2.Controls.Add(barButton)
         Panel2.Controls.Add(Label7)
         Panel2.Controls.Add(Label6)
-        Panel2.Controls.Add(favoritesButtonRight)
-        Panel2.Controls.Add(favoritesButtonLeft)
-        Panel2.Controls.Add(favoritesTableRight)
+        Panel2.Controls.Add(ArchiveBooksTable)
         Panel2.Controls.Add(favoritesTableLeft)
-        Panel2.Controls.Add(exploreButton)
-        Panel2.Controls.Add(amendButton)
-        Panel2.Controls.Add(discardButton)
-        Panel2.Controls.Add(appendButton)
         Panel2.Controls.Add(Label5)
         Panel2.Controls.Add(booksTable)
         Panel2.Controls.Add(Label4)
-        Panel2.Controls.Add(IconButton5)
-        Panel2.Controls.Add(userMore)
         Panel2.Controls.Add(borrowedFacTab)
         Panel2.Controls.Add(Label2)
         Panel2.Controls.Add(facultyTable)
@@ -285,9 +288,10 @@ Partial Class Dashboard
         Panel2.Controls.Add(Label3)
         Panel2.Controls.Add(borrowedStudTab)
         Panel2.Dock = DockStyle.Fill
-        Panel2.Location = New Point(238, 0)
+        Panel2.Location = New Point(340, 0)
+        Panel2.Margin = New Padding(4, 5, 4, 5)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(809, 632)
+        Panel2.Size = New Size(1156, 1050)
         Panel2.TabIndex = 7
         ' 
         ' barButton
@@ -299,161 +303,67 @@ Partial Class Dashboard
         barButton.IconColor = Color.Black
         barButton.IconFont = FontAwesome.Sharp.IconFont.Auto
         barButton.IconSize = 25
-        barButton.Location = New Point(762, 12)
+        barButton.Location = New Point(1089, 20)
+        barButton.Margin = New Padding(4, 5, 4, 5)
         barButton.Name = "barButton"
-        barButton.Size = New Size(35, 37)
+        barButton.Size = New Size(50, 62)
         barButton.TabIndex = 22
         barButton.UseVisualStyleBackColor = True
         ' 
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Font = New Font("Open Sans", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label7.Location = New Point(436, 485)
+        Label7.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label7.Location = New Point(623, 808)
+        Label7.Margin = New Padding(4, 0, 4, 0)
         Label7.Name = "Label7"
-        Label7.Size = New Size(78, 19)
+        Label7.Size = New Size(191, 25)
         Label7.TabIndex = 21
-        Label7.Text = "FAVORITES"
+        Label7.Text = "ARCHIVE BOOKS"
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Open Sans", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label6.Location = New Point(30, 485)
+        Label6.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label6.Location = New Point(43, 808)
+        Label6.Margin = New Padding(4, 0, 4, 0)
         Label6.Name = "Label6"
-        Label6.Size = New Size(78, 19)
+        Label6.Size = New Size(135, 25)
         Label6.TabIndex = 20
         Label6.Text = "FAVORITES"
         ' 
-        ' favoritesButtonRight
+        ' ArchiveBooksTable
         ' 
-        favoritesButtonRight.BackColor = Color.Tomato
-        favoritesButtonRight.Cursor = Cursors.Hand
-        favoritesButtonRight.FlatAppearance.BorderSize = 0
-        favoritesButtonRight.FlatStyle = FlatStyle.Flat
-        favoritesButtonRight.Font = New Font("Open Sans SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        favoritesButtonRight.IconChar = FontAwesome.Sharp.IconChar.None
-        favoritesButtonRight.IconColor = Color.Black
-        favoritesButtonRight.IconFont = FontAwesome.Sharp.IconFont.Auto
-        favoritesButtonRight.Location = New Point(706, 481)
-        favoritesButtonRight.Name = "favoritesButtonRight"
-        favoritesButtonRight.Size = New Size(75, 23)
-        favoritesButtonRight.TabIndex = 19
-        favoritesButtonRight.Text = "MORE"
-        favoritesButtonRight.UseVisualStyleBackColor = False
-        ' 
-        ' favoritesButtonLeft
-        ' 
-        favoritesButtonLeft.BackColor = Color.Tomato
-        favoritesButtonLeft.Cursor = Cursors.Hand
-        favoritesButtonLeft.FlatAppearance.BorderSize = 0
-        favoritesButtonLeft.FlatStyle = FlatStyle.Flat
-        favoritesButtonLeft.Font = New Font("Open Sans SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        favoritesButtonLeft.IconChar = FontAwesome.Sharp.IconChar.None
-        favoritesButtonLeft.IconColor = Color.Black
-        favoritesButtonLeft.IconFont = FontAwesome.Sharp.IconFont.Auto
-        favoritesButtonLeft.Location = New Point(300, 481)
-        favoritesButtonLeft.Name = "favoritesButtonLeft"
-        favoritesButtonLeft.Size = New Size(75, 23)
-        favoritesButtonLeft.TabIndex = 18
-        favoritesButtonLeft.Text = "MORE"
-        favoritesButtonLeft.UseVisualStyleBackColor = False
-        ' 
-        ' favoritesTableRight
-        ' 
-        favoritesTableRight.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        favoritesTableRight.GridColor = Color.White
-        favoritesTableRight.Location = New Point(436, 510)
-        favoritesTableRight.Name = "favoritesTableRight"
-        favoritesTableRight.RowTemplate.Height = 25
-        favoritesTableRight.Size = New Size(345, 86)
-        favoritesTableRight.TabIndex = 17
+        ArchiveBooksTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        ArchiveBooksTable.GridColor = Color.White
+        ArchiveBooksTable.Location = New Point(623, 850)
+        ArchiveBooksTable.Margin = New Padding(4, 5, 4, 5)
+        ArchiveBooksTable.Name = "ArchiveBooksTable"
+        ArchiveBooksTable.RowHeadersWidth = 62
+        ArchiveBooksTable.RowTemplate.Height = 25
+        ArchiveBooksTable.Size = New Size(493, 143)
+        ArchiveBooksTable.TabIndex = 17
         ' 
         ' favoritesTableLeft
         ' 
         favoritesTableLeft.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         favoritesTableLeft.GridColor = Color.White
-        favoritesTableLeft.Location = New Point(30, 510)
+        favoritesTableLeft.Location = New Point(43, 850)
+        favoritesTableLeft.Margin = New Padding(4, 5, 4, 5)
         favoritesTableLeft.Name = "favoritesTableLeft"
+        favoritesTableLeft.RowHeadersWidth = 62
         favoritesTableLeft.RowTemplate.Height = 25
-        favoritesTableLeft.Size = New Size(345, 86)
+        favoritesTableLeft.Size = New Size(493, 143)
         favoritesTableLeft.TabIndex = 16
-        ' 
-        ' exploreButton
-        ' 
-        exploreButton.BackColor = Color.Tomato
-        exploreButton.Cursor = Cursors.Hand
-        exploreButton.FlatAppearance.BorderSize = 0
-        exploreButton.FlatStyle = FlatStyle.Flat
-        exploreButton.Font = New Font("Open Sans SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        exploreButton.IconChar = FontAwesome.Sharp.IconChar.None
-        exploreButton.IconColor = Color.Black
-        exploreButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        exploreButton.Location = New Point(673, 418)
-        exploreButton.Name = "exploreButton"
-        exploreButton.Size = New Size(75, 23)
-        exploreButton.TabIndex = 15
-        exploreButton.Text = "EXPLORE"
-        exploreButton.UseVisualStyleBackColor = False
-        ' 
-        ' amendButton
-        ' 
-        amendButton.BackColor = Color.Tomato
-        amendButton.Cursor = Cursors.Hand
-        amendButton.FlatAppearance.BorderSize = 0
-        amendButton.FlatStyle = FlatStyle.Flat
-        amendButton.Font = New Font("Open Sans SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        amendButton.IconChar = FontAwesome.Sharp.IconChar.None
-        amendButton.IconColor = Color.Black
-        amendButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        amendButton.Location = New Point(592, 418)
-        amendButton.Name = "amendButton"
-        amendButton.Size = New Size(75, 23)
-        amendButton.TabIndex = 14
-        amendButton.Text = "AMEND"
-        amendButton.UseVisualStyleBackColor = False
-        ' 
-        ' discardButton
-        ' 
-        discardButton.BackColor = Color.Tomato
-        discardButton.Cursor = Cursors.Hand
-        discardButton.FlatAppearance.BorderSize = 0
-        discardButton.FlatStyle = FlatStyle.Flat
-        discardButton.Font = New Font("Open Sans SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        discardButton.IconChar = FontAwesome.Sharp.IconChar.None
-        discardButton.IconColor = Color.Black
-        discardButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        discardButton.Location = New Point(511, 418)
-        discardButton.Name = "discardButton"
-        discardButton.Size = New Size(75, 23)
-        discardButton.TabIndex = 13
-        discardButton.Text = "DISCARD"
-        discardButton.UseVisualStyleBackColor = False
-        ' 
-        ' appendButton
-        ' 
-        appendButton.BackColor = Color.Tomato
-        appendButton.Cursor = Cursors.Hand
-        appendButton.FlatAppearance.BorderSize = 0
-        appendButton.FlatStyle = FlatStyle.Flat
-        appendButton.Font = New Font("Open Sans SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        appendButton.IconChar = FontAwesome.Sharp.IconChar.None
-        appendButton.IconColor = Color.Black
-        appendButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        appendButton.Location = New Point(430, 418)
-        appendButton.Name = "appendButton"
-        appendButton.Size = New Size(75, 23)
-        appendButton.TabIndex = 12
-        appendButton.Text = "APPEND"
-        appendButton.UseVisualStyleBackColor = False
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Open Sans", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label5.Location = New Point(30, 305)
+        Label5.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label5.Location = New Point(43, 508)
+        Label5.Margin = New Padding(4, 0, 4, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(54, 19)
+        Label5.Size = New Size(90, 25)
         Label5.TabIndex = 11
         Label5.Text = "BOOKS"
         ' 
@@ -461,66 +371,36 @@ Partial Class Dashboard
         ' 
         booksTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         booksTable.GridColor = Color.White
-        booksTable.Location = New Point(30, 329)
+        booksTable.Location = New Point(43, 548)
+        booksTable.Margin = New Padding(4, 5, 4, 5)
         booksTable.Name = "booksTable"
+        booksTable.RowHeadersWidth = 62
         booksTable.RowTemplate.Height = 25
-        booksTable.Size = New Size(751, 121)
+        booksTable.Size = New Size(1073, 202)
         booksTable.TabIndex = 10
         ' 
         ' Label4
         ' 
         Label4.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         Label4.AutoSize = True
-        Label4.Font = New Font("Open Sans", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label4.Location = New Point(371, 20)
+        Label4.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label4.Location = New Point(530, 32)
+        Label4.Margin = New Padding(4, 0, 4, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(134, 19)
+        Label4.Size = New Size(222, 25)
         Label4.TabIndex = 9
         Label4.Text = "BORROWED BOOKS"
         Label4.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' IconButton5
-        ' 
-        IconButton5.BackColor = Color.Tomato
-        IconButton5.Cursor = Cursors.Hand
-        IconButton5.FlatAppearance.BorderSize = 0
-        IconButton5.FlatStyle = FlatStyle.Flat
-        IconButton5.Font = New Font("Open Sans SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        IconButton5.IconChar = FontAwesome.Sharp.IconChar.None
-        IconButton5.IconColor = Color.Black
-        IconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto
-        IconButton5.Location = New Point(706, 76)
-        IconButton5.Name = "IconButton5"
-        IconButton5.Size = New Size(75, 23)
-        IconButton5.TabIndex = 8
-        IconButton5.Text = "MORE"
-        IconButton5.UseVisualStyleBackColor = False
-        ' 
-        ' userMore
-        ' 
-        userMore.BackColor = Color.Tomato
-        userMore.Cursor = Cursors.Hand
-        userMore.FlatAppearance.BorderSize = 0
-        userMore.FlatStyle = FlatStyle.Flat
-        userMore.Font = New Font("Open Sans SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        userMore.IconChar = FontAwesome.Sharp.IconChar.None
-        userMore.IconColor = Color.Black
-        userMore.IconFont = FontAwesome.Sharp.IconFont.Auto
-        userMore.Location = New Point(300, 76)
-        userMore.Name = "userMore"
-        userMore.Size = New Size(75, 23)
-        userMore.TabIndex = 7
-        userMore.Text = "MORE"
-        userMore.UseVisualStyleBackColor = False
-        ' 
         ' Dashboard
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(1047, 632)
+        ClientSize = New Size(1496, 1050)
         Controls.Add(Panel2)
         Controls.Add(dashPanel)
+        Margin = New Padding(4, 5, 4, 5)
         Name = "Dashboard"
         Text = "Dashboard"
         dashPanel.ResumeLayout(False)
@@ -533,7 +413,7 @@ Partial Class Dashboard
         CType(borrowedFacTab, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
-        CType(favoritesTableRight, ComponentModel.ISupportInitialize).EndInit()
+        CType(ArchiveBooksTable, ComponentModel.ISupportInitialize).EndInit()
         CType(favoritesTableLeft, ComponentModel.ISupportInitialize).EndInit()
         CType(booksTable, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
@@ -555,17 +435,9 @@ Partial Class Dashboard
     Friend WithEvents facultyTable As DataGridView
     Friend WithEvents borrowedFacTab As DataGridView
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents userMore As FontAwesome.Sharp.IconButton
-    Friend WithEvents IconButton5 As FontAwesome.Sharp.IconButton
     Friend WithEvents Label4 As Label
-    Friend WithEvents favoritesButtonRight As FontAwesome.Sharp.IconButton
-    Friend WithEvents favoritesButtonLeft As FontAwesome.Sharp.IconButton
-    Friend WithEvents favoritesTableRight As DataGridView
+    Friend WithEvents ArchiveBooksTable As DataGridView
     Friend WithEvents favoritesTableLeft As DataGridView
-    Friend WithEvents exploreButton As FontAwesome.Sharp.IconButton
-    Friend WithEvents amendButton As FontAwesome.Sharp.IconButton
-    Friend WithEvents discardButton As FontAwesome.Sharp.IconButton
-    Friend WithEvents appendButton As FontAwesome.Sharp.IconButton
     Friend WithEvents Label5 As Label
     Friend WithEvents booksTable As DataGridView
     Friend WithEvents Label7 As Label

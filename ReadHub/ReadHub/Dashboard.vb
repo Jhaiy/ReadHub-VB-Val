@@ -5,6 +5,10 @@ Public Class Dashboard
         faculTable()
         stTable()
         bksTable()
+        BorStudTab()
+        BorEmpTab()
+        FavTab()
+        ArcBKTab()
         Me.CenterToScreen()
 
         Me.BackColor = Color.FromArgb(152, 193, 217)
@@ -16,7 +20,7 @@ Public Class Dashboard
         Label4.ForeColor = Color.FromArgb(255, 255, 255)
         booksTable.BackgroundColor = Color.FromArgb(61, 90, 128)
         favoritesTableLeft.BackgroundColor = Color.FromArgb(61, 90, 128)
-        favoritesTableRight.BackgroundColor = Color.FromArgb(61, 90, 128)
+        ArchiveBooksTable.BackgroundColor = Color.FromArgb(61, 90, 128)
     End Sub
 
     Private Sub bookButton_Click(sender As Object, e As EventArgs) Handles bookButton.Click
@@ -79,7 +83,56 @@ Public Class Dashboard
         con.Close()
     End Sub
 
-    Private Sub bogart()
-
+    Private Sub BorStudTab()
+        con.Open()
+        Dim Command As MySqlCommand
+        Dim sqlQuery As String
+        sqlQuery = "SELECT * FROM readhub.borrowed_books"
+        Command = New MySqlCommand(sqlQuery, con)
+        Command.ExecuteNonQuery()
+        Dim table As New DataTable
+        Dim Adapter As New MySqlDataAdapter(Command)
+        Adapter.Fill(table)
+        borrowedStudTab.DataSource = table
+        con.Close()
+    End Sub
+    Private Sub BorEmpTab()
+        con.Open()
+        Dim Command As MySqlCommand
+        Dim sqlQuery As String
+        sqlQuery = "SELECT * FROM readhub.borrowed_books"
+        Command = New MySqlCommand(sqlQuery, con)
+        Command.ExecuteNonQuery()
+        Dim table As New DataTable
+        Dim Adapter As New MySqlDataAdapter(Command)
+        Adapter.Fill(table)
+        borrowedFacTab.DataSource = table
+        con.Close()
+    End Sub
+    Private Sub FavTab()
+        con.Open()
+        Dim Command As MySqlCommand
+        Dim sqlQuery As String
+        sqlQuery = "SELECT * FROM readhub.favorites"
+        Command = New MySqlCommand(sqlQuery, con)
+        Command.ExecuteNonQuery()
+        Dim table As New DataTable
+        Dim Adapter As New MySqlDataAdapter(Command)
+        Adapter.Fill(table)
+        favoritesTableLeft.DataSource = table
+        con.Close()
+    End Sub
+    Private Sub ArcBKTab()
+        con.Open()
+        Dim Command As MySqlCommand
+        Dim sqlQuery As String
+        sqlQuery = "SELECT * FROM readhub.archive_books"
+        Command = New MySqlCommand(sqlQuery, con)
+        Command.ExecuteNonQuery()
+        Dim table As New DataTable
+        Dim Adapter As New MySqlDataAdapter(Command)
+        Adapter.Fill(table)
+        ArchiveBooksTable.DataSource = table
+        con.Close()
     End Sub
 End Class
