@@ -32,6 +32,8 @@ Partial Class BorrowedBooks
         Label1 = New Label()
         PictureBox1 = New PictureBox()
         Panel2 = New Panel()
+        Label5 = New Label()
+        BorrowedBooksEmployee = New DataGridView()
         Label3 = New Label()
         exploreButton = New FontAwesome.Sharp.IconButton()
         amendButton = New FontAwesome.Sharp.IconButton()
@@ -39,13 +41,13 @@ Partial Class BorrowedBooks
         appendButton = New FontAwesome.Sharp.IconButton()
         barButton = New FontAwesome.Sharp.IconButton()
         Label2 = New Label()
-        borrowedTable = New DataGridView()
-        Label4 = New Label()
+        borrowedstudTable = New DataGridView()
         borrowedPanel.SuspendLayout()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
-        CType(borrowedTable, ComponentModel.ISupportInitialize).BeginInit()
+        CType(BorrowedBooksEmployee, ComponentModel.ISupportInitialize).BeginInit()
+        CType(borrowedstudTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' borrowedPanel
@@ -193,6 +195,8 @@ Partial Class BorrowedBooks
         ' 
         ' Panel2
         ' 
+        Panel2.Controls.Add(Label5)
+        Panel2.Controls.Add(BorrowedBooksEmployee)
         Panel2.Controls.Add(Label3)
         Panel2.Controls.Add(exploreButton)
         Panel2.Controls.Add(amendButton)
@@ -200,14 +204,36 @@ Partial Class BorrowedBooks
         Panel2.Controls.Add(appendButton)
         Panel2.Controls.Add(barButton)
         Panel2.Controls.Add(Label2)
-        Panel2.Controls.Add(borrowedTable)
-        Panel2.Controls.Add(Label4)
+        Panel2.Controls.Add(borrowedstudTable)
         Panel2.Dock = DockStyle.Fill
         Panel2.Location = New Point(340, 0)
         Panel2.Margin = New Padding(4, 5, 4, 5)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(1156, 1050)
         Panel2.TabIndex = 16
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label5.Location = New Point(66, 483)
+        Label5.Margin = New Padding(4, 0, 4, 0)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(327, 25)
+        Label5.TabIndex = 30
+        Label5.Text = "BORROWED BOOKS FACULTY"
+        ' 
+        ' BorrowedBooksEmployee
+        ' 
+        BorrowedBooksEmployee.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        BorrowedBooksEmployee.GridColor = Color.White
+        BorrowedBooksEmployee.Location = New Point(66, 520)
+        BorrowedBooksEmployee.Margin = New Padding(4, 5, 4, 5)
+        BorrowedBooksEmployee.Name = "BorrowedBooksEmployee"
+        BorrowedBooksEmployee.RowHeadersWidth = 62
+        BorrowedBooksEmployee.RowTemplate.Height = 25
+        BorrowedBooksEmployee.Size = New Size(1029, 307)
+        BorrowedBooksEmployee.TabIndex = 29
         ' 
         ' Label3
         ' 
@@ -314,37 +340,24 @@ Partial Class BorrowedBooks
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label2.Location = New Point(67, 145)
+        Label2.Location = New Point(66, 96)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(222, 25)
+        Label2.Size = New Size(345, 25)
         Label2.TabIndex = 12
-        Label2.Text = "BORROWED BOOKS"
+        Label2.Text = "BORROWED BOOKS STUDENTS"
         ' 
-        ' borrowedTable
+        ' borrowedstudTable
         ' 
-        borrowedTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        borrowedTable.GridColor = Color.White
-        borrowedTable.Location = New Point(67, 182)
-        borrowedTable.Margin = New Padding(4, 5, 4, 5)
-        borrowedTable.Name = "borrowedTable"
-        borrowedTable.RowHeadersWidth = 62
-        borrowedTable.RowTemplate.Height = 25
-        borrowedTable.Size = New Size(1029, 780)
-        borrowedTable.TabIndex = 11
-        ' 
-        ' Label4
-        ' 
-        Label4.Anchor = AnchorStyles.Left Or AnchorStyles.Right
-        Label4.AutoSize = True
-        Label4.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label4.Location = New Point(530, 919)
-        Label4.Margin = New Padding(4, 0, 4, 0)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(90, 25)
-        Label4.TabIndex = 10
-        Label4.Text = "BOOKS"
-        Label4.TextAlign = ContentAlignment.MiddleCenter
+        borrowedstudTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        borrowedstudTable.GridColor = Color.White
+        borrowedstudTable.Location = New Point(66, 133)
+        borrowedstudTable.Margin = New Padding(4, 5, 4, 5)
+        borrowedstudTable.Name = "borrowedstudTable"
+        borrowedstudTable.RowHeadersWidth = 62
+        borrowedstudTable.RowTemplate.Height = 25
+        borrowedstudTable.Size = New Size(1029, 300)
+        borrowedstudTable.TabIndex = 11
         ' 
         ' BorrowedBooks
         ' 
@@ -362,7 +375,8 @@ Partial Class BorrowedBooks
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
-        CType(borrowedTable, ComponentModel.ISupportInitialize).EndInit()
+        CType(BorrowedBooksEmployee, ComponentModel.ISupportInitialize).EndInit()
+        CType(borrowedstudTable, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -383,6 +397,7 @@ Partial Class BorrowedBooks
     Friend WithEvents appendButton As FontAwesome.Sharp.IconButton
     Friend WithEvents barButton As FontAwesome.Sharp.IconButton
     Friend WithEvents Label2 As Label
-    Friend WithEvents borrowedTable As DataGridView
-    Friend WithEvents Label4 As Label
+    Friend WithEvents borrowedstudTable As DataGridView
+    Friend WithEvents Label5 As Label
+    Friend WithEvents BorrowedBooksEmployee As DataGridView
 End Class

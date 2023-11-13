@@ -87,7 +87,7 @@ Public Class Dashboard
         con.Open()
         Dim Command As MySqlCommand
         Dim sqlQuery As String
-        sqlQuery = "SELECT * FROM readhub.borrowed_books"
+        sqlQuery = "SELECT * FROM readhub.borrowed_books_student"
         Command = New MySqlCommand(sqlQuery, con)
         Command.ExecuteNonQuery()
         Dim table As New DataTable
@@ -100,7 +100,7 @@ Public Class Dashboard
         con.Open()
         Dim Command As MySqlCommand
         Dim sqlQuery As String
-        sqlQuery = "SELECT * FROM readhub.borrowed_books"
+        sqlQuery = "SELECT * FROM readhub.borrowed_books_employee"
         Command = New MySqlCommand(sqlQuery, con)
         Command.ExecuteNonQuery()
         Dim table As New DataTable
