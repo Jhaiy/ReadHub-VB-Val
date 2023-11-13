@@ -46,4 +46,5 @@ Public Class BookList
         booksTable.BackgroundColor = Color.FromArgb(61, 90, 128)
         Label4.ForeColor = Color.FromArgb(255, 255, 255)
     End Sub
+
 End Class
