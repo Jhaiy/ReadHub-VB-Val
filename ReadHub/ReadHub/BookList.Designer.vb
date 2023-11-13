@@ -38,7 +38,6 @@ Partial Class BookList
         CTB = New TextBox()
         DTB = New TextBox()
         YTB = New TextBox()
-        exploreButton = New FontAwesome.Sharp.IconButton()
         amendButton = New FontAwesome.Sharp.IconButton()
         discardButton = New FontAwesome.Sharp.IconButton()
         appendButton = New FontAwesome.Sharp.IconButton()
@@ -204,7 +203,6 @@ Partial Class BookList
         Panel2.Controls.Add(CTB)
         Panel2.Controls.Add(DTB)
         Panel2.Controls.Add(YTB)
-        Panel2.Controls.Add(exploreButton)
         Panel2.Controls.Add(amendButton)
         Panel2.Controls.Add(discardButton)
         Panel2.Controls.Add(appendButton)
@@ -309,24 +307,6 @@ Partial Class BookList
         YTB.TabIndex = 29
         YTB.Text = "Year_Published"
         ' 
-        ' exploreButton
-        ' 
-        exploreButton.BackColor = Color.Tomato
-        exploreButton.Cursor = Cursors.Hand
-        exploreButton.FlatAppearance.BorderSize = 0
-        exploreButton.FlatStyle = FlatStyle.Flat
-        exploreButton.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        exploreButton.IconChar = FontAwesome.Sharp.IconChar.None
-        exploreButton.IconColor = Color.Black
-        exploreButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        exploreButton.Location = New Point(989, 893)
-        exploreButton.Margin = New Padding(4, 5, 4, 5)
-        exploreButton.Name = "exploreButton"
-        exploreButton.Size = New Size(107, 38)
-        exploreButton.TabIndex = 27
-        exploreButton.Text = "EXPLORE"
-        exploreButton.UseVisualStyleBackColor = False
-        ' 
         ' amendButton
         ' 
         amendButton.BackColor = Color.Tomato
@@ -337,7 +317,7 @@ Partial Class BookList
         amendButton.IconChar = FontAwesome.Sharp.IconChar.None
         amendButton.IconColor = Color.Black
         amendButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        amendButton.Location = New Point(873, 893)
+        amendButton.Location = New Point(989, 891)
         amendButton.Margin = New Padding(4, 5, 4, 5)
         amendButton.Name = "amendButton"
         amendButton.Size = New Size(107, 38)
@@ -355,7 +335,7 @@ Partial Class BookList
         discardButton.IconChar = FontAwesome.Sharp.IconChar.None
         discardButton.IconColor = Color.Black
         discardButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        discardButton.Location = New Point(757, 893)
+        discardButton.Location = New Point(873, 891)
         discardButton.Margin = New Padding(4, 5, 4, 5)
         discardButton.Name = "discardButton"
         discardButton.Size = New Size(107, 38)
@@ -373,7 +353,7 @@ Partial Class BookList
         appendButton.IconChar = FontAwesome.Sharp.IconChar.None
         appendButton.IconColor = Color.Black
         appendButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        appendButton.Location = New Point(642, 893)
+        appendButton.Location = New Point(758, 891)
         appendButton.Margin = New Padding(4, 5, 4, 5)
         appendButton.Name = "appendButton"
         appendButton.Size = New Size(107, 38)
@@ -468,7 +448,6 @@ Partial Class BookList
     Friend WithEvents booksTable As DataGridView
     Friend WithEvents Label2 As Label
     Friend WithEvents barButton As FontAwesome.Sharp.IconButton
-    Friend WithEvents exploreButton As FontAwesome.Sharp.IconButton
     Friend WithEvents amendButton As FontAwesome.Sharp.IconButton
     Friend WithEvents discardButton As FontAwesome.Sharp.IconButton
     Friend WithEvents appendButton As FontAwesome.Sharp.IconButton

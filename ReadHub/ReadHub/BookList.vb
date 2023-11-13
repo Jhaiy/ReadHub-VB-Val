@@ -119,4 +119,50 @@ Public Class BookList
             loadDataOnTable()
         End Try
     End Sub
+
+    Private Sub amendButton_Click(sender As Object, e As EventArgs) Handles amendButton.Click
+        If booksTable.SelectedRows.Count > 0 Then
+            Dim selectedRow As DataGridViewRow = booksTable.SelectedRows(0)
+            Dim bookID As String = selectedRow.Cells("Book_ID").Value.ToString()
+
+            Dim newbookID As String = BTB.Text
+            Dim newTitle As String = TTB.Text
+            Dim newAuthor As String = ATB.Text
+            Dim newCategoryID As String = CTB.Text
+            Dim newDescription As String = DTB.Text
+            Dim newYearPublished As Integer
+
+            If Integer.TryParse(YTB.Text, newYearPublished) Then
+            Else
+                MessageBox.Show("Invalid year format. Please enter a valid year.")
+                Exit Sub
+            End If
+
+            UpdateBook(bookID, newbookID, newTitle, newAuthor, newCategoryID, newDescription, newYearPublished)
+        Else
+            MessageBox.Show("Please select a row to amend.", "No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
+    End Sub
+
+    Private Sub UpdateBook(bookID As String, newbookID As String, newTitle As String, newAuthor As String, newCategoryID As String, newDescription As String, newYearPublished As Integer)
+        Try
+            con.Open()
+            Dim sqlQuery As String = "UPDATE readhub.book_information SET Book_ID = @NewBookID, Title = @NewTitle, Author = @NewAuthor, Category_ID = @NewCategoryID, Description = @NewDescription, Year_Published = @NewYearPublished WHERE Book_ID = @BookID"
+            Dim command As MySqlCommand = New MySqlCommand(sqlQuery, con)
+            command.Parameters.AddWithValue("@NewBookID", newbookID)
+            command.Parameters.AddWithValue("@NewTitle", newTitle)
+            command.Parameters.AddWithValue("@NewAuthor", newAuthor)
+            command.Parameters.AddWithValue("@NewCategoryID", newCategoryID)
+            command.Parameters.AddWithValue("@NewDescription", newDescription)
+            command.Parameters.AddWithValue("@NewYearPublished", newYearPublished)
+            command.Parameters.AddWithValue("@BookID", bookID)
+            command.ExecuteNonQuery()
+            MessageBox.Show("Book with Book_ID " & bookID & " updated successfully.")
+        Catch ex As Exception
+            MessageBox.Show("Error updating book: " & ex.Message)
+        Finally
+            con.Close()
+            loadDataOnTable()
+        End Try
+    End Sub
 End Class
