@@ -225,6 +225,7 @@ Partial Class BorrowedBooks
         ' 
         ' BorrowedBooksEmployee
         ' 
+        BorrowedBooksEmployee.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         BorrowedBooksEmployee.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         BorrowedBooksEmployee.GridColor = Color.White
         BorrowedBooksEmployee.Location = New Point(66, 520)
@@ -349,6 +350,7 @@ Partial Class BorrowedBooks
         ' 
         ' borrowedstudTable
         ' 
+        borrowedstudTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         borrowedstudTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         borrowedstudTable.GridColor = Color.White
         borrowedstudTable.Location = New Point(66, 133)

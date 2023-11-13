@@ -11,7 +11,7 @@ Public Class BorrowedBooks
         borrowButton.BackColor = Color.FromArgb(152, 193, 217)
         borrowedstudTable.BackgroundColor = Color.FromArgb(61, 90, 128)
         Label3.ForeColor = Color.FromArgb(255, 255, 255)
-        BorrowedBooksEmployee.BackColor = Color.FromArgb(152, 193, 217)
+        BorrowedBooksEmployee.BackgroundColor = Color.FromArgb(61, 90, 128)
     End Sub
 
     Private Sub dashButton_Click(sender As Object, e As EventArgs) Handles dashButton.Click
