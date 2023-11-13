@@ -32,6 +32,12 @@ Partial Class BookList
         bookButton = New FontAwesome.Sharp.IconButton()
         dashButton = New FontAwesome.Sharp.IconButton()
         Panel2 = New Panel()
+        BTB = New TextBox()
+        TTB = New TextBox()
+        ATB = New TextBox()
+        CTB = New TextBox()
+        DTB = New TextBox()
+        YTB = New TextBox()
         exploreButton = New FontAwesome.Sharp.IconButton()
         amendButton = New FontAwesome.Sharp.IconButton()
         discardButton = New FontAwesome.Sharp.IconButton()
@@ -40,12 +46,6 @@ Partial Class BookList
         Label2 = New Label()
         booksTable = New DataGridView()
         Label4 = New Label()
-        TextBox2 = New TextBox()
-        TextBox3 = New TextBox()
-        TextBox4 = New TextBox()
-        TextBox5 = New TextBox()
-        TextBox6 = New TextBox()
-        TextBox7 = New TextBox()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         bookPanel.SuspendLayout()
@@ -198,12 +198,12 @@ Partial Class BookList
         ' 
         ' Panel2
         ' 
-        Panel2.Controls.Add(TextBox7)
-        Panel2.Controls.Add(TextBox6)
-        Panel2.Controls.Add(TextBox5)
-        Panel2.Controls.Add(TextBox4)
-        Panel2.Controls.Add(TextBox3)
-        Panel2.Controls.Add(TextBox2)
+        Panel2.Controls.Add(BTB)
+        Panel2.Controls.Add(TTB)
+        Panel2.Controls.Add(ATB)
+        Panel2.Controls.Add(CTB)
+        Panel2.Controls.Add(DTB)
+        Panel2.Controls.Add(YTB)
         Panel2.Controls.Add(exploreButton)
         Panel2.Controls.Add(amendButton)
         Panel2.Controls.Add(discardButton)
@@ -218,6 +218,96 @@ Partial Class BookList
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(1156, 1050)
         Panel2.TabIndex = 13
+        ' 
+        ' BTB
+        ' 
+        BTB.BackColor = Color.MistyRose
+        BTB.BorderStyle = BorderStyle.None
+        BTB.Cursor = Cursors.IBeam
+        BTB.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        BTB.ForeColor = Color.Black
+        BTB.Location = New Point(413, 832)
+        BTB.Margin = New Padding(4, 5, 4, 5)
+        BTB.Multiline = True
+        BTB.Name = "BTB"
+        BTB.Size = New Size(107, 38)
+        BTB.TabIndex = 34
+        BTB.Text = "Book_ID"
+        ' 
+        ' TTB
+        ' 
+        TTB.BackColor = Color.MistyRose
+        TTB.BorderStyle = BorderStyle.None
+        TTB.Cursor = Cursors.IBeam
+        TTB.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        TTB.ForeColor = Color.Black
+        TTB.Location = New Point(528, 832)
+        TTB.Margin = New Padding(4, 5, 4, 5)
+        TTB.Multiline = True
+        TTB.Name = "TTB"
+        TTB.Size = New Size(107, 38)
+        TTB.TabIndex = 33
+        TTB.Text = "Title"
+        ' 
+        ' ATB
+        ' 
+        ATB.BackColor = Color.MistyRose
+        ATB.BorderStyle = BorderStyle.None
+        ATB.Cursor = Cursors.IBeam
+        ATB.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        ATB.ForeColor = Color.Black
+        ATB.Location = New Point(643, 832)
+        ATB.Margin = New Padding(4, 5, 4, 5)
+        ATB.Multiline = True
+        ATB.Name = "ATB"
+        ATB.Size = New Size(107, 38)
+        ATB.TabIndex = 32
+        ATB.Text = "Author"
+        ' 
+        ' CTB
+        ' 
+        CTB.BackColor = Color.MistyRose
+        CTB.BorderStyle = BorderStyle.None
+        CTB.Cursor = Cursors.IBeam
+        CTB.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        CTB.ForeColor = Color.Black
+        CTB.Location = New Point(758, 832)
+        CTB.Margin = New Padding(4, 5, 4, 5)
+        CTB.Multiline = True
+        CTB.Name = "CTB"
+        CTB.Size = New Size(107, 38)
+        CTB.TabIndex = 31
+        CTB.Text = "Category_ID"
+        ' 
+        ' DTB
+        ' 
+        DTB.BackColor = Color.MistyRose
+        DTB.BorderStyle = BorderStyle.None
+        DTB.Cursor = Cursors.IBeam
+        DTB.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DTB.ForeColor = Color.Black
+        DTB.Location = New Point(874, 832)
+        DTB.Margin = New Padding(4, 5, 4, 5)
+        DTB.Multiline = True
+        DTB.Name = "DTB"
+        DTB.Size = New Size(107, 38)
+        DTB.TabIndex = 30
+        DTB.Text = "Description"
+        ' 
+        ' YTB
+        ' 
+        YTB.BackColor = Color.MistyRose
+        YTB.BorderStyle = BorderStyle.None
+        YTB.Cursor = Cursors.IBeam
+        YTB.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        YTB.ForeColor = Color.Black
+        YTB.Location = New Point(989, 832)
+        YTB.Margin = New Padding(4, 5, 4, 5)
+        YTB.Multiline = True
+        YTB.Name = "YTB"
+        YTB.Size = New Size(107, 38)
+        YTB.TabIndex = 29
+        YTB.Text = "Year_Published"
         ' 
         ' exploreButton
         ' 
@@ -344,96 +434,6 @@ Partial Class BookList
         Label4.Text = "BOOKS"
         Label4.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' TextBox2
-        ' 
-        TextBox2.BackColor = Color.MistyRose
-        TextBox2.BorderStyle = BorderStyle.None
-        TextBox2.Cursor = Cursors.IBeam
-        TextBox2.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox2.ForeColor = SystemColors.ActiveBorder
-        TextBox2.Location = New Point(989, 832)
-        TextBox2.Margin = New Padding(4, 5, 4, 5)
-        TextBox2.Multiline = True
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(107, 38)
-        TextBox2.TabIndex = 29
-        TextBox2.Text = "Year_Published"
-        ' 
-        ' TextBox3
-        ' 
-        TextBox3.BackColor = Color.MistyRose
-        TextBox3.BorderStyle = BorderStyle.None
-        TextBox3.Cursor = Cursors.IBeam
-        TextBox3.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox3.ForeColor = SystemColors.ActiveBorder
-        TextBox3.Location = New Point(874, 832)
-        TextBox3.Margin = New Padding(4, 5, 4, 5)
-        TextBox3.Multiline = True
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(107, 38)
-        TextBox3.TabIndex = 30
-        TextBox3.Text = "Description"
-        ' 
-        ' TextBox4
-        ' 
-        TextBox4.BackColor = Color.MistyRose
-        TextBox4.BorderStyle = BorderStyle.None
-        TextBox4.Cursor = Cursors.IBeam
-        TextBox4.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox4.ForeColor = SystemColors.ActiveBorder
-        TextBox4.Location = New Point(758, 832)
-        TextBox4.Margin = New Padding(4, 5, 4, 5)
-        TextBox4.Multiline = True
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(107, 38)
-        TextBox4.TabIndex = 31
-        TextBox4.Text = "Category_ID"
-        ' 
-        ' TextBox5
-        ' 
-        TextBox5.BackColor = Color.MistyRose
-        TextBox5.BorderStyle = BorderStyle.None
-        TextBox5.Cursor = Cursors.IBeam
-        TextBox5.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox5.ForeColor = SystemColors.ActiveBorder
-        TextBox5.Location = New Point(643, 832)
-        TextBox5.Margin = New Padding(4, 5, 4, 5)
-        TextBox5.Multiline = True
-        TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(107, 38)
-        TextBox5.TabIndex = 32
-        TextBox5.Text = "Author"
-        ' 
-        ' TextBox6
-        ' 
-        TextBox6.BackColor = Color.MistyRose
-        TextBox6.BorderStyle = BorderStyle.None
-        TextBox6.Cursor = Cursors.IBeam
-        TextBox6.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox6.ForeColor = SystemColors.ActiveBorder
-        TextBox6.Location = New Point(528, 832)
-        TextBox6.Margin = New Padding(4, 5, 4, 5)
-        TextBox6.Multiline = True
-        TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(107, 38)
-        TextBox6.TabIndex = 33
-        TextBox6.Text = "Title"
-        ' 
-        ' TextBox7
-        ' 
-        TextBox7.BackColor = Color.MistyRose
-        TextBox7.BorderStyle = BorderStyle.None
-        TextBox7.Cursor = Cursors.IBeam
-        TextBox7.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox7.ForeColor = SystemColors.ActiveBorder
-        TextBox7.Location = New Point(413, 832)
-        TextBox7.Margin = New Padding(4, 5, 4, 5)
-        TextBox7.Multiline = True
-        TextBox7.Name = "TextBox7"
-        TextBox7.Size = New Size(107, 38)
-        TextBox7.TabIndex = 34
-        TextBox7.Text = "Book_ID"
-        ' 
         ' BookList
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
@@ -472,10 +472,10 @@ Partial Class BookList
     Friend WithEvents amendButton As FontAwesome.Sharp.IconButton
     Friend WithEvents discardButton As FontAwesome.Sharp.IconButton
     Friend WithEvents appendButton As FontAwesome.Sharp.IconButton
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents ATB As TextBox
+    Friend WithEvents CTB As TextBox
+    Friend WithEvents DTB As TextBox
+    Friend WithEvents YTB As TextBox
+    Friend WithEvents BTB As TextBox
+    Friend WithEvents TTB As TextBox
 End Class

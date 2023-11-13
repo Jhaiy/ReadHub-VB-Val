@@ -41,7 +41,7 @@ Public Class Archives
         Dim sqlQuery As String
         sqlQuery = "SELECT * FROM readhub.archive_books"
         Command = New MySqlCommand(sqlQuery, con)
-        Command.ExecuteNonQuery()s
+        Command.ExecuteNonQuery()
         Dim table As New DataTable
         Dim Adapter As New MySqlDataAdapter(Command)
         Adapter.Fill(table)
