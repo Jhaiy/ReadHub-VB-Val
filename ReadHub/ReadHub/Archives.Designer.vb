@@ -41,6 +41,7 @@ Partial Class Archives
         Label2 = New Label()
         archiveTable = New DataGridView()
         Label4 = New Label()
+        IconButton7 = New FontAwesome.Sharp.IconButton()
         archivePanel.SuspendLayout()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -193,6 +194,7 @@ Partial Class Archives
         ' 
         ' Panel2
         ' 
+        Panel2.Controls.Add(IconButton7)
         Panel2.Controls.Add(Label3)
         Panel2.Controls.Add(exploreButton)
         Panel2.Controls.Add(amendButton)
@@ -347,6 +349,24 @@ Partial Class Archives
         Label4.Text = "BOOKS"
         Label4.TextAlign = ContentAlignment.MiddleCenter
         ' 
+        ' IconButton7
+        ' 
+        IconButton7.BackColor = Color.Tomato
+        IconButton7.Cursor = Cursors.Hand
+        IconButton7.FlatAppearance.BorderSize = 0
+        IconButton7.FlatStyle = FlatStyle.Flat
+        IconButton7.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        IconButton7.IconChar = FontAwesome.Sharp.IconChar.None
+        IconButton7.IconColor = Color.Black
+        IconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto
+        IconButton7.Location = New Point(978, 132)
+        IconButton7.Margin = New Padding(4, 5, 4, 5)
+        IconButton7.Name = "IconButton7"
+        IconButton7.Size = New Size(118, 38)
+        IconButton7.TabIndex = 42
+        IconButton7.Text = "REFRESH"
+        IconButton7.UseVisualStyleBackColor = False
+        ' 
         ' Archives
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
@@ -386,4 +406,5 @@ Partial Class Archives
     Friend WithEvents archiveTable As DataGridView
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents IconButton7 As FontAwesome.Sharp.IconButton
 End Class

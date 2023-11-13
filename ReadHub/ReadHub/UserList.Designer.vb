@@ -302,7 +302,7 @@ Partial Class UserList
         browseButton1.IconChar = FontAwesome.Sharp.IconChar.None
         browseButton1.IconColor = Color.Black
         browseButton1.IconFont = FontAwesome.Sharp.IconFont.Auto
-        browseButton1.Location = New Point(971, 427)
+        browseButton1.Location = New Point(989, 498)
         browseButton1.Margin = New Padding(4, 5, 4, 5)
         browseButton1.Name = "browseButton1"
         browseButton1.Size = New Size(107, 38)
@@ -320,7 +320,7 @@ Partial Class UserList
         modButton1.IconChar = FontAwesome.Sharp.IconChar.None
         modButton1.IconColor = Color.Black
         modButton1.IconFont = FontAwesome.Sharp.IconFont.Auto
-        modButton1.Location = New Point(856, 427)
+        modButton1.Location = New Point(874, 498)
         modButton1.Margin = New Padding(4, 5, 4, 5)
         modButton1.Name = "modButton1"
         modButton1.Size = New Size(107, 38)
@@ -338,7 +338,7 @@ Partial Class UserList
         remButton1.IconChar = FontAwesome.Sharp.IconChar.None
         remButton1.IconColor = Color.Black
         remButton1.IconFont = FontAwesome.Sharp.IconFont.Auto
-        remButton1.Location = New Point(740, 427)
+        remButton1.Location = New Point(759, 498)
         remButton1.Margin = New Padding(4, 5, 4, 5)
         remButton1.Name = "remButton1"
         remButton1.Size = New Size(107, 38)
@@ -356,10 +356,10 @@ Partial Class UserList
         regButton1.IconChar = FontAwesome.Sharp.IconChar.None
         regButton1.IconColor = Color.Black
         regButton1.IconFont = FontAwesome.Sharp.IconFont.Auto
-        regButton1.Location = New Point(624, 427)
+        regButton1.Location = New Point(632, 498)
         regButton1.Margin = New Padding(4, 5, 4, 5)
         regButton1.Name = "regButton1"
-        regButton1.Size = New Size(107, 38)
+        regButton1.Size = New Size(119, 38)
         regButton1.TabIndex = 25
         regButton1.Text = "REGISTER"
         regButton1.UseVisualStyleBackColor = False

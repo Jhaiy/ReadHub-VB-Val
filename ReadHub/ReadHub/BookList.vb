@@ -136,6 +136,7 @@ Public Class BookList
                 Dim yearPublished As Integer = Convert.ToInt32(selectedRow.Cells("Year_Published").Value)
 
                 ArchiveSelectedBook(bookID, title, author, categoryID, description, yearPublished)
+
             End If
         Else
             MessageBox.Show("Please select a row to discard.", "No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning)
