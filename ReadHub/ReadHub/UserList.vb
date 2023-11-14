@@ -1,6 +1,8 @@
 ﻿Imports System.Windows.Documents
 Imports MySql.Data.MySqlClient
 Public Class UserList
+    Dim sqlQuery As String
+    Dim Command As MySqlCommand
     Private Sub UserList_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         facTable()
         studentTable()
@@ -67,4 +69,15 @@ Public Class UserList
         con.Close()
     End Sub
 
+    Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
+        con.Open()
+        Dim Time = Date.Now.ToString("hh:mm:ss")
+        Dim currDate = Date.Now.ToString("dd MMM yyyy")
+        sqlQuery = "INSERT INTO admin_out(Email, Logout_Time, Logout_Date) values ('" & Login.TextBox1.Text & "'" & "," & "'" & Time & "'" & "," & "'" & currDate & "'" & ")"
+        Command = New MySqlCommand(sqlQuery, con)
+        Command.ExecuteNonQuery()
+        con.Close()
+        Me.Hide()
+        Login.Show()
+    End Sub
 End Class
