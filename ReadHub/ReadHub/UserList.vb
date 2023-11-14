@@ -6,8 +6,9 @@ Public Class UserList
     Private Sub UserList_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         facTable()
         studentTable()
+        ComboBox1.Height = 40
 
-
+        ComboBox1.ItemHeight = 30
 
         Me.CenterToScreen()
 

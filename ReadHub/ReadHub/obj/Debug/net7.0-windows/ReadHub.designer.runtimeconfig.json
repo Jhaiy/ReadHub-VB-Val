@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\TENSE\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\TENSE\\.nuget\\packages"
+      "C:\\Users\\Rhaine Hdart\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Rhaine Hdart\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
