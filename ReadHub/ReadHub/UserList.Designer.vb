@@ -299,7 +299,7 @@ Partial Class UserList
         ComboBox1.FormattingEnabled = True
         ComboBox1.ItemHeight = 22
         ComboBox1.Items.AddRange(New Object() {"Active", "Inactive", "Suspended", "Graduated", "Transferred"})
-        ComboBox1.Location = New Point(845, 433)
+        ComboBox1.Location = New Point(845, 453)
         ComboBox1.Name = "ComboBox1"
         ComboBox1.Size = New Size(251, 30)
         ComboBox1.TabIndex = 32
@@ -316,7 +316,7 @@ Partial Class UserList
         modButton1.IconChar = FontAwesome.Sharp.IconChar.None
         modButton1.IconColor = Color.Black
         modButton1.IconFont = FontAwesome.Sharp.IconFont.Auto
-        modButton1.Location = New Point(989, 387)
+        modButton1.Location = New Point(989, 407)
         modButton1.Margin = New Padding(4, 5, 4, 5)
         modButton1.Name = "modButton1"
         modButton1.Size = New Size(107, 38)
@@ -334,7 +334,7 @@ Partial Class UserList
         regButton1.IconChar = FontAwesome.Sharp.IconChar.None
         regButton1.IconColor = Color.Black
         regButton1.IconFont = FontAwesome.Sharp.IconFont.Auto
-        regButton1.Location = New Point(845, 387)
+        regButton1.Location = New Point(845, 407)
         regButton1.Margin = New Padding(4, 5, 4, 5)
         regButton1.Name = "regButton1"
         regButton1.Size = New Size(136, 38)
@@ -363,7 +363,7 @@ Partial Class UserList
         Label3.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         Label3.AutoSize = True
         Label3.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label3.Location = New Point(67, 503)
+        Label3.Location = New Point(67, 523)
         Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
         Label3.Size = New Size(111, 25)
@@ -376,7 +376,7 @@ Partial Class UserList
         Label2.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label2.Location = New Point(67, 106)
+        Label2.Location = New Point(67, 126)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
         Label2.Size = New Size(129, 25)
@@ -389,7 +389,7 @@ Partial Class UserList
         facultyTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         facultyTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         facultyTable.GridColor = Color.White
-        facultyTable.Location = New Point(67, 541)
+        facultyTable.Location = New Point(67, 561)
         facultyTable.Margin = New Padding(4, 5, 4, 5)
         facultyTable.Name = "facultyTable"
         facultyTable.RowHeadersWidth = 62
@@ -402,7 +402,7 @@ Partial Class UserList
         studTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         studTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         studTable.GridColor = Color.White
-        studTable.Location = New Point(67, 149)
+        studTable.Location = New Point(67, 169)
         studTable.Margin = New Padding(4, 5, 4, 5)
         studTable.Name = "studTable"
         studTable.RowHeadersWidth = 62
@@ -425,154 +425,154 @@ Partial Class UserList
         ' 
         ' TextBox1
         ' 
-        TextBox1.Location = New Point(846, 263)
+        TextBox1.Location = New Point(846, 283)
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(122, 31)
         TextBox1.TabIndex = 34
         ' 
         ' TextBox2
         ' 
-        TextBox2.Location = New Point(974, 263)
+        TextBox2.Location = New Point(974, 283)
         TextBox2.Name = "TextBox2"
         TextBox2.Size = New Size(122, 31)
         TextBox2.TabIndex = 35
         ' 
         ' TextBox3
         ' 
-        TextBox3.Location = New Point(846, 226)
+        TextBox3.Location = New Point(846, 246)
         TextBox3.Name = "TextBox3"
         TextBox3.Size = New Size(122, 31)
         TextBox3.TabIndex = 36
         ' 
         ' TextBox4
         ' 
-        TextBox4.Location = New Point(974, 226)
+        TextBox4.Location = New Point(974, 246)
         TextBox4.Name = "TextBox4"
         TextBox4.Size = New Size(122, 31)
         TextBox4.TabIndex = 37
         ' 
         ' TextBox5
         ' 
-        TextBox5.Location = New Point(846, 186)
+        TextBox5.Location = New Point(846, 206)
         TextBox5.Name = "TextBox5"
         TextBox5.Size = New Size(122, 31)
         TextBox5.TabIndex = 38
         ' 
         ' TextBox6
         ' 
-        TextBox6.Location = New Point(974, 186)
+        TextBox6.Location = New Point(974, 206)
         TextBox6.Name = "TextBox6"
         TextBox6.Size = New Size(122, 31)
         TextBox6.TabIndex = 39
         ' 
         ' TextBox7
         ' 
-        TextBox7.Location = New Point(846, 149)
+        TextBox7.Location = New Point(846, 169)
         TextBox7.Name = "TextBox7"
         TextBox7.Size = New Size(122, 31)
         TextBox7.TabIndex = 40
         ' 
         ' TextBox8
         ' 
-        TextBox8.Location = New Point(974, 149)
+        TextBox8.Location = New Point(974, 169)
         TextBox8.Name = "TextBox8"
         TextBox8.Size = New Size(122, 31)
         TextBox8.TabIndex = 41
         ' 
         ' TextBox9
         ' 
-        TextBox9.Location = New Point(846, 300)
+        TextBox9.Location = New Point(846, 320)
         TextBox9.Name = "TextBox9"
         TextBox9.Size = New Size(122, 31)
         TextBox9.TabIndex = 42
         ' 
         ' TextBox10
         ' 
-        TextBox10.Location = New Point(974, 300)
+        TextBox10.Location = New Point(974, 320)
         TextBox10.Name = "TextBox10"
         TextBox10.Size = New Size(122, 31)
         TextBox10.TabIndex = 43
         ' 
         ' TextBox11
         ' 
-        TextBox11.Location = New Point(846, 337)
+        TextBox11.Location = New Point(846, 357)
         TextBox11.Name = "TextBox11"
         TextBox11.Size = New Size(122, 31)
         TextBox11.TabIndex = 44
         ' 
         ' TextBox12
         ' 
-        TextBox12.Location = New Point(846, 729)
+        TextBox12.Location = New Point(846, 749)
         TextBox12.Name = "TextBox12"
         TextBox12.Size = New Size(122, 31)
         TextBox12.TabIndex = 58
         ' 
         ' TextBox13
         ' 
-        TextBox13.Location = New Point(974, 692)
+        TextBox13.Location = New Point(974, 712)
         TextBox13.Name = "TextBox13"
         TextBox13.Size = New Size(122, 31)
         TextBox13.TabIndex = 57
         ' 
         ' TextBox14
         ' 
-        TextBox14.Location = New Point(846, 692)
+        TextBox14.Location = New Point(846, 712)
         TextBox14.Name = "TextBox14"
         TextBox14.Size = New Size(122, 31)
         TextBox14.TabIndex = 56
         ' 
         ' TextBox15
         ' 
-        TextBox15.Location = New Point(974, 541)
+        TextBox15.Location = New Point(974, 561)
         TextBox15.Name = "TextBox15"
         TextBox15.Size = New Size(122, 31)
         TextBox15.TabIndex = 55
         ' 
         ' TextBox16
         ' 
-        TextBox16.Location = New Point(846, 541)
+        TextBox16.Location = New Point(846, 561)
         TextBox16.Name = "TextBox16"
         TextBox16.Size = New Size(122, 31)
         TextBox16.TabIndex = 54
         ' 
         ' TextBox17
         ' 
-        TextBox17.Location = New Point(974, 578)
+        TextBox17.Location = New Point(974, 598)
         TextBox17.Name = "TextBox17"
         TextBox17.Size = New Size(122, 31)
         TextBox17.TabIndex = 53
         ' 
         ' TextBox18
         ' 
-        TextBox18.Location = New Point(846, 578)
+        TextBox18.Location = New Point(846, 598)
         TextBox18.Name = "TextBox18"
         TextBox18.Size = New Size(122, 31)
         TextBox18.TabIndex = 52
         ' 
         ' TextBox19
         ' 
-        TextBox19.Location = New Point(974, 618)
+        TextBox19.Location = New Point(974, 638)
         TextBox19.Name = "TextBox19"
         TextBox19.Size = New Size(122, 31)
         TextBox19.TabIndex = 51
         ' 
         ' TextBox20
         ' 
-        TextBox20.Location = New Point(846, 618)
+        TextBox20.Location = New Point(846, 638)
         TextBox20.Name = "TextBox20"
         TextBox20.Size = New Size(122, 31)
         TextBox20.TabIndex = 50
         ' 
         ' TextBox21
         ' 
-        TextBox21.Location = New Point(974, 655)
+        TextBox21.Location = New Point(974, 675)
         TextBox21.Name = "TextBox21"
         TextBox21.Size = New Size(122, 31)
         TextBox21.TabIndex = 49
         ' 
         ' TextBox22
         ' 
-        TextBox22.Location = New Point(846, 655)
+        TextBox22.Location = New Point(846, 675)
         TextBox22.Name = "TextBox22"
         TextBox22.Size = New Size(122, 31)
         TextBox22.TabIndex = 48
@@ -584,7 +584,7 @@ Partial Class UserList
         ComboBox2.FormattingEnabled = True
         ComboBox2.ItemHeight = 22
         ComboBox2.Items.AddRange(New Object() {"Active", "Inactive", "Suspended", "Graduated", "Transferred"})
-        ComboBox2.Location = New Point(845, 825)
+        ComboBox2.Location = New Point(845, 845)
         ComboBox2.Name = "ComboBox2"
         ComboBox2.Size = New Size(251, 30)
         ComboBox2.TabIndex = 47
@@ -601,7 +601,7 @@ Partial Class UserList
         IconButton2.IconChar = FontAwesome.Sharp.IconChar.None
         IconButton2.IconColor = Color.Black
         IconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto
-        IconButton2.Location = New Point(989, 779)
+        IconButton2.Location = New Point(989, 799)
         IconButton2.Margin = New Padding(4, 5, 4, 5)
         IconButton2.Name = "IconButton2"
         IconButton2.Size = New Size(107, 38)
@@ -619,7 +619,7 @@ Partial Class UserList
         IconButton3.IconChar = FontAwesome.Sharp.IconChar.None
         IconButton3.IconColor = Color.Black
         IconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto
-        IconButton3.Location = New Point(845, 779)
+        IconButton3.Location = New Point(845, 799)
         IconButton3.Margin = New Padding(4, 5, 4, 5)
         IconButton3.Name = "IconButton3"
         IconButton3.Size = New Size(136, 38)
