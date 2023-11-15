@@ -258,4 +258,42 @@ Public Class UserList
             End If
         Next
     End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        If studTable.SelectedRows.Count > 0 Then
+            Dim selectedRow As DataGridViewRow = studTable.SelectedRows(0)
+            Dim selectedStatus As String = ""
+
+            Select Case ComboBox1.SelectedIndex
+                Case 0
+                    selectedStatus = "S_1"
+                Case 1
+                    selectedStatus = "S_2"
+                Case 2
+                    selectedStatus = "S_3"
+                Case 3
+                    selectedStatus = "S_4"
+                Case 4
+                    selectedStatus = "S_5"
+            End Select
+
+            selectedRow.Cells("Status_ID").Value = selectedStatus
+
+            UpdateData(selectedRow.Cells("User_ID").Value.ToString(),
+                       selectedRow.Cells("Fullname").Value.ToString(),
+                       selectedRow.Cells("Email").Value.ToString(),
+                       selectedRow.Cells("BorrowerType_ID").Value.ToString(),
+                       selectedRow.Cells("Address").Value.ToString(),
+                       selectedRow.Cells("Contact Number").Value.ToString(),
+                       selectedRow.Cells("Program_ID").Value.ToString(),
+                       selectedRow.Cells("Campus_ID").Value.ToString(),
+                       selectedRow.Cells("Account_Created").Value.ToString(),
+                       selectedStatus,
+                       selectedRow.Cells("password").Value.ToString())
+
+        Else
+            MessageBox.Show("Please select a row in the DataGridView.", "No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
+    End Sub
+
 End Class

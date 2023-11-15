@@ -185,7 +185,7 @@ Partial Class Login
         Label2.Location = New Point(360, 447)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(169, 75)
+        Label2.Size = New Size(175, 75)
         Label2.TabIndex = 2
         Label2.Text = "READHUB"
         Label2.TextAlign = ContentAlignment.MiddleCenter

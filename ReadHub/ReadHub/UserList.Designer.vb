@@ -34,6 +34,8 @@ Partial Class UserList
         bookButton = New FontAwesome.Sharp.IconButton()
         dashButton = New FontAwesome.Sharp.IconButton()
         Panel2 = New Panel()
+        IconButton6 = New FontAwesome.Sharp.IconButton()
+        IconButton7 = New FontAwesome.Sharp.IconButton()
         IconButton5 = New FontAwesome.Sharp.IconButton()
         IconButton4 = New FontAwesome.Sharp.IconButton()
         TextBox12 = New TextBox()
@@ -69,6 +71,7 @@ Partial Class UserList
         facultyTable = New DataGridView()
         studTable = New DataGridView()
         Label4 = New Label()
+        TextBox1 = New TextBox()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         userPanel.SuspendLayout()
@@ -252,6 +255,9 @@ Partial Class UserList
         ' 
         ' Panel2
         ' 
+        Panel2.Controls.Add(TextBox1)
+        Panel2.Controls.Add(IconButton6)
+        Panel2.Controls.Add(IconButton7)
         Panel2.Controls.Add(IconButton5)
         Panel2.Controls.Add(IconButton4)
         Panel2.Controls.Add(TextBox12)
@@ -294,6 +300,42 @@ Partial Class UserList
         Panel2.Size = New Size(1156, 1050)
         Panel2.TabIndex = 14
         ' 
+        ' IconButton6
+        ' 
+        IconButton6.BackColor = Color.Tomato
+        IconButton6.Cursor = Cursors.Hand
+        IconButton6.FlatAppearance.BorderSize = 0
+        IconButton6.FlatStyle = FlatStyle.Flat
+        IconButton6.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        IconButton6.IconChar = FontAwesome.Sharp.IconChar.None
+        IconButton6.IconColor = Color.Black
+        IconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto
+        IconButton6.Location = New Point(677, 537)
+        IconButton6.Margin = New Padding(4, 5, 4, 5)
+        IconButton6.Name = "IconButton6"
+        IconButton6.Size = New Size(160, 39)
+        IconButton6.TabIndex = 62
+        IconButton6.Text = "SELECT ROW"
+        IconButton6.UseVisualStyleBackColor = False
+        ' 
+        ' IconButton7
+        ' 
+        IconButton7.BackColor = Color.Tomato
+        IconButton7.Cursor = Cursors.Hand
+        IconButton7.FlatAppearance.BorderSize = 0
+        IconButton7.FlatStyle = FlatStyle.Flat
+        IconButton7.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        IconButton7.IconChar = FontAwesome.Sharp.IconChar.None
+        IconButton7.IconColor = Color.Black
+        IconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto
+        IconButton7.Location = New Point(973, 537)
+        IconButton7.Margin = New Padding(4, 5, 4, 5)
+        IconButton7.Name = "IconButton7"
+        IconButton7.Size = New Size(120, 38)
+        IconButton7.TabIndex = 61
+        IconButton7.Text = "REFRESH"
+        IconButton7.UseVisualStyleBackColor = False
+        ' 
         ' IconButton5
         ' 
         IconButton5.BackColor = Color.Tomato
@@ -304,7 +346,7 @@ Partial Class UserList
         IconButton5.IconChar = FontAwesome.Sharp.IconChar.None
         IconButton5.IconColor = Color.Black
         IconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto
-        IconButton5.Location = New Point(678, 121)
+        IconButton5.Location = New Point(677, 145)
         IconButton5.Margin = New Padding(4, 5, 4, 5)
         IconButton5.Name = "IconButton5"
         IconButton5.Size = New Size(160, 38)
@@ -322,7 +364,7 @@ Partial Class UserList
         IconButton4.IconChar = FontAwesome.Sharp.IconChar.None
         IconButton4.IconColor = Color.Black
         IconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto
-        IconButton4.Location = New Point(974, 120)
+        IconButton4.Location = New Point(973, 144)
         IconButton4.Margin = New Padding(4, 5, 4, 5)
         IconButton4.Name = "IconButton4"
         IconButton4.Size = New Size(120, 38)
@@ -332,7 +374,7 @@ Partial Class UserList
         ' 
         ' TextBox12
         ' 
-        TextBox12.Location = New Point(846, 713)
+        TextBox12.Location = New Point(845, 737)
         TextBox12.Name = "TextBox12"
         TextBox12.Size = New Size(122, 31)
         TextBox12.TabIndex = 58
@@ -340,7 +382,7 @@ Partial Class UserList
         ' 
         ' TextBox13
         ' 
-        TextBox13.Location = New Point(974, 713)
+        TextBox13.Location = New Point(973, 737)
         TextBox13.Name = "TextBox13"
         TextBox13.Size = New Size(122, 31)
         TextBox13.TabIndex = 57
@@ -348,7 +390,7 @@ Partial Class UserList
         ' 
         ' TextBox14
         ' 
-        TextBox14.Location = New Point(974, 676)
+        TextBox14.Location = New Point(973, 700)
         TextBox14.Name = "TextBox14"
         TextBox14.Size = New Size(122, 31)
         TextBox14.TabIndex = 56
@@ -356,7 +398,7 @@ Partial Class UserList
         ' 
         ' TextBox15
         ' 
-        TextBox15.Location = New Point(974, 562)
+        TextBox15.Location = New Point(973, 586)
         TextBox15.Name = "TextBox15"
         TextBox15.Size = New Size(122, 31)
         TextBox15.TabIndex = 55
@@ -364,7 +406,7 @@ Partial Class UserList
         ' 
         ' TextBox16
         ' 
-        TextBox16.Location = New Point(846, 562)
+        TextBox16.Location = New Point(845, 586)
         TextBox16.Name = "TextBox16"
         TextBox16.Size = New Size(122, 31)
         TextBox16.TabIndex = 54
@@ -372,7 +414,7 @@ Partial Class UserList
         ' 
         ' TextBox17
         ' 
-        TextBox17.Location = New Point(974, 599)
+        TextBox17.Location = New Point(973, 623)
         TextBox17.Name = "TextBox17"
         TextBox17.Size = New Size(122, 31)
         TextBox17.TabIndex = 53
@@ -380,7 +422,7 @@ Partial Class UserList
         ' 
         ' TextBox18
         ' 
-        TextBox18.Location = New Point(846, 599)
+        TextBox18.Location = New Point(845, 623)
         TextBox18.Name = "TextBox18"
         TextBox18.Size = New Size(122, 31)
         TextBox18.TabIndex = 52
@@ -388,7 +430,7 @@ Partial Class UserList
         ' 
         ' TextBox19
         ' 
-        TextBox19.Location = New Point(974, 639)
+        TextBox19.Location = New Point(973, 663)
         TextBox19.Name = "TextBox19"
         TextBox19.Size = New Size(122, 31)
         TextBox19.TabIndex = 51
@@ -396,7 +438,7 @@ Partial Class UserList
         ' 
         ' TextBox20
         ' 
-        TextBox20.Location = New Point(846, 639)
+        TextBox20.Location = New Point(845, 663)
         TextBox20.Name = "TextBox20"
         TextBox20.Size = New Size(122, 31)
         TextBox20.TabIndex = 50
@@ -404,7 +446,7 @@ Partial Class UserList
         ' 
         ' TextBox22
         ' 
-        TextBox22.Location = New Point(846, 676)
+        TextBox22.Location = New Point(845, 700)
         TextBox22.Name = "TextBox22"
         TextBox22.Size = New Size(122, 31)
         TextBox22.TabIndex = 48
@@ -417,9 +459,9 @@ Partial Class UserList
         ComboBox2.FormattingEnabled = True
         ComboBox2.ItemHeight = 22
         ComboBox2.Items.AddRange(New Object() {"Active", "Inactive", "Suspended", "Graduated", "Transferred"})
-        ComboBox2.Location = New Point(845, 845)
+        ComboBox2.Location = New Point(416, 537)
         ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(251, 30)
+        ComboBox2.Size = New Size(123, 30)
         ComboBox2.TabIndex = 47
         ComboBox2.Tag = ""
         ComboBox2.Text = "STATUS"
@@ -434,10 +476,10 @@ Partial Class UserList
         IconButton2.IconChar = FontAwesome.Sharp.IconChar.None
         IconButton2.IconColor = Color.Black
         IconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto
-        IconButton2.Location = New Point(989, 799)
+        IconButton2.Location = New Point(845, 537)
         IconButton2.Margin = New Padding(4, 5, 4, 5)
         IconButton2.Name = "IconButton2"
-        IconButton2.Size = New Size(107, 38)
+        IconButton2.Size = New Size(122, 38)
         IconButton2.TabIndex = 46
         IconButton2.Text = "MODIFY"
         IconButton2.UseVisualStyleBackColor = False
@@ -452,17 +494,17 @@ Partial Class UserList
         IconButton3.IconChar = FontAwesome.Sharp.IconChar.None
         IconButton3.IconColor = Color.Black
         IconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto
-        IconButton3.Location = New Point(845, 799)
+        IconButton3.Location = New Point(546, 537)
         IconButton3.Margin = New Padding(4, 5, 4, 5)
         IconButton3.Name = "IconButton3"
-        IconButton3.Size = New Size(136, 38)
+        IconButton3.Size = New Size(123, 38)
         IconButton3.TabIndex = 45
         IconButton3.Text = "REGISTER"
         IconButton3.UseVisualStyleBackColor = False
         ' 
         ' P1
         ' 
-        P1.Location = New Point(846, 357)
+        P1.Location = New Point(845, 381)
         P1.Name = "P1"
         P1.Size = New Size(122, 31)
         P1.TabIndex = 44
@@ -470,7 +512,7 @@ Partial Class UserList
         ' 
         ' S1
         ' 
-        S1.Location = New Point(974, 320)
+        S1.Location = New Point(973, 344)
         S1.Name = "S1"
         S1.Size = New Size(122, 31)
         S1.TabIndex = 43
@@ -478,7 +520,7 @@ Partial Class UserList
         ' 
         ' AC1
         ' 
-        AC1.Location = New Point(846, 320)
+        AC1.Location = New Point(845, 344)
         AC1.Name = "AC1"
         AC1.Size = New Size(122, 31)
         AC1.TabIndex = 42
@@ -486,7 +528,7 @@ Partial Class UserList
         ' 
         ' FN1
         ' 
-        FN1.Location = New Point(974, 169)
+        FN1.Location = New Point(973, 193)
         FN1.Name = "FN1"
         FN1.Size = New Size(122, 31)
         FN1.TabIndex = 41
@@ -494,7 +536,7 @@ Partial Class UserList
         ' 
         ' UID1
         ' 
-        UID1.Location = New Point(846, 169)
+        UID1.Location = New Point(845, 193)
         UID1.Name = "UID1"
         UID1.Size = New Size(122, 31)
         UID1.TabIndex = 40
@@ -502,7 +544,7 @@ Partial Class UserList
         ' 
         ' BT1
         ' 
-        BT1.Location = New Point(974, 206)
+        BT1.Location = New Point(973, 230)
         BT1.Name = "BT1"
         BT1.Size = New Size(122, 31)
         BT1.TabIndex = 39
@@ -510,7 +552,7 @@ Partial Class UserList
         ' 
         ' E1
         ' 
-        E1.Location = New Point(846, 206)
+        E1.Location = New Point(845, 230)
         E1.Name = "E1"
         E1.Size = New Size(122, 31)
         E1.TabIndex = 38
@@ -518,7 +560,7 @@ Partial Class UserList
         ' 
         ' CN1
         ' 
-        CN1.Location = New Point(974, 246)
+        CN1.Location = New Point(973, 270)
         CN1.Name = "CN1"
         CN1.Size = New Size(122, 31)
         CN1.TabIndex = 37
@@ -526,7 +568,7 @@ Partial Class UserList
         ' 
         ' A1
         ' 
-        A1.Location = New Point(846, 246)
+        A1.Location = New Point(845, 270)
         A1.Name = "A1"
         A1.Size = New Size(122, 31)
         A1.TabIndex = 36
@@ -534,7 +576,7 @@ Partial Class UserList
         ' 
         ' C1
         ' 
-        C1.Location = New Point(974, 283)
+        C1.Location = New Point(973, 307)
         C1.Name = "C1"
         C1.Size = New Size(122, 31)
         C1.TabIndex = 35
@@ -542,7 +584,7 @@ Partial Class UserList
         ' 
         ' PID1
         ' 
-        PID1.Location = New Point(846, 283)
+        PID1.Location = New Point(845, 307)
         PID1.Name = "PID1"
         PID1.Size = New Size(122, 31)
         PID1.TabIndex = 34
@@ -555,7 +597,7 @@ Partial Class UserList
         ComboBox1.FormattingEnabled = True
         ComboBox1.ItemHeight = 22
         ComboBox1.Items.AddRange(New Object() {"Active", "Inactive", "Suspended", "Graduated", "Transferred"})
-        ComboBox1.Location = New Point(417, 121)
+        ComboBox1.Location = New Point(416, 145)
         ComboBox1.Name = "ComboBox1"
         ComboBox1.Size = New Size(123, 30)
         ComboBox1.TabIndex = 32
@@ -572,7 +614,7 @@ Partial Class UserList
         modButton1.IconChar = FontAwesome.Sharp.IconChar.None
         modButton1.IconColor = Color.Black
         modButton1.IconFont = FontAwesome.Sharp.IconFont.Auto
-        modButton1.Location = New Point(846, 120)
+        modButton1.Location = New Point(845, 144)
         modButton1.Margin = New Padding(4, 5, 4, 5)
         modButton1.Name = "modButton1"
         modButton1.Size = New Size(122, 38)
@@ -590,7 +632,7 @@ Partial Class UserList
         regButton1.IconChar = FontAwesome.Sharp.IconChar.None
         regButton1.IconColor = Color.Black
         regButton1.IconFont = FontAwesome.Sharp.IconFont.Auto
-        regButton1.Location = New Point(547, 120)
+        regButton1.Location = New Point(546, 144)
         regButton1.Margin = New Padding(4, 5, 4, 5)
         regButton1.Name = "regButton1"
         regButton1.Size = New Size(123, 38)
@@ -619,7 +661,7 @@ Partial Class UserList
         Label3.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         Label3.AutoSize = True
         Label3.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label3.Location = New Point(67, 523)
+        Label3.Location = New Point(66, 547)
         Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
         Label3.Size = New Size(111, 25)
@@ -632,7 +674,7 @@ Partial Class UserList
         Label2.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label2.Location = New Point(67, 126)
+        Label2.Location = New Point(66, 150)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
         Label2.Size = New Size(129, 25)
@@ -645,7 +687,7 @@ Partial Class UserList
         facultyTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         facultyTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         facultyTable.GridColor = Color.White
-        facultyTable.Location = New Point(67, 561)
+        facultyTable.Location = New Point(66, 585)
         facultyTable.Margin = New Padding(4, 5, 4, 5)
         facultyTable.Name = "facultyTable"
         facultyTable.RowHeadersWidth = 62
@@ -658,7 +700,7 @@ Partial Class UserList
         studTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         studTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         studTable.GridColor = Color.White
-        studTable.Location = New Point(67, 169)
+        studTable.Location = New Point(66, 193)
         studTable.Margin = New Padding(4, 5, 4, 5)
         studTable.Name = "studTable"
         studTable.RowHeadersWidth = 62
@@ -670,14 +712,22 @@ Partial Class UserList
         ' 
         Label4.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         Label4.AutoSize = True
-        Label4.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label4.Location = New Point(530, 32)
+        Label4.Font = New Font("Bebas Neue", 20F, FontStyle.Bold, GraphicsUnit.Point)
+        Label4.Location = New Point(66, 20)
         Label4.Margin = New Padding(4, 0, 4, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(85, 25)
+        Label4.Size = New Size(102, 48)
         Label4.TabIndex = 11
         Label4.Text = "USERS"
         Label4.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Location = New Point(677, 68)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(290, 31)
+        TextBox1.TabIndex = 64
+        TextBox1.Text = "User_ID"
         ' 
         ' UserList
         ' 
@@ -749,4 +799,6 @@ Partial Class UserList
     Friend WithEvents UID1 As TextBox
     Friend WithEvents IconButton5 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton6 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButton7 As FontAwesome.Sharp.IconButton
+    Friend WithEvents TextBox1 As TextBox
 End Class

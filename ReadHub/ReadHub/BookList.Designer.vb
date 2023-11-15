@@ -577,11 +577,11 @@ Partial Class BookList
         ' 
         Label4.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         Label4.AutoSize = True
-        Label4.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label4.Location = New Point(530, 32)
+        Label4.Font = New Font("Bebas Neue", 20F, FontStyle.Bold, GraphicsUnit.Point)
+        Label4.Location = New Point(62, 20)
         Label4.Margin = New Padding(4, 0, 4, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(90, 25)
+        Label4.Size = New Size(105, 48)
         Label4.TabIndex = 10
         Label4.Text = "BOOKS"
         Label4.TextAlign = ContentAlignment.MiddleCenter
