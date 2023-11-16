@@ -42,14 +42,12 @@ Partial Class Dashboard
         Panel2 = New Panel()
         barButton = New FontAwesome.Sharp.IconButton()
         Label7 = New Label()
+        Label6 = New Label()
         ArchiveBooksTable = New DataGridView()
+        favoritesTableLeft = New DataGridView()
         Label5 = New Label()
         booksTable = New DataGridView()
         Label4 = New Label()
-        Panel4 = New Panel()
-        Label8 = New Label()
-        Label6 = New Label()
-        PB1 = New ProgressBar()
         dashPanel.SuspendLayout()
         Panel3.SuspendLayout()
         Panel1.SuspendLayout()
@@ -60,8 +58,8 @@ Partial Class Dashboard
         CType(borrowedFacTab, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         CType(ArchiveBooksTable, ComponentModel.ISupportInitialize).BeginInit()
+        CType(favoritesTableLeft, ComponentModel.ISupportInitialize).BeginInit()
         CType(booksTable, ComponentModel.ISupportInitialize).BeginInit()
-        Panel4.SuspendLayout()
         SuspendLayout()
         ' 
         ' dashPanel
@@ -309,7 +307,9 @@ Partial Class Dashboard
         ' 
         Panel2.Controls.Add(barButton)
         Panel2.Controls.Add(Label7)
+        Panel2.Controls.Add(Label6)
         Panel2.Controls.Add(ArchiveBooksTable)
+        Panel2.Controls.Add(favoritesTableLeft)
         Panel2.Controls.Add(Label5)
         Panel2.Controls.Add(booksTable)
         Panel2.Controls.Add(Label4)
@@ -319,7 +319,6 @@ Partial Class Dashboard
         Panel2.Controls.Add(studentTable)
         Panel2.Controls.Add(Label3)
         Panel2.Controls.Add(borrowedStudTab)
-        Panel2.Controls.Add(Panel4)
         Panel2.Dock = DockStyle.Fill
         Panel2.Location = New Point(340, 0)
         Panel2.Margin = New Padding(4, 5, 4, 5)
@@ -347,30 +346,53 @@ Partial Class Dashboard
         ' 
         Label7.AutoSize = True
         Label7.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label7.Location = New Point(610, 485)
+        Label7.Location = New Point(623, 808)
         Label7.Margin = New Padding(4, 0, 4, 0)
         Label7.Name = "Label7"
         Label7.Size = New Size(191, 25)
         Label7.TabIndex = 21
         Label7.Text = "ARCHIVE BOOKS"
         ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label6.Location = New Point(43, 808)
+        Label6.Margin = New Padding(4, 0, 4, 0)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(135, 25)
+        Label6.TabIndex = 20
+        Label6.Text = "FAVORITES"
+        ' 
         ' ArchiveBooksTable
         ' 
         ArchiveBooksTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         ArchiveBooksTable.GridColor = Color.White
-        ArchiveBooksTable.Location = New Point(610, 525)
+        ArchiveBooksTable.Location = New Point(623, 850)
         ArchiveBooksTable.Margin = New Padding(4, 5, 4, 5)
         ArchiveBooksTable.Name = "ArchiveBooksTable"
         ArchiveBooksTable.RowHeadersWidth = 62
         ArchiveBooksTable.RowTemplate.Height = 25
-        ArchiveBooksTable.Size = New Size(493, 202)
+        ArchiveBooksTable.Size = New Size(493, 143)
         ArchiveBooksTable.TabIndex = 17
+        ' 
+        ' favoritesTableLeft
+        ' 
+        favoritesTableLeft.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        favoritesTableLeft.GridColor = Color.White
+        favoritesTableLeft.Location = New Point(43, 850)
+        favoritesTableLeft.Margin = New Padding(4, 5, 4, 5)
+        favoritesTableLeft.Name = "favoritesTableLeft"
+        favoritesTableLeft.RowHeadersWidth = 62
+        favoritesTableLeft.RowTemplate.Height = 25
+        favoritesTableLeft.Size = New Size(493, 143)
+        favoritesTableLeft.TabIndex = 16
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label5.Location = New Point(43, 485)
+        Label5.Location = New Point(43, 508)
         Label5.Margin = New Padding(4, 0, 4, 0)
         Label5.Name = "Label5"
         Label5.Size = New Size(90, 25)
@@ -382,12 +404,12 @@ Partial Class Dashboard
         booksTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         booksTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         booksTable.GridColor = Color.White
-        booksTable.Location = New Point(43, 525)
+        booksTable.Location = New Point(43, 548)
         booksTable.Margin = New Padding(4, 5, 4, 5)
         booksTable.Name = "booksTable"
         booksTable.RowHeadersWidth = 62
         booksTable.RowTemplate.Height = 25
-        booksTable.Size = New Size(493, 202)
+        booksTable.Size = New Size(1073, 202)
         booksTable.TabIndex = 10
         ' 
         ' Label4
@@ -402,50 +424,6 @@ Partial Class Dashboard
         Label4.TabIndex = 9
         Label4.Text = "DASHBOARD"
         Label4.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' Panel4
-        ' 
-        Panel4.BackColor = Color.FromArgb(CByte(61), CByte(90), CByte(128))
-        Panel4.Controls.Add(Label8)
-        Panel4.Controls.Add(Label6)
-        Panel4.Controls.Add(PB1)
-        Panel4.Location = New Point(43, 762)
-        Panel4.Name = "Panel4"
-        Panel4.Size = New Size(1060, 231)
-        Panel4.TabIndex = 27
-        ' 
-        ' Label8
-        ' 
-        Label8.AutoSize = True
-        Label8.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        Label8.ForeColor = Color.White
-        Label8.Location = New Point(17, 57)
-        Label8.Margin = New Padding(4, 0, 4, 0)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(60, 25)
-        Label8.TabIndex = 25
-        Label8.Text = "count"
-        ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label6.ForeColor = Color.White
-        Label6.Location = New Point(17, 19)
-        Label6.Margin = New Padding(4, 0, 4, 0)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(191, 25)
-        Label6.TabIndex = 26
-        Label6.Text = "ARCHIVE BOOKS"
-        ' 
-        ' PB1
-        ' 
-        PB1.BackColor = Color.FromArgb(CByte(255), CByte(224), CByte(192))
-        PB1.ForeColor = Color.Tomato
-        PB1.Location = New Point(23, 85)
-        PB1.Name = "PB1"
-        PB1.Size = New Size(470, 27)
-        PB1.TabIndex = 23
         ' 
         ' Dashboard
         ' 
@@ -470,9 +448,8 @@ Partial Class Dashboard
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         CType(ArchiveBooksTable, ComponentModel.ISupportInitialize).EndInit()
+        CType(favoritesTableLeft, ComponentModel.ISupportInitialize).EndInit()
         CType(booksTable, ComponentModel.ISupportInitialize).EndInit()
-        Panel4.ResumeLayout(False)
-        Panel4.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -494,14 +471,12 @@ Partial Class Dashboard
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label4 As Label
     Friend WithEvents ArchiveBooksTable As DataGridView
+    Friend WithEvents favoritesTableLeft As DataGridView
     Friend WithEvents Label5 As Label
     Friend WithEvents booksTable As DataGridView
     Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
     Friend WithEvents barButton As FontAwesome.Sharp.IconButton
     Friend WithEvents Panel3 As Panel
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
-    Friend WithEvents PB1 As ProgressBar
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Panel4 As Panel
-    Friend WithEvents Label6 As Label
 End Class

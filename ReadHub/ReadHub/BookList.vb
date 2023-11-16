@@ -1,8 +1,11 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.CodeDom
+Imports System.Linq.Expressions
+Imports MySql.Data.MySqlClient
 
 Public Class BookList
     Dim sqlQuery As String
     Dim Command As MySqlCommand
+    Dim dataReader As MySqlDataReader
     Private Sub dashButton_Click(sender As Object, e As EventArgs) Handles dashButton.Click
         Me.Hide()
         Dashboard.Show()
@@ -24,19 +27,49 @@ Public Class BookList
     End Sub
 
     Private Sub loadDataOnTable()
+        'con.Open()
+        'Dim Command As MySqlCommand
+        'Dim sqlQuery As String
+        'sqlQuery = "SELECT * FROM readhub.book_information"
+        'Command = New MySqlCommand(sqlQuery, con)
+        'Command.ExecuteNonQuery()
+        'Dim table As New DataTable
+        'Dim Adapter As New MySqlDataAdapter(Command)
+
+        'Adapter.Fill(table)
+
+        'booksTable.DataSource = table
+        'con.Close()
         con.Open()
-        Dim Command As MySqlCommand
-        Dim sqlQuery As String
-        sqlQuery = "SELECT * FROM readhub.book_information"
-        Command = New MySqlCommand(sqlQuery, con)
-        Command.ExecuteNonQuery()
-        Dim table As New DataTable
-        Dim Adapter As New MySqlDataAdapter(Command)
+        Try
+            Dim command As New MySqlCommand("SELECT * FROM readhub.book_information", con)
+            dataReader = command.ExecuteReader
+            While dataReader.Read
+                booksTable.Rows.Add(dataReader.Item("Book_ID"), dataReader.Item("Title"), dataReader.Item("Author"), dataReader.Item("Description"), dataReader.Item("Year_Published"))
+            End While
+            dataReader.Dispose()
+        Catch ex As Exception
+            MsgBox("Debug Error")
+        Finally
+            con.Close()
+        End Try
+    End Sub
 
-        Adapter.Fill(table)
-
-        booksTable.DataSource = table
-        con.Close()
+    Private Sub searchBox_TextChanged(sender As Object, e As EventArgs) Handles searchBox.TextChanged
+        con.Open()
+        booksTable.Rows.Clear()
+        Try
+            Dim Command As New MySqlCommand("SELECT * FROM readhub.book_information WHERE Title like '%" & searchBox.Text & "%'", con)
+            dataReader = Command.ExecuteReader
+            While dataReader.Read
+                booksTable.Rows.Add(dataReader.Item("Book_ID"), dataReader.Item("Title"), dataReader.Item("Author"), dataReader.Item("Description"), dataReader.Item("Year_Published"))
+            End While
+            dataReader.Dispose()
+        Catch ex As Exception
+            MsgBox("Debug Error")
+        Finally
+            con.Close()
+        End Try
     End Sub
 
     Private Sub BookList_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -207,108 +240,108 @@ Public Class BookList
     End Sub
     Private Sub horror()
         con.Open()
-        Dim Command As MySqlCommand
-        Dim sqlQuery As String
-        sqlQuery = "SELECT * FROM readhub.book_information WHERE Category_ID = 'CAT_1'"
-        Command = New MySqlCommand(sqlQuery, con)
-        Command.ExecuteNonQuery()
-        Dim table As New DataTable
-        Dim Adapter As New MySqlDataAdapter(Command)
-
-        Adapter.Fill(table)
-
-        booksTable.DataSource = table
-        con.Close()
+        booksTable.Rows.Clear()
+        Try
+            Dim command As New MySqlCommand("SELECT * FROM readhub.book_information WHERE Category_ID = 'CAT_1'", con)
+            dataReader = command.ExecuteReader
+            While dataReader.Read
+                booksTable.Rows.Add(dataReader.Item("Book_ID"), dataReader.Item("Title"), dataReader.Item("Author"), dataReader.Item("Description"), dataReader.Item("Year_Published"))
+            End While
+        Catch ex As Exception
+            MsgBox("Debug Error")
+        Finally
+            con.Close()
+        End Try
     End Sub
     Private Sub mystery()
         con.Open()
-        Dim Command As MySqlCommand
-        Dim sqlQuery As String
-        sqlQuery = "SELECT * FROM readhub.book_information WHERE Category_ID = 'CAT_2'"
-        Command = New MySqlCommand(sqlQuery, con)
-        Command.ExecuteNonQuery()
-        Dim table As New DataTable
-        Dim Adapter As New MySqlDataAdapter(Command)
-
-        Adapter.Fill(table)
-
-        booksTable.DataSource = table
-        con.Close()
+        booksTable.Rows.Clear()
+        Try
+            Dim command As New MySqlCommand("SELECT * FROM readhub.book_information WHERE Category_ID = 'CAT_2'", con)
+            dataReader = command.ExecuteReader
+            While dataReader.Read
+                booksTable.Rows.Add(dataReader.Item("Book_ID"), dataReader.Item("Title"), dataReader.Item("Author"), dataReader.Item("Description"), dataReader.Item("Year_Published"))
+            End While
+        Catch ex As Exception
+            MsgBox("Debug Error")
+        Finally
+            con.Close()
+        End Try
     End Sub
     Private Sub romance()
         con.Open()
-        Dim Command As MySqlCommand
-        Dim sqlQuery As String
-        sqlQuery = "SELECT * FROM readhub.book_information WHERE Category_ID = 'CAT_3'"
-        Command = New MySqlCommand(sqlQuery, con)
-        Command.ExecuteNonQuery()
-        Dim table As New DataTable
-        Dim Adapter As New MySqlDataAdapter(Command)
-
-        Adapter.Fill(table)
-
-        booksTable.DataSource = table
-        con.Close()
+        booksTable.Rows.Clear()
+        Try
+            Dim command As New MySqlCommand("SELECT * FROM readhub.book_information WHERE Category_ID = 'CAT_3'", con)
+            dataReader = command.ExecuteReader
+            While dataReader.Read
+                booksTable.Rows.Add(dataReader.Item("Book_ID"), dataReader.Item("Title"), dataReader.Item("Author"), dataReader.Item("Description"), dataReader.Item("Year_Published"))
+            End While
+        Catch ex As Exception
+            MsgBox("Debug Error")
+        Finally
+            con.Close()
+        End Try
     End Sub
     Private Sub fantasy()
         con.Open()
-        Dim Command As MySqlCommand
-        Dim sqlQuery As String
-        sqlQuery = "SELECT * FROM readhub.book_information WHERE Category_ID = 'CAT_4'"
-        Command = New MySqlCommand(sqlQuery, con)
-        Command.ExecuteNonQuery()
-        Dim table As New DataTable
-        Dim Adapter As New MySqlDataAdapter(Command)
-
-        Adapter.Fill(table)
-
-        booksTable.DataSource = table
-        con.Close()
+        booksTable.Rows.Clear()
+        Try
+            Dim command As New MySqlCommand("SELECT * FROM readhub.book_information WHERE Category_ID = 'CAT_4'", con)
+            dataReader = command.ExecuteReader
+            While dataReader.Read
+                booksTable.Rows.Add(dataReader.Item("Book_ID"), dataReader.Item("Title"), dataReader.Item("Author"), dataReader.Item("Description"), dataReader.Item("Year_Published"))
+            End While
+        Catch ex As Exception
+            MsgBox("Debug Error")
+        Finally
+            con.Close()
+        End Try
     End Sub
     Private Sub history()
         con.Open()
-        Dim Command As MySqlCommand
-        Dim sqlQuery As String
-        sqlQuery = "SELECT * FROM readhub.book_information WHERE Category_ID = 'CAT_5'"
-        Command = New MySqlCommand(sqlQuery, con)
-        Command.ExecuteNonQuery()
-        Dim table As New DataTable
-        Dim Adapter As New MySqlDataAdapter(Command)
-
-        Adapter.Fill(table)
-
-        booksTable.DataSource = table
-        con.Close()
+        booksTable.Rows.Clear()
+        Try
+            Dim command As New MySqlCommand("SELECT * FROM readhub.book_information WHERE Category_ID = 'CAT_5'", con)
+            dataReader = command.ExecuteReader
+            While dataReader.Read
+                booksTable.Rows.Add(dataReader.Item("Book_ID"), dataReader.Item("Title"), dataReader.Item("Author"), dataReader.Item("Description"), dataReader.Item("Year_Published"))
+            End While
+        Catch ex As Exception
+            MsgBox("Debug Error")
+        Finally
+            con.Close()
+        End Try
     End Sub
     Private Sub academics()
         con.Open()
-        Dim Command As MySqlCommand
-        Dim sqlQuery As String
-        sqlQuery = "SELECT * FROM readhub.book_information WHERE Category_ID = 'CAT_6'"
-        Command = New MySqlCommand(sqlQuery, con)
-        Command.ExecuteNonQuery()
-        Dim table As New DataTable
-        Dim Adapter As New MySqlDataAdapter(Command)
-
-        Adapter.Fill(table)
-
-        booksTable.DataSource = table
-        con.Close()
+        booksTable.Rows.Clear()
+        Try
+            Dim command As New MySqlCommand("SELECT * FROM readhub.book_information WHERE Category_ID = 'CAT_6'", con)
+            dataReader = command.ExecuteReader
+            While dataReader.Read
+                booksTable.Rows.Add(dataReader.Item("Book_ID"), dataReader.Item("Title"), dataReader.Item("Author"), dataReader.Item("Description"), dataReader.Item("Year_Published"))
+            End While
+        Catch ex As Exception
+            MsgBox("Debug Error")
+        Finally
+            con.Close()
+        End Try
     End Sub
     Private Sub scifi()
         con.Open()
-        Dim Command As MySqlCommand
-        Dim sqlQuery As String
-        sqlQuery = "SELECT * FROM readhub.book_information WHERE Category_ID = 'CAT_7'"
-        Command = New MySqlCommand(sqlQuery, con)
-        Command.ExecuteNonQuery()
-        Dim table As New DataTable
-        Dim Adapter As New MySqlDataAdapter(Command)
-
-        Adapter.Fill(table)
-
-        booksTable.DataSource = table
-        con.Close()
+        booksTable.Rows.Clear()
+        Try
+            Dim command As New MySqlCommand("SELECT * FROM readhub.book_information WHERE Category_ID = 'CAT_7'", con)
+            dataReader = command.ExecuteReader
+            While dataReader.Read
+                booksTable.Rows.Add(dataReader.Item("Book_ID"), dataReader.Item("Title"), dataReader.Item("Author"), dataReader.Item("Description"), dataReader.Item("Year_Published"))
+            End While
+        Catch ex As Exception
+            MsgBox("Debug Error")
+        Finally
+            con.Close()
+        End Try
     End Sub
 
     Private Sub IconButton7_Click(sender As Object, e As EventArgs) Handles IconButton7.Click

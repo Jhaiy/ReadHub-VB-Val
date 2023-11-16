@@ -157,3 +157,4 @@ F:\Projects\ReadHub-VB-Val\ReadHub\ReadHub\obj\Debug\net7.0-windows\ReadHub.pdb
 F:\Projects\ReadHub-VB-Val\ReadHub\ReadHub\obj\Debug\net7.0-windows\ReadHub.genruntimeconfig.cache
 F:\Projects\ReadHub-VB-Val\ReadHub\ReadHub\obj\Debug\net7.0-windows\ref\ReadHub.dll
 C:\Users\Rhaine Hdart\Documents\GitHub\ReadHub-VB\ReadHub\ReadHub\bin\Debug\net7.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+F:\Projects\ReadHub-VB-Val\ReadHub\ReadHub\bin\Debug\net7.0-windows\Microsoft.Extensions.Logging.Abstractions.dll

@@ -1,5 +1,4 @@
 ﻿Imports System.Windows.Documents
-Imports Microsoft.SqlServer
 Imports MySql.Data.MySqlClient
 Public Class Dashboard
     Dim sqlQuery As String
@@ -10,9 +9,8 @@ Public Class Dashboard
         bksTable()
         BorStudTab()
         BorEmpTab()
-
+        FavTab()
         ArcBKTab()
-        UpdateProgressBar()
         Me.CenterToScreen()
 
         Me.BackColor = Color.FromArgb(152, 193, 217)
@@ -23,6 +21,7 @@ Public Class Dashboard
         borrowedStudTab.BackgroundColor = Color.FromArgb(61, 90, 128)
         Label4.ForeColor = Color.FromArgb(255, 255, 255)
         booksTable.BackgroundColor = Color.FromArgb(61, 90, 128)
+        favoritesTableLeft.BackgroundColor = Color.FromArgb(61, 90, 128)
         ArchiveBooksTable.BackgroundColor = Color.FromArgb(61, 90, 128)
     End Sub
 
@@ -112,6 +111,19 @@ Public Class Dashboard
         borrowedFacTab.DataSource = table
         con.Close()
     End Sub
+    Private Sub FavTab()
+        con.Open()
+        Dim Command As MySqlCommand
+        Dim sqlQuery As String
+        sqlQuery = "SELECT * FROM readhub.favorites"
+        Command = New MySqlCommand(sqlQuery, con)
+        Command.ExecuteNonQuery()
+        Dim table As New DataTable
+        Dim Adapter As New MySqlDataAdapter(Command)
+        Adapter.Fill(table)
+        favoritesTableLeft.DataSource = table
+        con.Close()
+    End Sub
     Private Sub ArcBKTab()
         con.Open()
         Dim Command As MySqlCommand
@@ -137,74 +149,4 @@ Public Class Dashboard
         Me.Hide()
         Login.Show()
     End Sub
-    Private Sub UpdateProgressBar()
-        con.Open()
-
-        ' Fetch the count and name of the most borrowed book from the database
-        sqlQuery = "SELECT Book_ID, COUNT(Book_ID) AS BorrowedCount FROM readhub.borrowed_books_student GROUP BY Book_ID ORDER BY BorrowedCount DESC LIMIT 1"
-        Command = New MySqlCommand(sqlQuery, con)
-
-        ' Execute the query and read the result
-        Dim reader As MySqlDataReader = Command.ExecuteReader()
-        If reader.Read() Then
-            ' Get the count and Book_ID from the result
-            Dim mostBorrowedCount As Integer = Convert.ToInt32(reader("BorrowedCount"))
-            Dim bookID As String = reader("Book_ID").ToString()
-
-            ' Fetch the book title from the book_information table
-            Dim bookTitle As String = GetBookTitle(bookID)
-
-            ' Fetch the total count of all books
-            Dim totalBooksCount As Integer = GetTotalBooksCount()
-
-            ' Calculate the percentage
-            Dim percentage As Integer = CInt((mostBorrowedCount / totalBooksCount) * 100)
-
-            ' Update the label with book information
-            Label8.Text = $"1. {bookTitle} - Count: {mostBorrowedCount}"
-
-            ' Update the progress bar with the percentage
-            PB1.Value = percentage
-        End If
-
-        con.Close()
-    End Sub
-
-    Private Function GetBookTitle(bookID As String) As String
-        ' Fetch the book title based on the Book_ID from the book_information table
-        Dim bookTitleQuery As String = $"SELECT Title FROM readhub.book_information WHERE Book_ID = '{bookID}'"
-        Using titleConnection As New MySqlConnection("Server = localhost;username=root;password=;database=readhub;")
-            titleConnection.Open()
-
-            Using titleCommand As New MySqlCommand(bookTitleQuery, titleConnection)
-                ' Execute the query and read the result
-                Dim titleReader As MySqlDataReader = titleCommand.ExecuteReader()
-
-                If titleReader.Read() Then
-                    Return titleReader("Title").ToString()
-                End If
-            End Using
-        End Using
-
-        Return "Unknown Title"
-    End Function
-
-    Private Function GetTotalBooksCount() As Integer
-        ' Fetch the total count of all books from the database
-        Dim totalBooksQuery As String = "SELECT COUNT(Book_ID) AS TotalCount FROM readhub.borrowed_books_student"
-        Using totalBooksConnection As New MySqlConnection("Server = localhost;username=root;password=;database=readhub;") ' Replace with your connection string
-            totalBooksConnection.Open()
-
-            Using totalBooksCommand As New MySqlCommand(totalBooksQuery, totalBooksConnection)
-                ' Execute the query and read the result
-                Dim totalBooksReader As MySqlDataReader = totalBooksCommand.ExecuteReader()
-
-                If totalBooksReader.Read() Then
-                    Return Convert.ToInt32(totalBooksReader("TotalCount"))
-                End If
-            End Using
-        End Using
-
-        Return 0
-    End Function
 End Class
