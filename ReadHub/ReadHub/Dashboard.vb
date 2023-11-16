@@ -11,13 +11,12 @@ Public Class Dashboard
         BorEmpTab()
         FavTab()
         ArcBKTab()
-<<<<<<< HEAD
+
         UpdateProgressBar()
         UpdateProgressBar2()
         UpdateProgressBar3()
         UpdateProgressBar4()
-=======
->>>>>>> 78edce19eaecd377039bc5e5ef68ec974331c84b
+
         Me.CenterToScreen()
 
         Me.BackColor = Color.FromArgb(152, 193, 217)
@@ -156,7 +155,7 @@ Public Class Dashboard
         Me.Hide()
         Login.Show()
     End Sub
-<<<<<<< HEAD
+
     Private Sub UpdateProgressBar()
         con.Open()
 
@@ -325,6 +324,5 @@ Public Class Dashboard
     End Sub
 
 
-=======
->>>>>>> 78edce19eaecd377039bc5e5ef68ec974331c84b
+
 End Class

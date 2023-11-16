@@ -3,6 +3,7 @@ Imports MySql.Data.MySqlClient
 Public Class UserList
     Dim sqlQuery As String
     Dim Command As MySqlCommand
+    Dim dataReader As MySqlDataReader
     Private Sub UserList_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         facTable()
         studentTable()
@@ -42,41 +43,32 @@ Public Class UserList
         BorrowedBooks.Show()
     End Sub
     Private Sub studentTable()
+        con.Open()
         Try
-            con.Open()
-            Dim Command As MySqlCommand
-            Dim sqlQuery As String
-            sqlQuery = "SELECT * FROM readhub.student_information"
-            Command = New MySqlCommand(sqlQuery, con)
-            Command.ExecuteNonQuery()
-            Dim table As New DataTable
-            Dim Adapter As New MySqlDataAdapter(Command)
-
-            Adapter.Fill(table)
-
-            studTable.DataSource = table
+            Dim command As New MySqlCommand("SELECT * FROM readhub.student_information", con)
+            dataReader = command.ExecuteReader
+            While dataReader.Read
+                studTable.Rows.Add(dataReader.Item("User_ID"), dataReader.Item("Fullname"), dataReader.Item("Email"), dataReader.Item("BorrowerType_ID"), dataReader.Item("Address"), dataReader.Item("Contact Number"), dataReader.Item("Program_ID"), dataReader.Item("Campus_ID"), dataReader.Item("Account_Created"), dataReader.Item("Status_ID"))
+            End While
+            dataReader.Dispose()
         Catch ex As Exception
-            MessageBox.Show("Error fetching student data: " & ex.Message)
+            MsgBox("Debug Error")
         Finally
             con.Close()
         End Try
     End Sub
 
     Private Sub facTable()
+        con.Open()
         Try
-            con.Open()
-            Dim Command As MySqlCommand
-            Dim sqlQuery As String
-            sqlQuery = "SELECT * FROM readhub.employee_information"
-            Command = New MySqlCommand(sqlQuery, con)
-            Command.ExecuteNonQuery()
-            Dim table As New DataTable
-            Dim Adapter As New MySqlDataAdapter(Command)
-
-            Adapter.Fill(table)
-            facultyTable.DataSource = table
+            Dim command As New MySqlCommand("SELECT * FROM readhub.employee_information", con)
+            dataReader = command.ExecuteReader
+            While dataReader.Read
+                facultyTable.Rows.Add(dataReader.Item("User_ID"), dataReader.Item("Fullname"), dataReader.Item("Email"), dataReader.Item("BorrowerType_ID"), dataReader.Item("Address"), dataReader.Item("Contact Number"), dataReader.Item("Department_ID"), dataReader.Item("Account_Created"), dataReader.Item("Status_IDEM"))
+            End While
+            dataReader.Dispose()
         Catch ex As Exception
-            MessageBox.Show("Error fetching faculty data: " & ex.Message)
+            MsgBox("Debug Error")
         Finally
             con.Close()
         End Try
@@ -484,5 +476,39 @@ Public Class UserList
 
     Private Sub IconButton2_Click(sender As Object, e As EventArgs) Handles IconButton2.Click
         UpdateFacInf()
+    End Sub
+
+    Private Sub searchBoxStud_TextChanged(sender As Object, e As EventArgs) Handles searchBoxStud.TextChanged
+        con.Open()
+        studTable.Rows.Clear()
+        Try
+            Dim Command As New MySqlCommand("SELECT * FROM readhub.student_information WHERE User_ID like '%" & searchBoxStud.Text & "%'", con)
+            dataReader = Command.ExecuteReader
+            While dataReader.Read
+                studTable.Rows.Add(dataReader.Item("User_ID"), dataReader.Item("Fullname"), dataReader.Item("Email"), dataReader.Item("BorrowerType_ID"), dataReader.Item("Address"), dataReader.Item("Contact Number"), dataReader.Item("Program_ID"), dataReader.Item("Campus_ID"), dataReader.Item("Account_Created"), dataReader.Item("Status_ID"))
+            End While
+            dataReader.Dispose()
+        Catch ex As Exception
+            MsgBox("Debug Error")
+        Finally
+            con.Close()
+        End Try
+    End Sub
+
+    Private Sub searchBoxFaculty_TextChanged(sender As Object, e As EventArgs) Handles searchBoxFaculty.TextChanged
+        con.Open()
+        facultyTable.Rows.Clear()
+        Try
+            Dim Command As New MySqlCommand("SELECT * FROM readhub.employee_information WHERE User_ID like '%" & searchBoxFaculty.Text & "%'", con)
+            dataReader = Command.ExecuteReader
+            While dataReader.Read
+                facultyTable.Rows.Add(dataReader.Item("User_ID"), dataReader.Item("Fullname"), dataReader.Item("Email"), dataReader.Item("BorrowerType_ID"), dataReader.Item("Address"), dataReader.Item("Contact Number"), dataReader.Item("Department_ID"), dataReader.Item("Account_Created"), dataReader.Item("Status_IDEM"))
+            End While
+            dataReader.Dispose()
+        Catch ex As Exception
+            MsgBox("Debug Error")
+        Finally
+            con.Close()
+        End Try
     End Sub
 End Class

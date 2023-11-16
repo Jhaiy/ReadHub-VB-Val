@@ -42,13 +42,13 @@ Partial Class Dashboard
         Panel2 = New Panel()
         barButton = New FontAwesome.Sharp.IconButton()
         Label7 = New Label()
-        Label6 = New Label()
+        'Label6 = New Label()
         ArchiveBooksTable = New DataGridView()
         favoritesTableLeft = New DataGridView()
         Label5 = New Label()
         booksTable = New DataGridView()
         Label4 = New Label()
-<<<<<<< HEAD
+
         Panel4 = New Panel()
         Label11 = New Label()
         PB4 = New ProgressBar()
@@ -57,10 +57,9 @@ Partial Class Dashboard
         Label9 = New Label()
         PB2 = New ProgressBar()
         Label8 = New Label()
-        Label6 = New Label()
+        'Label6 = New Label()
         PB1 = New ProgressBar()
-=======
->>>>>>> 78edce19eaecd377039bc5e5ef68ec974331c84b
+
         dashPanel.SuspendLayout()
         Panel3.SuspendLayout()
         Panel1.SuspendLayout()
@@ -320,7 +319,7 @@ Partial Class Dashboard
         ' 
         Panel2.Controls.Add(barButton)
         Panel2.Controls.Add(Label7)
-        Panel2.Controls.Add(Label6)
+        'Panel2.Controls.Add(Label6)
         Panel2.Controls.Add(ArchiveBooksTable)
         Panel2.Controls.Add(favoritesTableLeft)
         Panel2.Controls.Add(Label5)
@@ -368,14 +367,14 @@ Partial Class Dashboard
         ' 
         ' Label6
         ' 
-        Label6.AutoSize = True
-        Label6.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label6.Location = New Point(43, 808)
-        Label6.Margin = New Padding(4, 0, 4, 0)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(135, 25)
-        Label6.TabIndex = 20
-        Label6.Text = "FAVORITES"
+        'Label6.AutoSize = True
+        'Label6.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        'Label6.Location = New Point(43, 808)
+        'Label6.Margin = New Padding(4, 0, 4, 0)
+        'Label6.Name = "Label6"
+        'Label6.Size = New Size(135, 25)
+        'Label6.TabIndex = 20
+        'Label6.Text = "FAVORITES"
         ' 
         ' ArchiveBooksTable
         ' 
@@ -438,7 +437,7 @@ Partial Class Dashboard
         Label4.Text = "DASHBOARD"
         Label4.TextAlign = ContentAlignment.MiddleCenter
         ' 
-<<<<<<< HEAD
+
         ' Panel4
         ' 
         Panel4.BackColor = Color.FromArgb(CByte(61), CByte(90), CByte(128))
@@ -449,7 +448,7 @@ Partial Class Dashboard
         Panel4.Controls.Add(Label9)
         Panel4.Controls.Add(PB2)
         Panel4.Controls.Add(Label8)
-        Panel4.Controls.Add(Label6)
+        'Panel4.Controls.Add(Label6)
         Panel4.Controls.Add(PB1)
         Panel4.Location = New Point(43, 762)
         Panel4.Name = "Panel4"
@@ -533,15 +532,15 @@ Partial Class Dashboard
         ' 
         ' Label6
         ' 
-        Label6.AutoSize = True
-        Label6.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label6.ForeColor = Color.White
-        Label6.Location = New Point(17, 19)
-        Label6.Margin = New Padding(4, 0, 4, 0)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(292, 25)
-        Label6.TabIndex = 26
-        Label6.Text = "MOST BORROWED BOOKS"
+        'Label6.AutoSize = True
+        'Label6.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        'Label6.ForeColor = Color.White
+        'Label6.Location = New Point(17, 19)
+        'Label6.Margin = New Padding(4, 0, 4, 0)
+        'Label6.Name = "Label6"
+        'Label6.Size = New Size(292, 25)
+        'Label6.TabIndex = 26
+        'Label6.Text = "MOST BORROWED BOOKS"
         ' 
         ' PB1
         ' 
@@ -552,8 +551,7 @@ Partial Class Dashboard
         PB1.Size = New Size(470, 27)
         PB1.TabIndex = 23
         ' 
-=======
->>>>>>> 78edce19eaecd377039bc5e5ef68ec974331c84b
+
         ' Dashboard
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
@@ -608,17 +606,16 @@ Partial Class Dashboard
     Friend WithEvents barButton As FontAwesome.Sharp.IconButton
     Friend WithEvents Panel3 As Panel
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
-<<<<<<< HEAD
+
     Friend WithEvents PB1 As ProgressBar
     Friend WithEvents Label8 As Label
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents Label6 As Label
+    'Friend WithEvents Label6 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents PB4 As ProgressBar
     Friend WithEvents Label10 As Label
     Friend WithEvents PB3 As ProgressBar
     Friend WithEvents Label9 As Label
     Friend WithEvents PB2 As ProgressBar
-=======
->>>>>>> 78edce19eaecd377039bc5e5ef68ec974331c84b
+
 End Class
