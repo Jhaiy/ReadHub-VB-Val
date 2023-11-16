@@ -34,6 +34,8 @@ Partial Class BookList
         bookButton = New FontAwesome.Sharp.IconButton()
         dashButton = New FontAwesome.Sharp.IconButton()
         Panel2 = New Panel()
+        searchBox = New TextBox()
+        IconButton9 = New FontAwesome.Sharp.IconButton()
         IconButton7 = New FontAwesome.Sharp.IconButton()
         IconButton6 = New FontAwesome.Sharp.IconButton()
         IconButton5 = New FontAwesome.Sharp.IconButton()
@@ -53,8 +55,12 @@ Partial Class BookList
         barButton = New FontAwesome.Sharp.IconButton()
         Label2 = New Label()
         booksTable = New DataGridView()
+        Column1 = New DataGridViewTextBoxColumn()
+        Column2 = New DataGridViewTextBoxColumn()
+        Column3 = New DataGridViewTextBoxColumn()
+        Column4 = New DataGridViewTextBoxColumn()
+        Column5 = New DataGridViewTextBoxColumn()
         Label4 = New Label()
-        IconButton9 = New FontAwesome.Sharp.IconButton()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         bookPanel.SuspendLayout()
@@ -69,9 +75,8 @@ Partial Class BookList
         Panel1.Controls.Add(PictureBox1)
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
-        Panel1.Margin = New Padding(4, 5, 4, 5)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(340, 182)
+        Panel1.Size = New Size(238, 109)
         Panel1.TabIndex = 6
         ' 
         ' Label1
@@ -79,19 +84,17 @@ Partial Class BookList
         Label1.AutoSize = True
         Label1.Font = New Font("Bebas Neue", 26.25F, FontStyle.Regular, GraphicsUnit.Point)
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(126, 58)
-        Label1.Margin = New Padding(4, 0, 4, 0)
+        Label1.Location = New Point(88, 35)
         Label1.Name = "Label1"
-        Label1.Size = New Size(174, 64)
+        Label1.Size = New Size(118, 45)
         Label1.TabIndex = 1
         Label1.Text = "READHUB"
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Location = New Point(44, 50)
-        PictureBox1.Margin = New Padding(4, 5, 4, 5)
+        PictureBox1.Location = New Point(31, 30)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(73, 83)
+        PictureBox1.Size = New Size(51, 50)
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
         ' 
@@ -107,19 +110,17 @@ Partial Class BookList
         bookPanel.Controls.Add(Panel1)
         bookPanel.Dock = DockStyle.Left
         bookPanel.Location = New Point(0, 0)
-        bookPanel.Margin = New Padding(4, 5, 4, 5)
         bookPanel.Name = "bookPanel"
-        bookPanel.Size = New Size(340, 1050)
+        bookPanel.Size = New Size(238, 630)
         bookPanel.TabIndex = 12
         ' 
         ' Panel3
         ' 
         Panel3.Controls.Add(IconButton8)
         Panel3.Dock = DockStyle.Bottom
-        Panel3.Location = New Point(0, 977)
-        Panel3.Margin = New Padding(4, 5, 4, 5)
+        Panel3.Location = New Point(0, 586)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(340, 73)
+        Panel3.Size = New Size(238, 44)
         Panel3.TabIndex = 12
         ' 
         ' IconButton8
@@ -133,9 +134,8 @@ Partial Class BookList
         IconButton8.IconColor = Color.Black
         IconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto
         IconButton8.Location = New Point(0, 0)
-        IconButton8.Margin = New Padding(4, 5, 4, 5)
         IconButton8.Name = "IconButton8"
-        IconButton8.Size = New Size(340, 73)
+        IconButton8.Size = New Size(238, 44)
         IconButton8.TabIndex = 6
         IconButton8.Text = "LOGOUT"
         IconButton8.UseVisualStyleBackColor = True
@@ -151,10 +151,9 @@ Partial Class BookList
         borrowButton.IconChar = FontAwesome.Sharp.IconChar.None
         borrowButton.IconColor = Color.Black
         borrowButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        borrowButton.Location = New Point(0, 510)
-        borrowButton.Margin = New Padding(4, 5, 4, 5)
+        borrowButton.Location = New Point(0, 305)
         borrowButton.Name = "borrowButton"
-        borrowButton.Size = New Size(340, 82)
+        borrowButton.Size = New Size(238, 49)
         borrowButton.TabIndex = 11
         borrowButton.Text = "BORROWED BOOKS"
         borrowButton.UseVisualStyleBackColor = True
@@ -170,10 +169,9 @@ Partial Class BookList
         archiveButton.IconChar = FontAwesome.Sharp.IconChar.None
         archiveButton.IconColor = Color.Black
         archiveButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        archiveButton.Location = New Point(0, 428)
-        archiveButton.Margin = New Padding(4, 5, 4, 5)
+        archiveButton.Location = New Point(0, 256)
         archiveButton.Name = "archiveButton"
-        archiveButton.Size = New Size(340, 82)
+        archiveButton.Size = New Size(238, 49)
         archiveButton.TabIndex = 10
         archiveButton.Text = "ARCHIVES"
         archiveButton.UseVisualStyleBackColor = True
@@ -189,10 +187,9 @@ Partial Class BookList
         userButton.IconChar = FontAwesome.Sharp.IconChar.None
         userButton.IconColor = Color.Black
         userButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        userButton.Location = New Point(0, 346)
-        userButton.Margin = New Padding(4, 5, 4, 5)
+        userButton.Location = New Point(0, 207)
         userButton.Name = "userButton"
-        userButton.Size = New Size(340, 82)
+        userButton.Size = New Size(238, 49)
         userButton.TabIndex = 9
         userButton.Text = "USER'S LIST"
         userButton.UseVisualStyleBackColor = True
@@ -208,10 +205,9 @@ Partial Class BookList
         bookButton.IconChar = FontAwesome.Sharp.IconChar.None
         bookButton.IconColor = Color.Black
         bookButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        bookButton.Location = New Point(0, 264)
-        bookButton.Margin = New Padding(4, 5, 4, 5)
+        bookButton.Location = New Point(0, 158)
         bookButton.Name = "bookButton"
-        bookButton.Size = New Size(340, 82)
+        bookButton.Size = New Size(238, 49)
         bookButton.TabIndex = 8
         bookButton.Text = "BOOK LIST"
         bookButton.UseVisualStyleBackColor = True
@@ -227,16 +223,16 @@ Partial Class BookList
         dashButton.IconChar = FontAwesome.Sharp.IconChar.None
         dashButton.IconColor = Color.Black
         dashButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        dashButton.Location = New Point(0, 182)
-        dashButton.Margin = New Padding(4, 5, 4, 5)
+        dashButton.Location = New Point(0, 109)
         dashButton.Name = "dashButton"
-        dashButton.Size = New Size(340, 82)
+        dashButton.Size = New Size(238, 49)
         dashButton.TabIndex = 7
         dashButton.Text = "DASHBOARD"
         dashButton.UseVisualStyleBackColor = True
         ' 
         ' Panel2
         ' 
+        Panel2.Controls.Add(searchBox)
         Panel2.Controls.Add(IconButton9)
         Panel2.Controls.Add(IconButton7)
         Panel2.Controls.Add(IconButton6)
@@ -259,11 +255,35 @@ Partial Class BookList
         Panel2.Controls.Add(booksTable)
         Panel2.Controls.Add(Label4)
         Panel2.Dock = DockStyle.Fill
-        Panel2.Location = New Point(340, 0)
-        Panel2.Margin = New Padding(4, 5, 4, 5)
+        Panel2.Location = New Point(238, 0)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(1156, 1050)
+        Panel2.Size = New Size(809, 630)
         Panel2.TabIndex = 13
+        ' 
+        ' searchBox
+        ' 
+        searchBox.Location = New Point(46, 86)
+        searchBox.Name = "searchBox"
+        searchBox.PlaceholderText = "Book Name"
+        searchBox.Size = New Size(206, 23)
+        searchBox.TabIndex = 43
+        ' 
+        ' IconButton9
+        ' 
+        IconButton9.BackColor = Color.Tomato
+        IconButton9.Cursor = Cursors.Hand
+        IconButton9.FlatAppearance.BorderSize = 0
+        IconButton9.FlatStyle = FlatStyle.Flat
+        IconButton9.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        IconButton9.IconChar = FontAwesome.Sharp.IconChar.None
+        IconButton9.IconColor = Color.Black
+        IconButton9.IconFont = FontAwesome.Sharp.IconFont.Auto
+        IconButton9.Location = New Point(692, 578)
+        IconButton9.Name = "IconButton9"
+        IconButton9.Size = New Size(75, 23)
+        IconButton9.TabIndex = 42
+        IconButton9.Text = "REFRESH"
+        IconButton9.UseVisualStyleBackColor = False
         ' 
         ' IconButton7
         ' 
@@ -275,10 +295,9 @@ Partial Class BookList
         IconButton7.IconChar = FontAwesome.Sharp.IconChar.None
         IconButton7.IconColor = Color.Black
         IconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto
-        IconButton7.Location = New Point(237, 131)
-        IconButton7.Margin = New Padding(4, 5, 4, 5)
+        IconButton7.Location = New Point(169, 122)
         IconButton7.Name = "IconButton7"
-        IconButton7.Size = New Size(107, 38)
+        IconButton7.Size = New Size(75, 23)
         IconButton7.TabIndex = 41
         IconButton7.Text = "HORROR"
         IconButton7.UseVisualStyleBackColor = False
@@ -293,10 +312,9 @@ Partial Class BookList
         IconButton6.IconChar = FontAwesome.Sharp.IconChar.None
         IconButton6.IconColor = Color.Black
         IconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto
-        IconButton6.Location = New Point(352, 131)
-        IconButton6.Margin = New Padding(4, 5, 4, 5)
+        IconButton6.Location = New Point(249, 122)
         IconButton6.Name = "IconButton6"
-        IconButton6.Size = New Size(114, 38)
+        IconButton6.Size = New Size(80, 23)
         IconButton6.TabIndex = 40
         IconButton6.Text = "MYSTERY"
         IconButton6.UseVisualStyleBackColor = False
@@ -311,10 +329,9 @@ Partial Class BookList
         IconButton5.IconChar = FontAwesome.Sharp.IconChar.None
         IconButton5.IconColor = Color.Black
         IconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto
-        IconButton5.Location = New Point(984, 131)
-        IconButton5.Margin = New Padding(4, 5, 4, 5)
+        IconButton5.Location = New Point(692, 122)
         IconButton5.Name = "IconButton5"
-        IconButton5.Size = New Size(107, 38)
+        IconButton5.Size = New Size(75, 23)
         IconButton5.TabIndex = 39
         IconButton5.Text = "SCI-FI"
         IconButton5.UseVisualStyleBackColor = False
@@ -329,10 +346,9 @@ Partial Class BookList
         IconButton4.IconChar = FontAwesome.Sharp.IconChar.None
         IconButton4.IconColor = Color.Black
         IconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto
-        IconButton4.Location = New Point(474, 131)
-        IconButton4.Margin = New Padding(4, 5, 4, 5)
+        IconButton4.Location = New Point(335, 122)
         IconButton4.Name = "IconButton4"
-        IconButton4.Size = New Size(119, 38)
+        IconButton4.Size = New Size(83, 23)
         IconButton4.TabIndex = 38
         IconButton4.Text = "ROMANCE"
         IconButton4.UseVisualStyleBackColor = False
@@ -347,10 +363,9 @@ Partial Class BookList
         IconButton3.IconChar = FontAwesome.Sharp.IconChar.None
         IconButton3.IconColor = Color.Black
         IconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto
-        IconButton3.Location = New Point(844, 131)
-        IconButton3.Margin = New Padding(4, 5, 4, 5)
+        IconButton3.Location = New Point(594, 122)
         IconButton3.Name = "IconButton3"
-        IconButton3.Size = New Size(131, 38)
+        IconButton3.Size = New Size(92, 23)
         IconButton3.TabIndex = 37
         IconButton3.Text = "ACADEMICS"
         IconButton3.UseVisualStyleBackColor = False
@@ -365,10 +380,9 @@ Partial Class BookList
         IconButton2.IconChar = FontAwesome.Sharp.IconChar.None
         IconButton2.IconColor = Color.Black
         IconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto
-        IconButton2.Location = New Point(728, 131)
-        IconButton2.Margin = New Padding(4, 5, 4, 5)
+        IconButton2.Location = New Point(513, 122)
         IconButton2.Name = "IconButton2"
-        IconButton2.Size = New Size(107, 38)
+        IconButton2.Size = New Size(75, 23)
         IconButton2.TabIndex = 36
         IconButton2.Text = "HISTORY"
         IconButton2.UseVisualStyleBackColor = False
@@ -383,10 +397,9 @@ Partial Class BookList
         IconButton1.IconChar = FontAwesome.Sharp.IconChar.None
         IconButton1.IconColor = Color.Black
         IconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto
-        IconButton1.Location = New Point(601, 131)
-        IconButton1.Margin = New Padding(4, 5, 4, 5)
+        IconButton1.Location = New Point(424, 122)
         IconButton1.Name = "IconButton1"
-        IconButton1.Size = New Size(119, 38)
+        IconButton1.Size = New Size(83, 23)
         IconButton1.TabIndex = 35
         IconButton1.Text = "FANTASY"
         IconButton1.UseVisualStyleBackColor = False
@@ -398,11 +411,10 @@ Partial Class BookList
         BTB.Cursor = Cursors.IBeam
         BTB.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
         BTB.ForeColor = Color.Black
-        BTB.Location = New Point(408, 831)
-        BTB.Margin = New Padding(4, 5, 4, 5)
+        BTB.Location = New Point(289, 542)
         BTB.Multiline = True
         BTB.Name = "BTB"
-        BTB.Size = New Size(107, 38)
+        BTB.Size = New Size(75, 23)
         BTB.TabIndex = 34
         BTB.Text = "Book_ID"
         ' 
@@ -413,11 +425,10 @@ Partial Class BookList
         TTB.Cursor = Cursors.IBeam
         TTB.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
         TTB.ForeColor = Color.Black
-        TTB.Location = New Point(524, 831)
-        TTB.Margin = New Padding(4, 5, 4, 5)
+        TTB.Location = New Point(370, 542)
         TTB.Multiline = True
         TTB.Name = "TTB"
-        TTB.Size = New Size(107, 38)
+        TTB.Size = New Size(75, 23)
         TTB.TabIndex = 33
         TTB.Text = "Title"
         ' 
@@ -428,11 +439,10 @@ Partial Class BookList
         ATB.Cursor = Cursors.IBeam
         ATB.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
         ATB.ForeColor = Color.Black
-        ATB.Location = New Point(638, 831)
-        ATB.Margin = New Padding(4, 5, 4, 5)
+        ATB.Location = New Point(450, 542)
         ATB.Multiline = True
         ATB.Name = "ATB"
-        ATB.Size = New Size(107, 38)
+        ATB.Size = New Size(75, 23)
         ATB.TabIndex = 32
         ATB.Text = "Author"
         ' 
@@ -443,11 +453,10 @@ Partial Class BookList
         CTB.Cursor = Cursors.IBeam
         CTB.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
         CTB.ForeColor = Color.Black
-        CTB.Location = New Point(754, 831)
-        CTB.Margin = New Padding(4, 5, 4, 5)
+        CTB.Location = New Point(531, 542)
         CTB.Multiline = True
         CTB.Name = "CTB"
-        CTB.Size = New Size(107, 38)
+        CTB.Size = New Size(75, 23)
         CTB.TabIndex = 31
         CTB.Text = "Category_ID"
         ' 
@@ -458,11 +467,10 @@ Partial Class BookList
         DTB.Cursor = Cursors.IBeam
         DTB.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
         DTB.ForeColor = Color.Black
-        DTB.Location = New Point(869, 831)
-        DTB.Margin = New Padding(4, 5, 4, 5)
+        DTB.Location = New Point(611, 542)
         DTB.Multiline = True
         DTB.Name = "DTB"
-        DTB.Size = New Size(107, 38)
+        DTB.Size = New Size(75, 23)
         DTB.TabIndex = 30
         DTB.Text = "Description"
         ' 
@@ -473,11 +481,10 @@ Partial Class BookList
         YTB.Cursor = Cursors.IBeam
         YTB.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
         YTB.ForeColor = Color.Black
-        YTB.Location = New Point(984, 831)
-        YTB.Margin = New Padding(4, 5, 4, 5)
+        YTB.Location = New Point(692, 542)
         YTB.Multiline = True
         YTB.Name = "YTB"
-        YTB.Size = New Size(107, 38)
+        YTB.Size = New Size(75, 23)
         YTB.TabIndex = 29
         YTB.Text = "Year_Published"
         ' 
@@ -491,10 +498,9 @@ Partial Class BookList
         amendButton.IconChar = FontAwesome.Sharp.IconChar.None
         amendButton.IconColor = Color.Black
         amendButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        amendButton.Location = New Point(868, 892)
-        amendButton.Margin = New Padding(4, 5, 4, 5)
+        amendButton.Location = New Point(611, 578)
         amendButton.Name = "amendButton"
-        amendButton.Size = New Size(107, 38)
+        amendButton.Size = New Size(75, 23)
         amendButton.TabIndex = 26
         amendButton.Text = "AMEND"
         amendButton.UseVisualStyleBackColor = False
@@ -509,10 +515,9 @@ Partial Class BookList
         discardButton.IconChar = FontAwesome.Sharp.IconChar.None
         discardButton.IconColor = Color.Black
         discardButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        discardButton.Location = New Point(752, 892)
-        discardButton.Margin = New Padding(4, 5, 4, 5)
+        discardButton.Location = New Point(529, 578)
         discardButton.Name = "discardButton"
-        discardButton.Size = New Size(107, 38)
+        discardButton.Size = New Size(75, 23)
         discardButton.TabIndex = 25
         discardButton.Text = "ARCHIVE"
         discardButton.UseVisualStyleBackColor = False
@@ -527,10 +532,9 @@ Partial Class BookList
         appendButton.IconChar = FontAwesome.Sharp.IconChar.None
         appendButton.IconColor = Color.Black
         appendButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        appendButton.Location = New Point(638, 892)
-        appendButton.Margin = New Padding(4, 5, 4, 5)
+        appendButton.Location = New Point(450, 578)
         appendButton.Name = "appendButton"
-        appendButton.Size = New Size(107, 38)
+        appendButton.Size = New Size(75, 23)
         appendButton.TabIndex = 24
         appendButton.Text = "APPEND"
         appendButton.UseVisualStyleBackColor = False
@@ -544,10 +548,9 @@ Partial Class BookList
         barButton.IconColor = Color.Black
         barButton.IconFont = FontAwesome.Sharp.IconFont.Auto
         barButton.IconSize = 25
-        barButton.Location = New Point(1089, 20)
-        barButton.Margin = New Padding(4, 5, 4, 5)
+        barButton.Location = New Point(762, 12)
         barButton.Name = "barButton"
-        barButton.Size = New Size(50, 62)
+        barButton.Size = New Size(35, 37)
         barButton.TabIndex = 23
         barButton.UseVisualStyleBackColor = True
         ' 
@@ -555,66 +558,89 @@ Partial Class BookList
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label2.Location = New Point(62, 138)
-        Label2.Margin = New Padding(4, 0, 4, 0)
+        Label2.Location = New Point(46, 126)
         Label2.Name = "Label2"
-        Label2.Size = New Size(128, 25)
+        Label2.Size = New Size(84, 16)
         Label2.TabIndex = 12
         Label2.Text = "BOOK LIST"
         ' 
         ' booksTable
         ' 
         booksTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        booksTable.BackgroundColor = Color.White
         booksTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        booksTable.Columns.AddRange(New DataGridViewColumn() {Column1, Column2, Column3, Column4, Column5})
         booksTable.GridColor = Color.White
-        booksTable.Location = New Point(62, 181)
-        booksTable.Margin = New Padding(4, 5, 4, 5)
+        booksTable.Location = New Point(46, 152)
         booksTable.Name = "booksTable"
+        booksTable.ReadOnly = True
+        booksTable.RowHeadersVisible = False
         booksTable.RowHeadersWidth = 62
         booksTable.RowTemplate.Height = 25
-        booksTable.Size = New Size(1029, 623)
+        booksTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        booksTable.Size = New Size(720, 374)
         booksTable.TabIndex = 11
+        ' 
+        ' Column1
+        ' 
+        Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        Column1.HeaderText = "Book ID"
+        Column1.Name = "Column1"
+        Column1.ReadOnly = True
+        Column1.Width = 73
+        ' 
+        ' Column2
+        ' 
+        Column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        Column2.HeaderText = "Title"
+        Column2.Name = "Column2"
+        Column2.ReadOnly = True
+        Column2.Width = 54
+        ' 
+        ' Column3
+        ' 
+        Column3.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        Column3.HeaderText = "Author"
+        Column3.Name = "Column3"
+        Column3.ReadOnly = True
+        Column3.Width = 69
+        ' 
+        ' Column4
+        ' 
+        Column4.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        Column4.HeaderText = "Description"
+        Column4.Name = "Column4"
+        Column4.ReadOnly = True
+        Column4.Width = 92
+        ' 
+        ' Column5
+        ' 
+        Column5.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        Column5.HeaderText = "Year Published"
+        Column5.Name = "Column5"
+        Column5.ReadOnly = True
+        Column5.Width = 109
         ' 
         ' Label4
         ' 
         Label4.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         Label4.AutoSize = True
         Label4.Font = New Font("Bebas Neue", 20F, FontStyle.Bold, GraphicsUnit.Point)
-        Label4.Location = New Point(62, 20)
-        Label4.Margin = New Padding(4, 0, 4, 0)
+        Label4.Location = New Point(43, 12)
         Label4.Name = "Label4"
-        Label4.Size = New Size(105, 48)
+        Label4.Size = New Size(74, 35)
         Label4.TabIndex = 10
         Label4.Text = "BOOKS"
         Label4.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' IconButton9
-        ' 
-        IconButton9.BackColor = Color.Tomato
-        IconButton9.Cursor = Cursors.Hand
-        IconButton9.FlatAppearance.BorderSize = 0
-        IconButton9.FlatStyle = FlatStyle.Flat
-        IconButton9.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        IconButton9.IconChar = FontAwesome.Sharp.IconChar.None
-        IconButton9.IconColor = Color.Black
-        IconButton9.IconFont = FontAwesome.Sharp.IconFont.Auto
-        IconButton9.Location = New Point(984, 892)
-        IconButton9.Margin = New Padding(4, 5, 4, 5)
-        IconButton9.Name = "IconButton9"
-        IconButton9.Size = New Size(107, 38)
-        IconButton9.TabIndex = 42
-        IconButton9.Text = "REFRESH"
-        IconButton9.UseVisualStyleBackColor = False
-        ' 
         ' BookList
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(1496, 1050)
+        ClientSize = New Size(1047, 630)
         Controls.Add(Panel2)
         Controls.Add(bookPanel)
-        Margin = New Padding(4, 5, 4, 5)
         Name = "BookList"
         Text = "BookList"
         Panel1.ResumeLayout(False)
@@ -660,4 +686,10 @@ Partial Class BookList
     Friend WithEvents Panel3 As Panel
     Friend WithEvents IconButton8 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton9 As FontAwesome.Sharp.IconButton
+    Friend WithEvents searchBox As TextBox
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
 End Class

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8zXaZ5W0caMoRV5bTkhxROC/apK0RLz7K7BeTxTxrZR3E78vWPTRlsBWeOi8ym0SDgQM7wlkf5XMgWz+0jTsTQ==",
+  "dgSpecHash": "U7XUrObyq+qquk+f81aLxCfkelUME9hVzr5bqF6+ydGzSMF7wt660szZUEkglWHJ8Ek8VGPotgDyKHfyK5n8Eg==",
   "success": true,
-  "projectFilePath": "F:\\Projects\\ReadHub-VB-Val\\ReadHub\\ReadHub\\ReadHub.vbproj",
+  "projectFilePath": "F:\\Projects\\Readhub\\ReadHub-VB-Val\\ReadHub\\ReadHub\\ReadHub.vbproj",
   "expectedPackageFiles": [
     "C:\\Users\\TENSE\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\TENSE\\.nuget\\packages\\fontawesome.sharp\\6.3.0\\fontawesome.sharp.6.3.0.nupkg.sha512",

@@ -2237,11 +2237,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Projects\\ReadHub-VB-Val\\ReadHub\\ReadHub\\ReadHub.vbproj",
+      "projectUniqueName": "F:\\Projects\\Readhub\\ReadHub-VB-Val\\ReadHub\\ReadHub\\ReadHub.vbproj",
       "projectName": "ReadHub",
-      "projectPath": "F:\\Projects\\ReadHub-VB-Val\\ReadHub\\ReadHub\\ReadHub.vbproj",
+      "projectPath": "F:\\Projects\\Readhub\\ReadHub-VB-Val\\ReadHub\\ReadHub\\ReadHub.vbproj",
       "packagesPath": "C:\\Users\\TENSE\\.nuget\\packages\\",
-      "outputPath": "F:\\Projects\\ReadHub-VB-Val\\ReadHub\\ReadHub\\obj\\",
+      "outputPath": "F:\\Projects\\Readhub\\ReadHub-VB-Val\\ReadHub\\ReadHub\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\TENSE\\AppData\\Roaming\\NuGet\\NuGet.Config",
