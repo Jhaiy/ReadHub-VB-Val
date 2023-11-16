@@ -34,20 +34,22 @@ Partial Class UserList
         bookButton = New FontAwesome.Sharp.IconButton()
         dashButton = New FontAwesome.Sharp.IconButton()
         Panel2 = New Panel()
+        facultyTable = New DataGridView()
+        TextBox1 = New TextBox()
         IconButton6 = New FontAwesome.Sharp.IconButton()
         IconButton7 = New FontAwesome.Sharp.IconButton()
         IconButton5 = New FontAwesome.Sharp.IconButton()
         IconButton4 = New FontAwesome.Sharp.IconButton()
-        TextBox12 = New TextBox()
-        TextBox13 = New TextBox()
-        TextBox14 = New TextBox()
-        TextBox15 = New TextBox()
-        TextBox16 = New TextBox()
-        TextBox17 = New TextBox()
-        TextBox18 = New TextBox()
-        TextBox19 = New TextBox()
-        TextBox20 = New TextBox()
-        TextBox22 = New TextBox()
+        P2 = New TextBox()
+        SID2 = New TextBox()
+        AC2 = New TextBox()
+        FN2 = New TextBox()
+        UID2 = New TextBox()
+        BTID2 = New TextBox()
+        E2 = New TextBox()
+        CN2 = New TextBox()
+        A2 = New TextBox()
+        DID2 = New TextBox()
         ComboBox2 = New ComboBox()
         IconButton2 = New FontAwesome.Sharp.IconButton()
         IconButton3 = New FontAwesome.Sharp.IconButton()
@@ -68,10 +70,8 @@ Partial Class UserList
         barButton = New FontAwesome.Sharp.IconButton()
         Label3 = New Label()
         Label2 = New Label()
-        facultyTable = New DataGridView()
         studTable = New DataGridView()
         Label4 = New Label()
-        TextBox1 = New TextBox()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         userPanel.SuspendLayout()
@@ -255,21 +255,22 @@ Partial Class UserList
         ' 
         ' Panel2
         ' 
+        Panel2.Controls.Add(facultyTable)
         Panel2.Controls.Add(TextBox1)
         Panel2.Controls.Add(IconButton6)
         Panel2.Controls.Add(IconButton7)
         Panel2.Controls.Add(IconButton5)
         Panel2.Controls.Add(IconButton4)
-        Panel2.Controls.Add(TextBox12)
-        Panel2.Controls.Add(TextBox13)
-        Panel2.Controls.Add(TextBox14)
-        Panel2.Controls.Add(TextBox15)
-        Panel2.Controls.Add(TextBox16)
-        Panel2.Controls.Add(TextBox17)
-        Panel2.Controls.Add(TextBox18)
-        Panel2.Controls.Add(TextBox19)
-        Panel2.Controls.Add(TextBox20)
-        Panel2.Controls.Add(TextBox22)
+        Panel2.Controls.Add(P2)
+        Panel2.Controls.Add(SID2)
+        Panel2.Controls.Add(AC2)
+        Panel2.Controls.Add(FN2)
+        Panel2.Controls.Add(UID2)
+        Panel2.Controls.Add(BTID2)
+        Panel2.Controls.Add(E2)
+        Panel2.Controls.Add(CN2)
+        Panel2.Controls.Add(A2)
+        Panel2.Controls.Add(DID2)
         Panel2.Controls.Add(ComboBox2)
         Panel2.Controls.Add(IconButton2)
         Panel2.Controls.Add(IconButton3)
@@ -290,7 +291,6 @@ Partial Class UserList
         Panel2.Controls.Add(barButton)
         Panel2.Controls.Add(Label3)
         Panel2.Controls.Add(Label2)
-        Panel2.Controls.Add(facultyTable)
         Panel2.Controls.Add(studTable)
         Panel2.Controls.Add(Label4)
         Panel2.Dock = DockStyle.Fill
@@ -299,6 +299,27 @@ Partial Class UserList
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(1156, 1050)
         Panel2.TabIndex = 14
+        ' 
+        ' facultyTable
+        ' 
+        facultyTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        facultyTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        facultyTable.GridColor = Color.White
+        facultyTable.Location = New Point(66, 586)
+        facultyTable.Margin = New Padding(4, 5, 4, 5)
+        facultyTable.Name = "facultyTable"
+        facultyTable.RowHeadersWidth = 62
+        facultyTable.RowTemplate.Height = 25
+        facultyTable.Size = New Size(770, 314)
+        facultyTable.TabIndex = 65
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Location = New Point(677, 68)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(290, 31)
+        TextBox1.TabIndex = 64
+        TextBox1.Text = "User_ID"
         ' 
         ' IconButton6
         ' 
@@ -372,85 +393,85 @@ Partial Class UserList
         IconButton4.Text = "REFRESH"
         IconButton4.UseVisualStyleBackColor = False
         ' 
-        ' TextBox12
+        ' P2
         ' 
-        TextBox12.Location = New Point(845, 737)
-        TextBox12.Name = "TextBox12"
-        TextBox12.Size = New Size(122, 31)
-        TextBox12.TabIndex = 58
-        TextBox12.Text = "password"
+        P2.Location = New Point(845, 737)
+        P2.Name = "P2"
+        P2.Size = New Size(122, 31)
+        P2.TabIndex = 58
+        P2.Text = "password"
         ' 
-        ' TextBox13
+        ' SID2
         ' 
-        TextBox13.Location = New Point(973, 737)
-        TextBox13.Name = "TextBox13"
-        TextBox13.Size = New Size(122, 31)
-        TextBox13.TabIndex = 57
-        TextBox13.Text = "Status_ID"
+        SID2.Location = New Point(973, 737)
+        SID2.Name = "SID2"
+        SID2.Size = New Size(122, 31)
+        SID2.TabIndex = 57
+        SID2.Text = "Status_ID"
         ' 
-        ' TextBox14
+        ' AC2
         ' 
-        TextBox14.Location = New Point(973, 700)
-        TextBox14.Name = "TextBox14"
-        TextBox14.Size = New Size(122, 31)
-        TextBox14.TabIndex = 56
-        TextBox14.Text = "Account_Created"
+        AC2.Location = New Point(973, 700)
+        AC2.Name = "AC2"
+        AC2.Size = New Size(122, 31)
+        AC2.TabIndex = 56
+        AC2.Text = "Account_Created"
         ' 
-        ' TextBox15
+        ' FN2
         ' 
-        TextBox15.Location = New Point(973, 586)
-        TextBox15.Name = "TextBox15"
-        TextBox15.Size = New Size(122, 31)
-        TextBox15.TabIndex = 55
-        TextBox15.Text = "Fullname"
+        FN2.Location = New Point(973, 586)
+        FN2.Name = "FN2"
+        FN2.Size = New Size(122, 31)
+        FN2.TabIndex = 55
+        FN2.Text = "Fullname"
         ' 
-        ' TextBox16
+        ' UID2
         ' 
-        TextBox16.Location = New Point(845, 586)
-        TextBox16.Name = "TextBox16"
-        TextBox16.Size = New Size(122, 31)
-        TextBox16.TabIndex = 54
-        TextBox16.Text = "User_ID"
+        UID2.Location = New Point(845, 586)
+        UID2.Name = "UID2"
+        UID2.Size = New Size(122, 31)
+        UID2.TabIndex = 54
+        UID2.Text = "User_ID"
         ' 
-        ' TextBox17
+        ' BTID2
         ' 
-        TextBox17.Location = New Point(973, 623)
-        TextBox17.Name = "TextBox17"
-        TextBox17.Size = New Size(122, 31)
-        TextBox17.TabIndex = 53
-        TextBox17.Text = "BorrowerType_ID"
+        BTID2.Location = New Point(973, 623)
+        BTID2.Name = "BTID2"
+        BTID2.Size = New Size(122, 31)
+        BTID2.TabIndex = 53
+        BTID2.Text = "BorrowerType_ID"
         ' 
-        ' TextBox18
+        ' E2
         ' 
-        TextBox18.Location = New Point(845, 623)
-        TextBox18.Name = "TextBox18"
-        TextBox18.Size = New Size(122, 31)
-        TextBox18.TabIndex = 52
-        TextBox18.Text = "Email"
+        E2.Location = New Point(845, 623)
+        E2.Name = "E2"
+        E2.Size = New Size(122, 31)
+        E2.TabIndex = 52
+        E2.Text = "Email"
         ' 
-        ' TextBox19
+        ' CN2
         ' 
-        TextBox19.Location = New Point(973, 663)
-        TextBox19.Name = "TextBox19"
-        TextBox19.Size = New Size(122, 31)
-        TextBox19.TabIndex = 51
-        TextBox19.Text = "Contact Number"
+        CN2.Location = New Point(973, 663)
+        CN2.Name = "CN2"
+        CN2.Size = New Size(122, 31)
+        CN2.TabIndex = 51
+        CN2.Text = "Contact Number"
         ' 
-        ' TextBox20
+        ' A2
         ' 
-        TextBox20.Location = New Point(845, 663)
-        TextBox20.Name = "TextBox20"
-        TextBox20.Size = New Size(122, 31)
-        TextBox20.TabIndex = 50
-        TextBox20.Text = "Address"
+        A2.Location = New Point(845, 663)
+        A2.Name = "A2"
+        A2.Size = New Size(122, 31)
+        A2.TabIndex = 50
+        A2.Text = "Address"
         ' 
-        ' TextBox22
+        ' DID2
         ' 
-        TextBox22.Location = New Point(845, 700)
-        TextBox22.Name = "TextBox22"
-        TextBox22.Size = New Size(122, 31)
-        TextBox22.TabIndex = 48
-        TextBox22.Text = "Department_ID"
+        DID2.Location = New Point(845, 700)
+        DID2.Name = "DID2"
+        DID2.Size = New Size(122, 31)
+        DID2.TabIndex = 48
+        DID2.Text = "Department_ID"
         ' 
         ' ComboBox2
         ' 
@@ -682,19 +703,6 @@ Partial Class UserList
         Label2.Text = "STUDENTS"
         Label2.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' facultyTable
-        ' 
-        facultyTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-        facultyTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        facultyTable.GridColor = Color.White
-        facultyTable.Location = New Point(66, 585)
-        facultyTable.Margin = New Padding(4, 5, 4, 5)
-        facultyTable.Name = "facultyTable"
-        facultyTable.RowHeadersWidth = 62
-        facultyTable.RowTemplate.Height = 25
-        facultyTable.Size = New Size(770, 314)
-        facultyTable.TabIndex = 13
-        ' 
         ' studTable
         ' 
         studTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
@@ -720,14 +728,6 @@ Partial Class UserList
         Label4.TabIndex = 11
         Label4.Text = "USERS"
         Label4.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Location = New Point(677, 68)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(290, 31)
-        TextBox1.TabIndex = 64
-        TextBox1.Text = "User_ID"
         ' 
         ' UserList
         ' 
@@ -762,7 +762,6 @@ Partial Class UserList
     Friend WithEvents dashButton As FontAwesome.Sharp.IconButton
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label4 As Label
-    Friend WithEvents facultyTable As DataGridView
     Friend WithEvents studTable As DataGridView
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
@@ -785,20 +784,21 @@ Partial Class UserList
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton3 As FontAwesome.Sharp.IconButton
-    Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents TextBox13 As TextBox
-    Friend WithEvents TextBox14 As TextBox
-    Friend WithEvents TextBox15 As TextBox
-    Friend WithEvents TextBox16 As TextBox
-    Friend WithEvents TextBox17 As TextBox
-    Friend WithEvents TextBox18 As TextBox
-    Friend WithEvents TextBox19 As TextBox
-    Friend WithEvents TextBox20 As TextBox
-    Friend WithEvents TextBox22 As TextBox
+    Friend WithEvents P2 As TextBox
+    Friend WithEvents SID2 As TextBox
+    Friend WithEvents AC2 As TextBox
+    Friend WithEvents FN2 As TextBox
+    Friend WithEvents UID2 As TextBox
+    Friend WithEvents BTID2 As TextBox
+    Friend WithEvents E2 As TextBox
+    Friend WithEvents CN2 As TextBox
+    Friend WithEvents A2 As TextBox
+    Friend WithEvents DID2 As TextBox
     Friend WithEvents IconButton4 As FontAwesome.Sharp.IconButton
     Friend WithEvents UID1 As TextBox
     Friend WithEvents IconButton5 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton6 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton7 As FontAwesome.Sharp.IconButton
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents facultyTable As DataGridView
 End Class

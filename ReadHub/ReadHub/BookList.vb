@@ -350,4 +350,8 @@ Public Class BookList
         Me.Hide()
         Login.Show()
     End Sub
+
+    Private Sub IconButton9_Click(sender As Object, e As EventArgs) Handles IconButton9.Click
+        loadDataOnTable()
+    End Sub
 End Class

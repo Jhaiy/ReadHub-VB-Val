@@ -125,7 +125,6 @@ Partial Class Login
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(389, 48)
         TextBox1.TabIndex = 7
-        TextBox1.Text = " "
         ' 
         ' emailLbl
         ' 

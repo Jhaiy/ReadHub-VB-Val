@@ -401,6 +401,7 @@ Partial Class Dashboard
         ' 
         ' booksTable
         ' 
+        booksTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         booksTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         booksTable.GridColor = Color.White
         booksTable.Location = New Point(43, 548)

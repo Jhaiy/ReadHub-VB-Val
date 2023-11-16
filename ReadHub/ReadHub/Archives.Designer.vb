@@ -278,12 +278,12 @@ Partial Class Archives
         amendButton.IconChar = FontAwesome.Sharp.IconChar.None
         amendButton.IconColor = Color.Black
         amendButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        amendButton.Location = New Point(864, 102)
+        amendButton.Location = New Point(856, 102)
         amendButton.Margin = New Padding(4, 5, 4, 5)
         amendButton.Name = "amendButton"
-        amendButton.Size = New Size(107, 38)
+        amendButton.Size = New Size(115, 38)
         amendButton.TabIndex = 26
-        amendButton.Text = "AMEND"
+        amendButton.Text = "RESTORE"
         amendButton.UseVisualStyleBackColor = False
         ' 
         ' barButton

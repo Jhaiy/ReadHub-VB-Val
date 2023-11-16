@@ -54,6 +54,7 @@ Partial Class BookList
         Label2 = New Label()
         booksTable = New DataGridView()
         Label4 = New Label()
+        IconButton9 = New FontAwesome.Sharp.IconButton()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         bookPanel.SuspendLayout()
@@ -236,6 +237,7 @@ Partial Class BookList
         ' 
         ' Panel2
         ' 
+        Panel2.Controls.Add(IconButton9)
         Panel2.Controls.Add(IconButton7)
         Panel2.Controls.Add(IconButton6)
         Panel2.Controls.Add(IconButton5)
@@ -489,7 +491,7 @@ Partial Class BookList
         amendButton.IconChar = FontAwesome.Sharp.IconChar.None
         amendButton.IconColor = Color.Black
         amendButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        amendButton.Location = New Point(984, 891)
+        amendButton.Location = New Point(868, 892)
         amendButton.Margin = New Padding(4, 5, 4, 5)
         amendButton.Name = "amendButton"
         amendButton.Size = New Size(107, 38)
@@ -507,7 +509,7 @@ Partial Class BookList
         discardButton.IconChar = FontAwesome.Sharp.IconChar.None
         discardButton.IconColor = Color.Black
         discardButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        discardButton.Location = New Point(868, 891)
+        discardButton.Location = New Point(752, 892)
         discardButton.Margin = New Padding(4, 5, 4, 5)
         discardButton.Name = "discardButton"
         discardButton.Size = New Size(107, 38)
@@ -525,7 +527,7 @@ Partial Class BookList
         appendButton.IconChar = FontAwesome.Sharp.IconChar.None
         appendButton.IconColor = Color.Black
         appendButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        appendButton.Location = New Point(754, 891)
+        appendButton.Location = New Point(638, 892)
         appendButton.Margin = New Padding(4, 5, 4, 5)
         appendButton.Name = "appendButton"
         appendButton.Size = New Size(107, 38)
@@ -586,6 +588,24 @@ Partial Class BookList
         Label4.Text = "BOOKS"
         Label4.TextAlign = ContentAlignment.MiddleCenter
         ' 
+        ' IconButton9
+        ' 
+        IconButton9.BackColor = Color.Tomato
+        IconButton9.Cursor = Cursors.Hand
+        IconButton9.FlatAppearance.BorderSize = 0
+        IconButton9.FlatStyle = FlatStyle.Flat
+        IconButton9.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        IconButton9.IconChar = FontAwesome.Sharp.IconChar.None
+        IconButton9.IconColor = Color.Black
+        IconButton9.IconFont = FontAwesome.Sharp.IconFont.Auto
+        IconButton9.Location = New Point(984, 892)
+        IconButton9.Margin = New Padding(4, 5, 4, 5)
+        IconButton9.Name = "IconButton9"
+        IconButton9.Size = New Size(107, 38)
+        IconButton9.TabIndex = 42
+        IconButton9.Text = "REFRESH"
+        IconButton9.UseVisualStyleBackColor = False
+        ' 
         ' BookList
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
@@ -639,4 +659,5 @@ Partial Class BookList
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents Panel3 As Panel
     Friend WithEvents IconButton8 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButton9 As FontAwesome.Sharp.IconButton
 End Class
