@@ -34,16 +34,34 @@ Partial Class BorrowedBooks
         Label1 = New Label()
         PictureBox1 = New PictureBox()
         Panel2 = New Panel()
+        ComboBox1 = New ComboBox()
+        IconButton2 = New FontAwesome.Sharp.IconButton()
         Label5 = New Label()
         BorrowedBooksEmployee = New DataGridView()
         Label3 = New Label()
-        exploreButton = New FontAwesome.Sharp.IconButton()
         amendButton = New FontAwesome.Sharp.IconButton()
-        discardButton = New FontAwesome.Sharp.IconButton()
         appendButton = New FontAwesome.Sharp.IconButton()
         barButton = New FontAwesome.Sharp.IconButton()
         Label2 = New Label()
         borrowedstudTable = New DataGridView()
+        UID1 = New TextBox()
+        BBID1 = New TextBox()
+        DB1 = New TextBox()
+        BID1 = New TextBox()
+        FSID1 = New TextBox()
+        RD1 = New TextBox()
+        FA1 = New TextBox()
+        ComboBox2 = New ComboBox()
+        IconButton3 = New FontAwesome.Sharp.IconButton()
+        IconButton4 = New FontAwesome.Sharp.IconButton()
+        IconButton5 = New FontAwesome.Sharp.IconButton()
+        Me.FA2 = New TextBox()
+        Me.FSID2 = New TextBox()
+        Me.RD2 = New TextBox()
+        Me.DB2 = New TextBox()
+        Me.BID2 = New TextBox()
+        Me.UID2 = New TextBox()
+        BBID2 = New TextBox()
         borrowedPanel.SuspendLayout()
         Panel3.SuspendLayout()
         Panel1.SuspendLayout()
@@ -227,12 +245,30 @@ Partial Class BorrowedBooks
         ' 
         ' Panel2
         ' 
+        Panel2.Controls.Add(Me.FA2)
+        Panel2.Controls.Add(Me.FSID2)
+        Panel2.Controls.Add(Me.RD2)
+        Panel2.Controls.Add(Me.DB2)
+        Panel2.Controls.Add(Me.BID2)
+        Panel2.Controls.Add(Me.UID2)
+        Panel2.Controls.Add(BBID2)
+        Panel2.Controls.Add(ComboBox2)
+        Panel2.Controls.Add(IconButton3)
+        Panel2.Controls.Add(IconButton4)
+        Panel2.Controls.Add(IconButton5)
+        Panel2.Controls.Add(FA1)
+        Panel2.Controls.Add(FSID1)
+        Panel2.Controls.Add(RD1)
+        Panel2.Controls.Add(DB1)
+        Panel2.Controls.Add(BID1)
+        Panel2.Controls.Add(UID1)
+        Panel2.Controls.Add(BBID1)
+        Panel2.Controls.Add(ComboBox1)
+        Panel2.Controls.Add(IconButton2)
         Panel2.Controls.Add(Label5)
         Panel2.Controls.Add(BorrowedBooksEmployee)
         Panel2.Controls.Add(Label3)
-        Panel2.Controls.Add(exploreButton)
         Panel2.Controls.Add(amendButton)
-        Panel2.Controls.Add(discardButton)
         Panel2.Controls.Add(appendButton)
         Panel2.Controls.Add(barButton)
         Panel2.Controls.Add(Label2)
@@ -244,11 +280,43 @@ Partial Class BorrowedBooks
         Panel2.Size = New Size(1156, 1050)
         Panel2.TabIndex = 16
         ' 
+        ' ComboBox1
+        ' 
+        ComboBox1.BackColor = Color.Tomato
+        ComboBox1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        ComboBox1.FormattingEnabled = True
+        ComboBox1.ItemHeight = 22
+        ComboBox1.Items.AddRange(New Object() {"Paid", "Unpaid", "Pending", "Partial Payment"})
+        ComboBox1.Location = New Point(538, 534)
+        ComboBox1.Name = "ComboBox1"
+        ComboBox1.Size = New Size(172, 30)
+        ComboBox1.TabIndex = 33
+        ComboBox1.Tag = ""
+        ComboBox1.Text = "FINE STATUS"
+        ' 
+        ' IconButton2
+        ' 
+        IconButton2.BackColor = Color.Tomato
+        IconButton2.Cursor = Cursors.Hand
+        IconButton2.FlatAppearance.BorderSize = 0
+        IconButton2.FlatStyle = FlatStyle.Flat
+        IconButton2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        IconButton2.IconChar = FontAwesome.Sharp.IconChar.None
+        IconButton2.IconColor = Color.Black
+        IconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto
+        IconButton2.Location = New Point(832, 534)
+        IconButton2.Margin = New Padding(4, 5, 4, 5)
+        IconButton2.Name = "IconButton2"
+        IconButton2.Size = New Size(133, 38)
+        IconButton2.TabIndex = 31
+        IconButton2.Text = "RETURNED"
+        IconButton2.UseVisualStyleBackColor = False
+        ' 
         ' Label5
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label5.Location = New Point(66, 483)
+        Label5.Location = New Point(66, 545)
         Label5.Margin = New Padding(4, 0, 4, 0)
         Label5.Name = "Label5"
         Label5.Size = New Size(327, 25)
@@ -260,12 +328,12 @@ Partial Class BorrowedBooks
         BorrowedBooksEmployee.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         BorrowedBooksEmployee.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         BorrowedBooksEmployee.GridColor = Color.White
-        BorrowedBooksEmployee.Location = New Point(66, 520)
+        BorrowedBooksEmployee.Location = New Point(66, 582)
         BorrowedBooksEmployee.Margin = New Padding(4, 5, 4, 5)
         BorrowedBooksEmployee.Name = "BorrowedBooksEmployee"
         BorrowedBooksEmployee.RowHeadersWidth = 62
         BorrowedBooksEmployee.RowTemplate.Height = 25
-        BorrowedBooksEmployee.Size = New Size(1029, 307)
+        BorrowedBooksEmployee.Size = New Size(772, 307)
         BorrowedBooksEmployee.TabIndex = 29
         ' 
         ' Label3
@@ -281,24 +349,6 @@ Partial Class BorrowedBooks
         Label3.Text = "BORROWED BOOKS"
         Label3.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' exploreButton
-        ' 
-        exploreButton.BackColor = Color.Tomato
-        exploreButton.Cursor = Cursors.Hand
-        exploreButton.FlatAppearance.BorderSize = 0
-        exploreButton.FlatStyle = FlatStyle.Flat
-        exploreButton.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        exploreButton.IconChar = FontAwesome.Sharp.IconChar.None
-        exploreButton.IconColor = Color.Black
-        exploreButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        exploreButton.Location = New Point(970, 872)
-        exploreButton.Margin = New Padding(4, 5, 4, 5)
-        exploreButton.Name = "exploreButton"
-        exploreButton.Size = New Size(124, 38)
-        exploreButton.TabIndex = 27
-        exploreButton.Text = "EXPLORE"
-        exploreButton.UseVisualStyleBackColor = False
-        ' 
         ' amendButton
         ' 
         amendButton.BackColor = Color.Tomato
@@ -309,31 +359,13 @@ Partial Class BorrowedBooks
         amendButton.IconChar = FontAwesome.Sharp.IconChar.None
         amendButton.IconColor = Color.Black
         amendButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        amendButton.Location = New Point(854, 872)
+        amendButton.Location = New Point(717, 534)
         amendButton.Margin = New Padding(4, 5, 4, 5)
         amendButton.Name = "amendButton"
         amendButton.Size = New Size(107, 38)
         amendButton.TabIndex = 26
         amendButton.Text = "AMEND"
         amendButton.UseVisualStyleBackColor = False
-        ' 
-        ' discardButton
-        ' 
-        discardButton.BackColor = Color.Tomato
-        discardButton.Cursor = Cursors.Hand
-        discardButton.FlatAppearance.BorderSize = 0
-        discardButton.FlatStyle = FlatStyle.Flat
-        discardButton.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        discardButton.IconChar = FontAwesome.Sharp.IconChar.None
-        discardButton.IconColor = Color.Black
-        discardButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        discardButton.Location = New Point(739, 872)
-        discardButton.Margin = New Padding(4, 5, 4, 5)
-        discardButton.Name = "discardButton"
-        discardButton.Size = New Size(107, 38)
-        discardButton.TabIndex = 25
-        discardButton.Text = "DISCARD"
-        discardButton.UseVisualStyleBackColor = False
         ' 
         ' appendButton
         ' 
@@ -345,12 +377,12 @@ Partial Class BorrowedBooks
         appendButton.IconChar = FontAwesome.Sharp.IconChar.None
         appendButton.IconColor = Color.Black
         appendButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        appendButton.Location = New Point(623, 872)
+        appendButton.Location = New Point(973, 534)
         appendButton.Margin = New Padding(4, 5, 4, 5)
         appendButton.Name = "appendButton"
-        appendButton.Size = New Size(107, 38)
+        appendButton.Size = New Size(119, 38)
         appendButton.TabIndex = 24
-        appendButton.Text = "APPEND"
+        appendButton.Text = "REFRESH"
         appendButton.UseVisualStyleBackColor = False
         ' 
         ' barButton
@@ -373,7 +405,7 @@ Partial Class BorrowedBooks
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label2.Location = New Point(66, 97)
+        Label2.Location = New Point(66, 131)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
         Label2.Size = New Size(345, 25)
@@ -385,13 +417,193 @@ Partial Class BorrowedBooks
         borrowedstudTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         borrowedstudTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         borrowedstudTable.GridColor = Color.White
-        borrowedstudTable.Location = New Point(66, 133)
+        borrowedstudTable.Location = New Point(66, 167)
         borrowedstudTable.Margin = New Padding(4, 5, 4, 5)
         borrowedstudTable.Name = "borrowedstudTable"
         borrowedstudTable.RowHeadersWidth = 62
         borrowedstudTable.RowTemplate.Height = 25
-        borrowedstudTable.Size = New Size(1029, 300)
+        borrowedstudTable.Size = New Size(772, 300)
         borrowedstudTable.TabIndex = 11
+        ' 
+        ' UID1
+        ' 
+        UID1.Location = New Point(973, 167)
+        UID1.Name = "UID1"
+        UID1.Size = New Size(122, 31)
+        UID1.TabIndex = 43
+        UID1.Text = "User_ID"
+        ' 
+        ' BBID1
+        ' 
+        BBID1.Location = New Point(845, 167)
+        BBID1.Name = "BBID1"
+        BBID1.Size = New Size(122, 31)
+        BBID1.TabIndex = 42
+        BBID1.Text = "BorrowedBooks_ID"
+        ' 
+        ' DB1
+        ' 
+        DB1.Location = New Point(973, 204)
+        DB1.Name = "DB1"
+        DB1.Size = New Size(122, 31)
+        DB1.TabIndex = 45
+        DB1.Text = "Date_Borrowed"
+        ' 
+        ' BID1
+        ' 
+        BID1.Location = New Point(845, 204)
+        BID1.Name = "BID1"
+        BID1.Size = New Size(122, 31)
+        BID1.TabIndex = 44
+        BID1.Text = "Book_ID"
+        ' 
+        ' FSID1
+        ' 
+        FSID1.Location = New Point(973, 241)
+        FSID1.Name = "FSID1"
+        FSID1.Size = New Size(122, 31)
+        FSID1.TabIndex = 47
+        FSID1.Text = "Fine_Status_ID"
+        ' 
+        ' RD1
+        ' 
+        RD1.Location = New Point(845, 241)
+        RD1.Name = "RD1"
+        RD1.Size = New Size(122, 31)
+        RD1.TabIndex = 46
+        RD1.Text = "Return_Date"
+        ' 
+        ' FA1
+        ' 
+        FA1.Location = New Point(845, 278)
+        FA1.Name = "FA1"
+        FA1.Size = New Size(122, 31)
+        FA1.TabIndex = 48
+        FA1.Text = "Fine_Amount"
+        ' 
+        ' ComboBox2
+        ' 
+        ComboBox2.BackColor = Color.Tomato
+        ComboBox2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        ComboBox2.FormattingEnabled = True
+        ComboBox2.ItemHeight = 22
+        ComboBox2.Items.AddRange(New Object() {"Paid", "Unpaid", "Pending", "Partial Payment"})
+        ComboBox2.Location = New Point(538, 121)
+        ComboBox2.Name = "ComboBox2"
+        ComboBox2.Size = New Size(172, 30)
+        ComboBox2.TabIndex = 54
+        ComboBox2.Tag = ""
+        ComboBox2.Text = "FINE STATUS"
+        ' 
+        ' IconButton3
+        ' 
+        IconButton3.BackColor = Color.Tomato
+        IconButton3.Cursor = Cursors.Hand
+        IconButton3.FlatAppearance.BorderSize = 0
+        IconButton3.FlatStyle = FlatStyle.Flat
+        IconButton3.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        IconButton3.IconChar = FontAwesome.Sharp.IconChar.None
+        IconButton3.IconColor = Color.Black
+        IconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto
+        IconButton3.Location = New Point(832, 121)
+        IconButton3.Margin = New Padding(4, 5, 4, 5)
+        IconButton3.Name = "IconButton3"
+        IconButton3.Size = New Size(133, 38)
+        IconButton3.TabIndex = 53
+        IconButton3.Text = "RETURNED"
+        IconButton3.UseVisualStyleBackColor = False
+        ' 
+        ' IconButton4
+        ' 
+        IconButton4.BackColor = Color.Tomato
+        IconButton4.Cursor = Cursors.Hand
+        IconButton4.FlatAppearance.BorderSize = 0
+        IconButton4.FlatStyle = FlatStyle.Flat
+        IconButton4.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        IconButton4.IconChar = FontAwesome.Sharp.IconChar.None
+        IconButton4.IconColor = Color.Black
+        IconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto
+        IconButton4.Location = New Point(717, 121)
+        IconButton4.Margin = New Padding(4, 5, 4, 5)
+        IconButton4.Name = "IconButton4"
+        IconButton4.Size = New Size(107, 38)
+        IconButton4.TabIndex = 52
+        IconButton4.Text = "AMEND"
+        IconButton4.UseVisualStyleBackColor = False
+        ' 
+        ' IconButton5
+        ' 
+        IconButton5.BackColor = Color.Tomato
+        IconButton5.Cursor = Cursors.Hand
+        IconButton5.FlatAppearance.BorderSize = 0
+        IconButton5.FlatStyle = FlatStyle.Flat
+        IconButton5.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        IconButton5.IconChar = FontAwesome.Sharp.IconChar.None
+        IconButton5.IconColor = Color.Black
+        IconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto
+        IconButton5.Location = New Point(973, 121)
+        IconButton5.Margin = New Padding(4, 5, 4, 5)
+        IconButton5.Name = "IconButton5"
+        IconButton5.Size = New Size(119, 38)
+        IconButton5.TabIndex = 51
+        IconButton5.Text = "REFRESH"
+        IconButton5.UseVisualStyleBackColor = False
+        ' 
+        ' FA2
+        ' 
+        Me.FA2.Location = New Point(845, 693)
+        Me.FA2.Name = "FA2"
+        Me.FA2.Size = New Size(122, 31)
+        Me.FA2.TabIndex = 61
+        Me.FA2.Text = "Fine_Amount"
+        ' 
+        ' FSID2
+        ' 
+        Me.FSID2.Location = New Point(973, 656)
+        Me.FSID2.Name = "FSID2"
+        Me.FSID2.Size = New Size(122, 31)
+        Me.FSID2.TabIndex = 60
+        Me.FSID2.Text = "Fine_Status_ID"
+        ' 
+        ' RD2
+        ' 
+        Me.RD2.Location = New Point(845, 656)
+        Me.RD2.Name = "RD2"
+        Me.RD2.Size = New Size(122, 31)
+        Me.RD2.TabIndex = 59
+        Me.RD2.Text = "Return_Date"
+        ' 
+        ' DB2
+        ' 
+        Me.DB2.Location = New Point(973, 619)
+        Me.DB2.Name = "DB2"
+        Me.DB2.Size = New Size(122, 31)
+        Me.DB2.TabIndex = 58
+        Me.DB2.Text = "Date_Borrowed"
+        ' 
+        ' BID2
+        ' 
+        Me.BID2.Location = New Point(845, 619)
+        Me.BID2.Name = "BID2"
+        Me.BID2.Size = New Size(122, 31)
+        Me.BID2.TabIndex = 57
+        Me.BID2.Text = "Book_ID"
+        ' 
+        ' UID2
+        ' 
+        Me.UID2.Location = New Point(973, 582)
+        Me.UID2.Name = "UID2"
+        Me.UID2.Size = New Size(122, 31)
+        Me.UID2.TabIndex = 56
+        Me.UID2.Text = "User_ID"
+        ' 
+        ' BBID2
+        ' 
+        BBID2.Location = New Point(845, 582)
+        BBID2.Name = "BBID2"
+        BBID2.Size = New Size(122, 31)
+        BBID2.TabIndex = 55
+        BBID2.Text = "BorrowedBooks_ID"
         ' 
         ' BorrowedBooks
         ' 
@@ -402,7 +614,7 @@ Partial Class BorrowedBooks
         Controls.Add(borrowedPanel)
         Margin = New Padding(4, 5, 4, 5)
         Name = "BorrowedBooks"
-        Text = "BorrowedBooks"
+        Text = "S"
         borrowedPanel.ResumeLayout(False)
         Panel3.ResumeLayout(False)
         Panel1.ResumeLayout(False)
@@ -426,9 +638,7 @@ Partial Class BorrowedBooks
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label3 As Label
-    Friend WithEvents exploreButton As FontAwesome.Sharp.IconButton
     Friend WithEvents amendButton As FontAwesome.Sharp.IconButton
-    Friend WithEvents discardButton As FontAwesome.Sharp.IconButton
     Friend WithEvents appendButton As FontAwesome.Sharp.IconButton
     Friend WithEvents barButton As FontAwesome.Sharp.IconButton
     Friend WithEvents Label2 As Label
@@ -437,4 +647,28 @@ Partial Class BorrowedBooks
     Friend WithEvents BorrowedBooksEmployee As DataGridView
     Friend WithEvents Panel3 As Panel
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents TextBox12 As TextBox
+    Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents TextBox14 As TextBox
+    Friend WithEvents TextBox15 As TextBox
+    Friend WithEvents BBID2 As TextBox
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents IconButton3 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButton4 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButton5 As FontAwesome.Sharp.IconButton
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents FA1 As TextBox
+    Friend WithEvents FSID1 As TextBox
+    Friend WithEvents RD1 As TextBox
+    Friend WithEvents DB1 As TextBox
+    Friend WithEvents BID1 As TextBox
+    Friend WithEvents UID1 As TextBox
+    Friend WithEvents BBID1 As TextBox
 End Class
