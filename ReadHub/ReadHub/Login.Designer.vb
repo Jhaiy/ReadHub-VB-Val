@@ -125,7 +125,6 @@ Partial Class Login
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(389, 48)
         TextBox1.TabIndex = 7
-        TextBox1.Text = " "
         ' 
         ' emailLbl
         ' 
@@ -185,7 +184,7 @@ Partial Class Login
         Label2.Location = New Point(360, 447)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(169, 75)
+        Label2.Size = New Size(175, 75)
         Label2.TabIndex = 2
         Label2.Text = "READHUB"
         Label2.TextAlign = ContentAlignment.MiddleCenter

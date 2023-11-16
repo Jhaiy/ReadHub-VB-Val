@@ -23,6 +23,8 @@ Partial Class Archives
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         archivePanel = New Panel()
+        Panel3 = New Panel()
+        IconButton1 = New FontAwesome.Sharp.IconButton()
         borrowButton = New FontAwesome.Sharp.IconButton()
         archiveButton = New FontAwesome.Sharp.IconButton()
         userButton = New FontAwesome.Sharp.IconButton()
@@ -34,22 +36,17 @@ Partial Class Archives
         Panel2 = New Panel()
         IconButton7 = New FontAwesome.Sharp.IconButton()
         Label3 = New Label()
-        exploreButton = New FontAwesome.Sharp.IconButton()
         amendButton = New FontAwesome.Sharp.IconButton()
-        discardButton = New FontAwesome.Sharp.IconButton()
-        appendButton = New FontAwesome.Sharp.IconButton()
         barButton = New FontAwesome.Sharp.IconButton()
         Label2 = New Label()
         archiveTable = New DataGridView()
         Label4 = New Label()
-        Panel3 = New Panel()
-        IconButton1 = New FontAwesome.Sharp.IconButton()
         archivePanel.SuspendLayout()
+        Panel3.SuspendLayout()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         CType(archiveTable, ComponentModel.ISupportInitialize).BeginInit()
-        Panel3.SuspendLayout()
         SuspendLayout()
         ' 
         ' archivePanel
@@ -64,9 +61,38 @@ Partial Class Archives
         archivePanel.Controls.Add(Panel1)
         archivePanel.Dock = DockStyle.Left
         archivePanel.Location = New Point(0, 0)
+        archivePanel.Margin = New Padding(4, 5, 4, 5)
         archivePanel.Name = "archivePanel"
-        archivePanel.Size = New Size(238, 630)
+        archivePanel.Size = New Size(340, 1050)
         archivePanel.TabIndex = 14
+        ' 
+        ' Panel3
+        ' 
+        Panel3.Controls.Add(IconButton1)
+        Panel3.Dock = DockStyle.Bottom
+        Panel3.Location = New Point(0, 977)
+        Panel3.Margin = New Padding(4, 5, 4, 5)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(340, 73)
+        Panel3.TabIndex = 12
+        ' 
+        ' IconButton1
+        ' 
+        IconButton1.Dock = DockStyle.Fill
+        IconButton1.FlatAppearance.BorderSize = 0
+        IconButton1.FlatStyle = FlatStyle.Flat
+        IconButton1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        IconButton1.ForeColor = Color.White
+        IconButton1.IconChar = FontAwesome.Sharp.IconChar.None
+        IconButton1.IconColor = Color.Black
+        IconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto
+        IconButton1.Location = New Point(0, 0)
+        IconButton1.Margin = New Padding(4, 5, 4, 5)
+        IconButton1.Name = "IconButton1"
+        IconButton1.Size = New Size(340, 73)
+        IconButton1.TabIndex = 6
+        IconButton1.Text = "LOGOUT"
+        IconButton1.UseVisualStyleBackColor = True
         ' 
         ' borrowButton
         ' 
@@ -79,9 +105,10 @@ Partial Class Archives
         borrowButton.IconChar = FontAwesome.Sharp.IconChar.None
         borrowButton.IconColor = Color.Black
         borrowButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        borrowButton.Location = New Point(0, 305)
+        borrowButton.Location = New Point(0, 510)
+        borrowButton.Margin = New Padding(4, 5, 4, 5)
         borrowButton.Name = "borrowButton"
-        borrowButton.Size = New Size(238, 49)
+        borrowButton.Size = New Size(340, 82)
         borrowButton.TabIndex = 11
         borrowButton.Text = "BORROWED BOOKS"
         borrowButton.UseVisualStyleBackColor = True
@@ -97,9 +124,10 @@ Partial Class Archives
         archiveButton.IconChar = FontAwesome.Sharp.IconChar.None
         archiveButton.IconColor = Color.Black
         archiveButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        archiveButton.Location = New Point(0, 256)
+        archiveButton.Location = New Point(0, 428)
+        archiveButton.Margin = New Padding(4, 5, 4, 5)
         archiveButton.Name = "archiveButton"
-        archiveButton.Size = New Size(238, 49)
+        archiveButton.Size = New Size(340, 82)
         archiveButton.TabIndex = 10
         archiveButton.Text = "ARCHIVES"
         archiveButton.UseVisualStyleBackColor = True
@@ -115,9 +143,10 @@ Partial Class Archives
         userButton.IconChar = FontAwesome.Sharp.IconChar.None
         userButton.IconColor = Color.Black
         userButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        userButton.Location = New Point(0, 207)
+        userButton.Location = New Point(0, 346)
+        userButton.Margin = New Padding(4, 5, 4, 5)
         userButton.Name = "userButton"
-        userButton.Size = New Size(238, 49)
+        userButton.Size = New Size(340, 82)
         userButton.TabIndex = 9
         userButton.Text = "USER'S LIST"
         userButton.UseVisualStyleBackColor = True
@@ -133,9 +162,10 @@ Partial Class Archives
         bookButton.IconChar = FontAwesome.Sharp.IconChar.None
         bookButton.IconColor = Color.Black
         bookButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        bookButton.Location = New Point(0, 158)
+        bookButton.Location = New Point(0, 264)
+        bookButton.Margin = New Padding(4, 5, 4, 5)
         bookButton.Name = "bookButton"
-        bookButton.Size = New Size(238, 49)
+        bookButton.Size = New Size(340, 82)
         bookButton.TabIndex = 8
         bookButton.Text = "BOOK LIST"
         bookButton.UseVisualStyleBackColor = True
@@ -151,9 +181,10 @@ Partial Class Archives
         dashButton.IconChar = FontAwesome.Sharp.IconChar.None
         dashButton.IconColor = Color.Black
         dashButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        dashButton.Location = New Point(0, 109)
+        dashButton.Location = New Point(0, 182)
+        dashButton.Margin = New Padding(4, 5, 4, 5)
         dashButton.Name = "dashButton"
-        dashButton.Size = New Size(238, 49)
+        dashButton.Size = New Size(340, 82)
         dashButton.TabIndex = 7
         dashButton.Text = "DASHBOARD"
         dashButton.UseVisualStyleBackColor = True
@@ -164,8 +195,9 @@ Partial Class Archives
         Panel1.Controls.Add(PictureBox1)
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
+        Panel1.Margin = New Padding(4, 5, 4, 5)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(238, 109)
+        Panel1.Size = New Size(340, 182)
         Panel1.TabIndex = 6
         ' 
         ' Label1
@@ -173,17 +205,19 @@ Partial Class Archives
         Label1.AutoSize = True
         Label1.Font = New Font("Bebas Neue", 26.25F, FontStyle.Regular, GraphicsUnit.Point)
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(88, 35)
+        Label1.Location = New Point(126, 58)
+        Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(118, 45)
+        Label1.Size = New Size(174, 64)
         Label1.TabIndex = 1
         Label1.Text = "READHUB"
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Location = New Point(31, 30)
+        PictureBox1.Location = New Point(44, 50)
+        PictureBox1.Margin = New Padding(4, 5, 4, 5)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(51, 50)
+        PictureBox1.Size = New Size(73, 83)
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
         ' 
@@ -191,18 +225,16 @@ Partial Class Archives
         ' 
         Panel2.Controls.Add(IconButton7)
         Panel2.Controls.Add(Label3)
-        Panel2.Controls.Add(exploreButton)
         Panel2.Controls.Add(amendButton)
-        Panel2.Controls.Add(discardButton)
-        Panel2.Controls.Add(appendButton)
         Panel2.Controls.Add(barButton)
         Panel2.Controls.Add(Label2)
         Panel2.Controls.Add(archiveTable)
         Panel2.Controls.Add(Label4)
         Panel2.Dock = DockStyle.Fill
-        Panel2.Location = New Point(238, 0)
+        Panel2.Location = New Point(340, 0)
+        Panel2.Margin = New Padding(4, 5, 4, 5)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(809, 630)
+        Panel2.Size = New Size(1156, 1050)
         Panel2.TabIndex = 15
         ' 
         ' IconButton7
@@ -215,9 +247,10 @@ Partial Class Archives
         IconButton7.IconChar = FontAwesome.Sharp.IconChar.None
         IconButton7.IconColor = Color.Black
         IconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto
-        IconButton7.Location = New Point(685, 79)
+        IconButton7.Location = New Point(979, 102)
+        IconButton7.Margin = New Padding(4, 5, 4, 5)
         IconButton7.Name = "IconButton7"
-        IconButton7.Size = New Size(83, 23)
+        IconButton7.Size = New Size(119, 38)
         IconButton7.TabIndex = 42
         IconButton7.Text = "REFRESH"
         IconButton7.UseVisualStyleBackColor = False
@@ -226,30 +259,14 @@ Partial Class Archives
         ' 
         Label3.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         Label3.AutoSize = True
-        Label3.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label3.Location = New Point(371, 19)
+        Label3.Font = New Font("Bebas Neue", 20F, FontStyle.Bold, GraphicsUnit.Point)
+        Label3.Location = New Point(67, 20)
+        Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(150, 16)
+        Label3.Size = New Size(253, 48)
         Label3.TabIndex = 28
         Label3.Text = "ARCHIVE ACCOUNT"
         Label3.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' exploreButton
-        ' 
-        exploreButton.BackColor = Color.Tomato
-        exploreButton.Cursor = Cursors.Hand
-        exploreButton.FlatAppearance.BorderSize = 0
-        exploreButton.FlatStyle = FlatStyle.Flat
-        exploreButton.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        exploreButton.IconChar = FontAwesome.Sharp.IconChar.None
-        exploreButton.IconColor = Color.Black
-        exploreButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        exploreButton.Location = New Point(685, 583)
-        exploreButton.Name = "exploreButton"
-        exploreButton.Size = New Size(82, 23)
-        exploreButton.TabIndex = 27
-        exploreButton.Text = "EXPLORE"
-        exploreButton.UseVisualStyleBackColor = False
         ' 
         ' amendButton
         ' 
@@ -261,46 +278,13 @@ Partial Class Archives
         amendButton.IconChar = FontAwesome.Sharp.IconChar.None
         amendButton.IconColor = Color.Black
         amendButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        amendButton.Location = New Point(604, 583)
+        amendButton.Location = New Point(856, 102)
+        amendButton.Margin = New Padding(4, 5, 4, 5)
         amendButton.Name = "amendButton"
-        amendButton.Size = New Size(75, 23)
+        amendButton.Size = New Size(115, 38)
         amendButton.TabIndex = 26
-        amendButton.Text = "AMEND"
+        amendButton.Text = "RESTORE"
         amendButton.UseVisualStyleBackColor = False
-        ' 
-        ' discardButton
-        ' 
-        discardButton.BackColor = Color.Tomato
-        discardButton.Cursor = Cursors.Hand
-        discardButton.FlatAppearance.BorderSize = 0
-        discardButton.FlatStyle = FlatStyle.Flat
-        discardButton.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        discardButton.IconChar = FontAwesome.Sharp.IconChar.None
-        discardButton.IconColor = Color.Black
-        discardButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        discardButton.Location = New Point(523, 583)
-        discardButton.Name = "discardButton"
-        discardButton.Size = New Size(75, 23)
-        discardButton.TabIndex = 25
-        discardButton.Text = "DISCARD"
-        discardButton.UseVisualStyleBackColor = False
-        ' 
-        ' appendButton
-        ' 
-        appendButton.BackColor = Color.Tomato
-        appendButton.Cursor = Cursors.Hand
-        appendButton.FlatAppearance.BorderSize = 0
-        appendButton.FlatStyle = FlatStyle.Flat
-        appendButton.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        appendButton.IconChar = FontAwesome.Sharp.IconChar.None
-        appendButton.IconColor = Color.Black
-        appendButton.IconFont = FontAwesome.Sharp.IconFont.Auto
-        appendButton.Location = New Point(442, 583)
-        appendButton.Name = "appendButton"
-        appendButton.Size = New Size(75, 23)
-        appendButton.TabIndex = 24
-        appendButton.Text = "APPEND"
-        appendButton.UseVisualStyleBackColor = False
         ' 
         ' barButton
         ' 
@@ -311,9 +295,10 @@ Partial Class Archives
         barButton.IconColor = Color.Black
         barButton.IconFont = FontAwesome.Sharp.IconFont.Auto
         barButton.IconSize = 25
-        barButton.Location = New Point(762, 12)
+        barButton.Location = New Point(1089, 20)
+        barButton.Margin = New Padding(4, 5, 4, 5)
         barButton.Name = "barButton"
-        barButton.Size = New Size(35, 37)
+        barButton.Size = New Size(50, 62)
         barButton.TabIndex = 23
         barButton.UseVisualStyleBackColor = True
         ' 
@@ -321,9 +306,10 @@ Partial Class Archives
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label2.Location = New Point(47, 87)
+        Label2.Location = New Point(67, 115)
+        Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(128, 16)
+        Label2.Size = New Size(191, 25)
         Label2.TabIndex = 12
         Label2.Text = "ARCHIVE BOOKS"
         ' 
@@ -332,11 +318,12 @@ Partial Class Archives
         archiveTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         archiveTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         archiveTable.GridColor = Color.White
-        archiveTable.Location = New Point(47, 109)
+        archiveTable.Location = New Point(67, 152)
+        archiveTable.Margin = New Padding(4, 5, 4, 5)
         archiveTable.Name = "archiveTable"
         archiveTable.RowHeadersWidth = 62
         archiveTable.RowTemplate.Height = 25
-        archiveTable.Size = New Size(720, 468)
+        archiveTable.Size = New Size(1029, 780)
         archiveTable.TabIndex = 11
         ' 
         ' Label4
@@ -344,56 +331,32 @@ Partial Class Archives
         Label4.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         Label4.AutoSize = True
         Label4.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label4.Location = New Point(371, 286)
+        Label4.Location = New Point(530, 477)
+        Label4.Margin = New Padding(4, 0, 4, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(58, 16)
+        Label4.Size = New Size(90, 25)
         Label4.TabIndex = 10
         Label4.Text = "BOOKS"
         Label4.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' Panel3
-        ' 
-        Panel3.Controls.Add(IconButton1)
-        Panel3.Dock = DockStyle.Bottom
-        Panel3.Location = New Point(0, 586)
-        Panel3.Name = "Panel3"
-        Panel3.Size = New Size(238, 44)
-        Panel3.TabIndex = 12
-        ' 
-        ' IconButton1
-        ' 
-        IconButton1.Dock = DockStyle.Fill
-        IconButton1.FlatAppearance.BorderSize = 0
-        IconButton1.FlatStyle = FlatStyle.Flat
-        IconButton1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        IconButton1.ForeColor = Color.White
-        IconButton1.IconChar = FontAwesome.Sharp.IconChar.None
-        IconButton1.IconColor = Color.Black
-        IconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto
-        IconButton1.Location = New Point(0, 0)
-        IconButton1.Name = "IconButton1"
-        IconButton1.Size = New Size(238, 44)
-        IconButton1.TabIndex = 6
-        IconButton1.Text = "LOGOUT"
-        IconButton1.UseVisualStyleBackColor = True
-        ' 
         ' Archives
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1047, 630)
+        ClientSize = New Size(1496, 1050)
         Controls.Add(Panel2)
         Controls.Add(archivePanel)
+        Margin = New Padding(4, 5, 4, 5)
         Name = "Archives"
         Text = "Archives"
         archivePanel.ResumeLayout(False)
+        Panel3.ResumeLayout(False)
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         CType(archiveTable, ComponentModel.ISupportInitialize).EndInit()
-        Panel3.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
 
@@ -407,10 +370,7 @@ Partial Class Archives
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents exploreButton As FontAwesome.Sharp.IconButton
     Friend WithEvents amendButton As FontAwesome.Sharp.IconButton
-    Friend WithEvents discardButton As FontAwesome.Sharp.IconButton
-    Friend WithEvents appendButton As FontAwesome.Sharp.IconButton
     Friend WithEvents barButton As FontAwesome.Sharp.IconButton
     Friend WithEvents Label2 As Label
     Friend WithEvents archiveTable As DataGridView
