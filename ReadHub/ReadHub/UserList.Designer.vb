@@ -37,6 +37,8 @@ Partial Class UserList
         Panel2 = New Panel()
         searchBoxFaculty = New TextBox()
         facultyTable = New DataGridView()
+<<<<<<< HEAD
+=======
         Column10 = New DataGridViewTextBoxColumn()
         Column11 = New DataGridViewTextBoxColumn()
         Column12 = New DataGridViewTextBoxColumn()
@@ -47,6 +49,7 @@ Partial Class UserList
         Column17 = New DataGridViewTextBoxColumn()
         Status_IDEM = New DataGridViewLinkColumn()
         searchBoxStud = New TextBox()
+>>>>>>> 78edce19eaecd377039bc5e5ef68ec974331c84b
         IconButton6 = New FontAwesome.Sharp.IconButton()
         IconButton7 = New FontAwesome.Sharp.IconButton()
         IconButton5 = New FontAwesome.Sharp.IconButton()
@@ -267,7 +270,10 @@ Partial Class UserList
         ' 
         Panel2.Controls.Add(searchBoxFaculty)
         Panel2.Controls.Add(facultyTable)
+<<<<<<< HEAD
+=======
         Panel2.Controls.Add(searchBoxStud)
+>>>>>>> 78edce19eaecd377039bc5e5ef68ec974331c84b
         Panel2.Controls.Add(IconButton6)
         Panel2.Controls.Add(IconButton7)
         Panel2.Controls.Add(IconButton5)
@@ -336,6 +342,8 @@ Partial Class UserList
         facultyTable.Size = New Size(539, 188)
         facultyTable.TabIndex = 65
         ' 
+<<<<<<< HEAD
+=======
         ' Column10
         ' 
         Column10.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
@@ -419,6 +427,7 @@ Partial Class UserList
         searchBoxStud.Size = New Size(204, 23)
         searchBoxStud.TabIndex = 64
         ' 
+>>>>>>> 78edce19eaecd377039bc5e5ef68ec974331c84b
         ' IconButton6
         ' 
         IconButton6.BackColor = Color.Tomato
@@ -1005,7 +1014,10 @@ Partial Class UserList
     Friend WithEvents IconButton5 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton6 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton7 As FontAwesome.Sharp.IconButton
+<<<<<<< HEAD
+=======
     Friend WithEvents searchBoxStud As TextBox
+>>>>>>> 78edce19eaecd377039bc5e5ef68ec974331c84b
     Friend WithEvents facultyTable As DataGridView
     Friend WithEvents searchBoxFaculty As TextBox
     Friend WithEvents Column10 As DataGridViewTextBoxColumn

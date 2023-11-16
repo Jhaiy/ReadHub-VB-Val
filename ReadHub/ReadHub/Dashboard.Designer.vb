@@ -48,6 +48,19 @@ Partial Class Dashboard
         Label5 = New Label()
         booksTable = New DataGridView()
         Label4 = New Label()
+<<<<<<< HEAD
+        Panel4 = New Panel()
+        Label11 = New Label()
+        PB4 = New ProgressBar()
+        Label10 = New Label()
+        PB3 = New ProgressBar()
+        Label9 = New Label()
+        PB2 = New ProgressBar()
+        Label8 = New Label()
+        Label6 = New Label()
+        PB1 = New ProgressBar()
+=======
+>>>>>>> 78edce19eaecd377039bc5e5ef68ec974331c84b
         dashPanel.SuspendLayout()
         Panel3.SuspendLayout()
         Panel1.SuspendLayout()
@@ -425,6 +438,122 @@ Partial Class Dashboard
         Label4.Text = "DASHBOARD"
         Label4.TextAlign = ContentAlignment.MiddleCenter
         ' 
+<<<<<<< HEAD
+        ' Panel4
+        ' 
+        Panel4.BackColor = Color.FromArgb(CByte(61), CByte(90), CByte(128))
+        Panel4.Controls.Add(Label11)
+        Panel4.Controls.Add(PB4)
+        Panel4.Controls.Add(Label10)
+        Panel4.Controls.Add(PB3)
+        Panel4.Controls.Add(Label9)
+        Panel4.Controls.Add(PB2)
+        Panel4.Controls.Add(Label8)
+        Panel4.Controls.Add(Label6)
+        Panel4.Controls.Add(PB1)
+        Panel4.Location = New Point(43, 762)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(1060, 231)
+        Panel4.TabIndex = 27
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        Label11.ForeColor = Color.White
+        Label11.Location = New Point(561, 130)
+        Label11.Margin = New Padding(4, 0, 4, 0)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(23, 25)
+        Label11.TabIndex = 32
+        Label11.Text = "4"
+        ' 
+        ' PB4
+        ' 
+        PB4.BackColor = Color.FromArgb(CByte(255), CByte(224), CByte(192))
+        PB4.ForeColor = Color.Tomato
+        PB4.Location = New Point(567, 158)
+        PB4.Name = "PB4"
+        PB4.Size = New Size(470, 27)
+        PB4.TabIndex = 31
+        ' 
+        ' Label10
+        ' 
+        Label10.AutoSize = True
+        Label10.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        Label10.ForeColor = Color.White
+        Label10.Location = New Point(561, 57)
+        Label10.Margin = New Padding(4, 0, 4, 0)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(23, 25)
+        Label10.TabIndex = 30
+        Label10.Text = "3"
+        ' 
+        ' PB3
+        ' 
+        PB3.BackColor = Color.FromArgb(CByte(255), CByte(224), CByte(192))
+        PB3.ForeColor = Color.Tomato
+        PB3.Location = New Point(567, 85)
+        PB3.Name = "PB3"
+        PB3.Size = New Size(470, 27)
+        PB3.TabIndex = 29
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        Label9.ForeColor = Color.White
+        Label9.Location = New Point(17, 130)
+        Label9.Margin = New Padding(4, 0, 4, 0)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(23, 25)
+        Label9.TabIndex = 28
+        Label9.Text = "2"
+        ' 
+        ' PB2
+        ' 
+        PB2.BackColor = Color.FromArgb(CByte(255), CByte(224), CByte(192))
+        PB2.ForeColor = Color.Tomato
+        PB2.Location = New Point(23, 158)
+        PB2.Name = "PB2"
+        PB2.Size = New Size(470, 27)
+        PB2.TabIndex = 27
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        Label8.ForeColor = Color.White
+        Label8.Location = New Point(17, 57)
+        Label8.Margin = New Padding(4, 0, 4, 0)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(23, 25)
+        Label8.TabIndex = 25
+        Label8.Text = "1"
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label6.ForeColor = Color.White
+        Label6.Location = New Point(17, 19)
+        Label6.Margin = New Padding(4, 0, 4, 0)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(292, 25)
+        Label6.TabIndex = 26
+        Label6.Text = "MOST BORROWED BOOKS"
+        ' 
+        ' PB1
+        ' 
+        PB1.BackColor = Color.FromArgb(CByte(255), CByte(224), CByte(192))
+        PB1.ForeColor = Color.Tomato
+        PB1.Location = New Point(23, 85)
+        PB1.Name = "PB1"
+        PB1.Size = New Size(470, 27)
+        PB1.TabIndex = 23
+        ' 
+=======
+>>>>>>> 78edce19eaecd377039bc5e5ef68ec974331c84b
         ' Dashboard
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
@@ -479,4 +608,17 @@ Partial Class Dashboard
     Friend WithEvents barButton As FontAwesome.Sharp.IconButton
     Friend WithEvents Panel3 As Panel
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
+<<<<<<< HEAD
+    Friend WithEvents PB1 As ProgressBar
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents PB4 As ProgressBar
+    Friend WithEvents Label10 As Label
+    Friend WithEvents PB3 As ProgressBar
+    Friend WithEvents Label9 As Label
+    Friend WithEvents PB2 As ProgressBar
+=======
+>>>>>>> 78edce19eaecd377039bc5e5ef68ec974331c84b
 End Class
