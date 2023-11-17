@@ -1,4 +1,5 @@
 ﻿Imports System.Windows.Documents
+Imports Microsoft.SqlServer
 Imports MySql.Data.MySqlClient
 Public Class Dashboard
     Dim sqlQuery As String
@@ -147,14 +148,41 @@ Public Class Dashboard
         Dim reader As MySqlDataReader = Command.ExecuteReader()
         If reader.Read() Then
             ' Get the count and name from the result
-            Dim borrowedCount As Integer = Convert.ToInt32(reader("BorrowedCount"))
+            Dim mostBorrowedCount As Integer = Convert.ToInt32(reader("BorrowedCount"))
             Dim bookID As String = reader("Book_ID").ToString()
 
-            ' Update the progress bar with the count and name
-            PB1.Value = borrowedCount
-            PB1.Text = $"Most Borrowed Book: {bookID} - Count: {borrowedCount}"
+            ' Fetch the total count of all books
+            Dim totalBooksCount As Integer = GetTotalBooksCount()
+
+            ' Calculate the percentage
+            Dim percentage As Integer = CInt((mostBorrowedCount / totalBooksCount) * 100)
+
+            ' Update the label with book information
+            Label8.Text = $"1. {bookID} - Count: {mostBorrowedCount}"
+
+            ' Update the progress bar with the percentage
+            PB1.Value = percentage
         End If
 
         con.Close()
     End Sub
+
+    Private Function GetTotalBooksCount() As Integer
+        ' Fetch the total count of all books from the database
+        Dim totalBooksQuery As String = "SELECT COUNT(Book_ID) AS TotalCount FROM readhub.borrowed_books_student"
+        Using totalBooksConnection As New MySqlConnection("Server = localhost;username=root;password=;database=readhub;") ' Replace with your connection string
+            totalBooksConnection.Open()
+
+            Using totalBooksCommand As New MySqlCommand(totalBooksQuery, totalBooksConnection)
+                ' Execute the query and read the result
+                Dim totalBooksReader As MySqlDataReader = totalBooksCommand.ExecuteReader()
+
+                If totalBooksReader.Read() Then
+                    Return Convert.ToInt32(totalBooksReader("TotalCount"))
+                End If
+            End Using
+        End Using
+
+        Return 0
+    End Function
 End Class

@@ -40,13 +40,14 @@ Partial Class Dashboard
         facultyTable = New DataGridView()
         borrowedFacTab = New DataGridView()
         Panel2 = New Panel()
+        Label8 = New Label()
+        PB1 = New ProgressBar()
         barButton = New FontAwesome.Sharp.IconButton()
         Label7 = New Label()
         ArchiveBooksTable = New DataGridView()
         Label5 = New Label()
         booksTable = New DataGridView()
         Label4 = New Label()
-        PB1 = New ProgressBar()
         dashPanel.SuspendLayout()
         Panel3.SuspendLayout()
         Panel1.SuspendLayout()
@@ -303,6 +304,7 @@ Partial Class Dashboard
         ' 
         ' Panel2
         ' 
+        Panel2.Controls.Add(Label8)
         Panel2.Controls.Add(PB1)
         Panel2.Controls.Add(barButton)
         Panel2.Controls.Add(Label7)
@@ -322,6 +324,25 @@ Partial Class Dashboard
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(1156, 1050)
         Panel2.TabIndex = 7
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label8.Location = New Point(43, 833)
+        Label8.Margin = New Padding(4, 0, 4, 0)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(65, 25)
+        Label8.TabIndex = 25
+        Label8.Text = "count"
+        ' 
+        ' PB1
+        ' 
+        PB1.ForeColor = Color.Tomato
+        PB1.Location = New Point(43, 861)
+        PB1.Name = "PB1"
+        PB1.Size = New Size(229, 27)
+        PB1.TabIndex = 23
         ' 
         ' barButton
         ' 
@@ -399,14 +420,6 @@ Partial Class Dashboard
         Label4.Text = "DASHBOARD"
         Label4.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' PB1
-        ' 
-        PB1.ForeColor = Color.Tomato
-        PB1.Location = New Point(92, 808)
-        PB1.Name = "PB1"
-        PB1.Size = New Size(166, 27)
-        PB1.TabIndex = 23
-        ' 
         ' Dashboard
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
@@ -459,4 +472,5 @@ Partial Class Dashboard
     Friend WithEvents Panel3 As Panel
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents PB1 As ProgressBar
+    Friend WithEvents Label8 As Label
 End Class
