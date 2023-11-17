@@ -42,12 +42,11 @@ Partial Class Dashboard
         Panel2 = New Panel()
         barButton = New FontAwesome.Sharp.IconButton()
         Label7 = New Label()
-        Label6 = New Label()
         ArchiveBooksTable = New DataGridView()
-        favoritesTableLeft = New DataGridView()
         Label5 = New Label()
         booksTable = New DataGridView()
         Label4 = New Label()
+        PB1 = New ProgressBar()
         dashPanel.SuspendLayout()
         Panel3.SuspendLayout()
         Panel1.SuspendLayout()
@@ -58,7 +57,6 @@ Partial Class Dashboard
         CType(borrowedFacTab, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         CType(ArchiveBooksTable, ComponentModel.ISupportInitialize).BeginInit()
-        CType(favoritesTableLeft, ComponentModel.ISupportInitialize).BeginInit()
         CType(booksTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -305,11 +303,10 @@ Partial Class Dashboard
         ' 
         ' Panel2
         ' 
+        Panel2.Controls.Add(PB1)
         Panel2.Controls.Add(barButton)
         Panel2.Controls.Add(Label7)
-        Panel2.Controls.Add(Label6)
         Panel2.Controls.Add(ArchiveBooksTable)
-        Panel2.Controls.Add(favoritesTableLeft)
         Panel2.Controls.Add(Label5)
         Panel2.Controls.Add(booksTable)
         Panel2.Controls.Add(Label4)
@@ -353,17 +350,6 @@ Partial Class Dashboard
         Label7.TabIndex = 21
         Label7.Text = "ARCHIVE BOOKS"
         ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label6.Location = New Point(43, 808)
-        Label6.Margin = New Padding(4, 0, 4, 0)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(135, 25)
-        Label6.TabIndex = 20
-        Label6.Text = "FAVORITES"
-        ' 
         ' ArchiveBooksTable
         ' 
         ArchiveBooksTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -375,18 +361,6 @@ Partial Class Dashboard
         ArchiveBooksTable.RowTemplate.Height = 25
         ArchiveBooksTable.Size = New Size(493, 143)
         ArchiveBooksTable.TabIndex = 17
-        ' 
-        ' favoritesTableLeft
-        ' 
-        favoritesTableLeft.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        favoritesTableLeft.GridColor = Color.White
-        favoritesTableLeft.Location = New Point(43, 850)
-        favoritesTableLeft.Margin = New Padding(4, 5, 4, 5)
-        favoritesTableLeft.Name = "favoritesTableLeft"
-        favoritesTableLeft.RowHeadersWidth = 62
-        favoritesTableLeft.RowTemplate.Height = 25
-        favoritesTableLeft.Size = New Size(493, 143)
-        favoritesTableLeft.TabIndex = 16
         ' 
         ' Label5
         ' 
@@ -425,6 +399,14 @@ Partial Class Dashboard
         Label4.Text = "DASHBOARD"
         Label4.TextAlign = ContentAlignment.MiddleCenter
         ' 
+        ' PB1
+        ' 
+        PB1.ForeColor = Color.Tomato
+        PB1.Location = New Point(92, 808)
+        PB1.Name = "PB1"
+        PB1.Size = New Size(166, 27)
+        PB1.TabIndex = 23
+        ' 
         ' Dashboard
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
@@ -448,7 +430,6 @@ Partial Class Dashboard
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         CType(ArchiveBooksTable, ComponentModel.ISupportInitialize).EndInit()
-        CType(favoritesTableLeft, ComponentModel.ISupportInitialize).EndInit()
         CType(booksTable, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
@@ -471,12 +452,11 @@ Partial Class Dashboard
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label4 As Label
     Friend WithEvents ArchiveBooksTable As DataGridView
-    Friend WithEvents favoritesTableLeft As DataGridView
     Friend WithEvents Label5 As Label
     Friend WithEvents booksTable As DataGridView
     Friend WithEvents Label7 As Label
-    Friend WithEvents Label6 As Label
     Friend WithEvents barButton As FontAwesome.Sharp.IconButton
     Friend WithEvents Panel3 As Panel
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
+    Friend WithEvents PB1 As ProgressBar
 End Class
