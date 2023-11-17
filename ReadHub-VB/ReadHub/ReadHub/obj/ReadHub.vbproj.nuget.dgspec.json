@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Projects\\Readhub\\ReadHub-VB-Val\\ReadHub-VB\\ReadHub\\ReadHub\\ReadHub.vbproj": {}
+    "C:\\Users\\Rhaine Hdart\\Documents\\GitHub\\ReadHub-VB\\ReadHub-VB\\ReadHub\\ReadHub\\ReadHub.vbproj": {}
   },
   "projects": {
-    "F:\\Projects\\Readhub\\ReadHub-VB-Val\\ReadHub-VB\\ReadHub\\ReadHub\\ReadHub.vbproj": {
+    "C:\\Users\\Rhaine Hdart\\Documents\\GitHub\\ReadHub-VB\\ReadHub-VB\\ReadHub\\ReadHub\\ReadHub.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Projects\\Readhub\\ReadHub-VB-Val\\ReadHub-VB\\ReadHub\\ReadHub\\ReadHub.vbproj",
+        "projectUniqueName": "C:\\Users\\Rhaine Hdart\\Documents\\GitHub\\ReadHub-VB\\ReadHub-VB\\ReadHub\\ReadHub\\ReadHub.vbproj",
         "projectName": "ReadHub",
-        "projectPath": "F:\\Projects\\Readhub\\ReadHub-VB-Val\\ReadHub-VB\\ReadHub\\ReadHub\\ReadHub.vbproj",
-        "packagesPath": "C:\\Users\\TENSE\\.nuget\\packages\\",
-        "outputPath": "F:\\Projects\\Readhub\\ReadHub-VB-Val\\ReadHub-VB\\ReadHub\\ReadHub\\obj\\",
+        "projectPath": "C:\\Users\\Rhaine Hdart\\Documents\\GitHub\\ReadHub-VB\\ReadHub-VB\\ReadHub\\ReadHub\\ReadHub.vbproj",
+        "packagesPath": "C:\\Users\\Rhaine Hdart\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rhaine Hdart\\Documents\\GitHub\\ReadHub-VB\\ReadHub-VB\\ReadHub\\ReadHub\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\TENSE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Rhaine Hdart\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -76,7 +76,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
