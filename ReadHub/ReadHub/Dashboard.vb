@@ -147,9 +147,12 @@ Public Class Dashboard
         ' Execute the query and read the result
         Dim reader As MySqlDataReader = Command.ExecuteReader()
         If reader.Read() Then
-            ' Get the count and name from the result
+            ' Get the count and Book_ID from the result
             Dim mostBorrowedCount As Integer = Convert.ToInt32(reader("BorrowedCount"))
             Dim bookID As String = reader("Book_ID").ToString()
+
+            ' Fetch the book title from the book_information table
+            Dim bookTitle As String = GetBookTitle(bookID)
 
             ' Fetch the total count of all books
             Dim totalBooksCount As Integer = GetTotalBooksCount()
@@ -158,7 +161,7 @@ Public Class Dashboard
             Dim percentage As Integer = CInt((mostBorrowedCount / totalBooksCount) * 100)
 
             ' Update the label with book information
-            Label8.Text = $"1. {bookID} - Count: {mostBorrowedCount}"
+            Label8.Text = $"1. {bookTitle} - Count: {mostBorrowedCount}"
 
             ' Update the progress bar with the percentage
             PB1.Value = percentage
@@ -166,6 +169,25 @@ Public Class Dashboard
 
         con.Close()
     End Sub
+
+    Private Function GetBookTitle(bookID As String) As String
+        ' Fetch the book title based on the Book_ID from the book_information table
+        Dim bookTitleQuery As String = $"SELECT Title FROM readhub.book_information WHERE Book_ID = '{bookID}'"
+        Using titleConnection As New MySqlConnection("Server = localhost;username=root;password=;database=readhub;")
+            titleConnection.Open()
+
+            Using titleCommand As New MySqlCommand(bookTitleQuery, titleConnection)
+                ' Execute the query and read the result
+                Dim titleReader As MySqlDataReader = titleCommand.ExecuteReader()
+
+                If titleReader.Read() Then
+                    Return titleReader("Title").ToString()
+                End If
+            End Using
+        End Using
+
+        Return "Unknown Title"
+    End Function
 
     Private Function GetTotalBooksCount() As Integer
         ' Fetch the total count of all books from the database
