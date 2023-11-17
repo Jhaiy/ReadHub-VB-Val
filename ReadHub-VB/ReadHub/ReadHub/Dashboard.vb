@@ -1,4 +1,5 @@
-﻿Imports System.Windows.Documents
+﻿Imports System.Globalization
+Imports System.Windows.Documents
 Imports Microsoft.SqlServer
 Imports MySql.Data.MySqlClient
 Public Class Dashboard
@@ -10,7 +11,7 @@ Public Class Dashboard
         bksTable()
         BorStudTab()
         BorEmpTab()
-
+        CheckAndInsertOverdueNotifications()
         ArcBKTab()
         UpdateProgressBar()
         UpdateProgressBar2()
@@ -101,6 +102,7 @@ Public Class Dashboard
         Adapter.Fill(table)
         borrowedStudTab.DataSource = table
         con.Close()
+        CheckAndInsertOverdueNotifications()
     End Sub
     Private Sub BorEmpTab()
         con.Open()
@@ -213,30 +215,22 @@ Public Class Dashboard
     Private Sub UpdateProgressBar2()
         con.Open()
 
-        ' Fetch the second highest count and name of the borrowed book from the database
         sqlQuery = "SELECT Book_ID, COUNT(Book_ID) AS BorrowedCount FROM readhub.borrowed_books_student GROUP BY Book_ID ORDER BY BorrowedCount DESC LIMIT 1 OFFSET 1"
         Command = New MySqlCommand(sqlQuery, con)
 
-        ' Execute the query and read the result
         Dim reader As MySqlDataReader = Command.ExecuteReader()
         If reader.Read() Then
-            ' Get the count and Book_ID from the result
             Dim secondBorrowedCount As Integer = Convert.ToInt32(reader("BorrowedCount"))
             Dim bookID As String = reader("Book_ID").ToString()
 
-            ' Fetch the book title from the book_information table
             Dim bookTitle As String = GetBookTitle(bookID)
 
-            ' Fetch the total count of all books
             Dim totalBooksCount As Integer = GetTotalBooksCount()
 
-            ' Calculate the percentage
             Dim percentage As Integer = CInt((secondBorrowedCount / totalBooksCount) * 100)
 
-            ' Update the label with book information for the second highest
             Label9.Text = $"2. {bookTitle} - Borrowed Count: {secondBorrowedCount}"
 
-            ' Update the progress bar with the percentage for the second highest
             PB2.Value = percentage
         End If
 
@@ -245,30 +239,22 @@ Public Class Dashboard
     Private Sub UpdateProgressBar3()
         con.Open()
 
-        ' Fetch the third highest count and name of the borrowed book from the database
         sqlQuery = "SELECT Book_ID, COUNT(Book_ID) AS BorrowedCount FROM readhub.borrowed_books_student GROUP BY Book_ID ORDER BY BorrowedCount DESC LIMIT 1 OFFSET 2"
         Command = New MySqlCommand(sqlQuery, con)
 
-        ' Execute the query and read the result
         Dim reader As MySqlDataReader = Command.ExecuteReader()
         If reader.Read() Then
-            ' Get the count and Book_ID from the result
             Dim thirdBorrowedCount As Integer = Convert.ToInt32(reader("BorrowedCount"))
             Dim bookID As String = reader("Book_ID").ToString()
 
-            ' Fetch the book title from the book_information table
             Dim bookTitle As String = GetBookTitle(bookID)
 
-            ' Fetch the total count of all books
             Dim totalBooksCount As Integer = GetTotalBooksCount()
 
-            ' Calculate the percentage
             Dim percentage As Integer = CInt((thirdBorrowedCount / totalBooksCount) * 100)
 
-            ' Update the label with book information for the third highest
             Label10.Text = $"3. {bookTitle} - Count: {thirdBorrowedCount}"
 
-            ' Update the progress bar with the percentage for the third highest
             PB3.Value = percentage
         End If
 
@@ -277,35 +263,52 @@ Public Class Dashboard
     Private Sub UpdateProgressBar4()
         con.Open()
 
-        ' Fetch the fourth highest count and name of the borrowed book from the database
         sqlQuery = "SELECT Book_ID, COUNT(Book_ID) AS BorrowedCount FROM readhub.borrowed_books_student GROUP BY Book_ID ORDER BY BorrowedCount DESC LIMIT 1 OFFSET 3"
         Command = New MySqlCommand(sqlQuery, con)
 
-        ' Execute the query and read the result
         Dim reader As MySqlDataReader = Command.ExecuteReader()
         If reader.Read() Then
-            ' Get the count and Book_ID from the result
             Dim fourthBorrowedCount As Integer = Convert.ToInt32(reader("BorrowedCount"))
             Dim bookID As String = reader("Book_ID").ToString()
 
-            ' Fetch the book title from the book_information table
             Dim bookTitle As String = GetBookTitle(bookID)
 
-            ' Fetch the total count of all books
             Dim totalBooksCount As Integer = GetTotalBooksCount()
 
-            ' Calculate the percentage
             Dim percentage As Integer = CInt((fourthBorrowedCount / totalBooksCount) * 100)
 
-            ' Update the label with book information for the fourth highest
             Label11.Text = $"4. {bookTitle} - Count: {fourthBorrowedCount}"
 
-            ' Update the progress bar with the percentage for the fourth highest
             PB4.Value = percentage
         End If
 
         con.Close()
     End Sub
+    Private Sub CheckAndInsertOverdueNotifications()
+        con.Open()
 
+        For Each row As DataGridViewRow In borrowedStudTab.Rows
+            Dim returnDate As DateTime
+            If DateTime.TryParseExact(row.Cells("Return_Date").Value.ToString(), "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, returnDate) Then
+                If returnDate.Date = DateTime.Now.Date Then
+                    Dim userId As String = row.Cells("User_ID").Value.ToString()
+                    InsertOverdueNotification(userId)
+                End If
+            End If
+        Next
+
+        con.Close()
+    End Sub
+
+    Private Sub InsertOverdueNotification(userId As String)
+        Dim notificationTitle As String = "Friendly Reminder: Please Return Your Overdue Books"
+        Dim notificationBody As String = "We would like to remind you that some of the books you have checked out are now overdue and need to be returned as soon as possible."
+        Dim currentDate As String = DateTime.Now.ToString("yyyy-MM-dd")
+
+        sqlQuery = $"INSERT INTO readhub.notification(User_ID, Notification_Title, Notification_Body, Notification_Date) VALUES ('{userId}', '{notificationTitle}', '{notificationBody}', '{currentDate}')"
+        Command = New MySqlCommand(sqlQuery, con)
+        Command.ExecuteNonQuery()
+        MessageBox.Show("Overdue books reminder sent successfully!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
 
 End Class

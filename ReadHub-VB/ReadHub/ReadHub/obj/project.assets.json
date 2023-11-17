@@ -2237,11 +2237,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rhaine Hdart\\Documents\\Visual Studio 2022\\New folder\\ReadHub-VB\\ReadHub-VB\\ReadHub\\ReadHub\\ReadHub.vbproj",
+      "projectUniqueName": "C:\\Users\\Rhaine Hdart\\Documents\\GitHub\\ReadHub-VB\\ReadHub-VB\\ReadHub\\ReadHub\\ReadHub.vbproj",
       "projectName": "ReadHub",
-      "projectPath": "C:\\Users\\Rhaine Hdart\\Documents\\Visual Studio 2022\\New folder\\ReadHub-VB\\ReadHub-VB\\ReadHub\\ReadHub\\ReadHub.vbproj",
+      "projectPath": "C:\\Users\\Rhaine Hdart\\Documents\\GitHub\\ReadHub-VB\\ReadHub-VB\\ReadHub\\ReadHub\\ReadHub.vbproj",
       "packagesPath": "C:\\Users\\Rhaine Hdart\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rhaine Hdart\\Documents\\Visual Studio 2022\\New folder\\ReadHub-VB\\ReadHub-VB\\ReadHub\\ReadHub\\obj\\",
+      "outputPath": "C:\\Users\\Rhaine Hdart\\Documents\\GitHub\\ReadHub-VB\\ReadHub-VB\\ReadHub\\ReadHub\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Rhaine Hdart\\AppData\\Roaming\\NuGet\\NuGet.Config",
