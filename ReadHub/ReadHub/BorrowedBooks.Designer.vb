@@ -55,12 +55,12 @@ Partial Class BorrowedBooks
         IconButton3 = New FontAwesome.Sharp.IconButton()
         IconButton4 = New FontAwesome.Sharp.IconButton()
         IconButton5 = New FontAwesome.Sharp.IconButton()
-        Me.FA2 = New TextBox()
-        Me.FSID2 = New TextBox()
-        Me.RD2 = New TextBox()
-        Me.DB2 = New TextBox()
-        Me.BID2 = New TextBox()
-        Me.UID2 = New TextBox()
+        Me.FA1 = New TextBox()
+        Me.FSID1 = New TextBox()
+        Me.RD1 = New TextBox()
+        Me.DB1 = New TextBox()
+        Me.BID1 = New TextBox()
+        Me.UID1 = New TextBox()
         BBID2 = New TextBox()
         borrowedPanel.SuspendLayout()
         Panel3.SuspendLayout()
@@ -245,12 +245,12 @@ Partial Class BorrowedBooks
         ' 
         ' Panel2
         ' 
-        Panel2.Controls.Add(Me.FA2)
-        Panel2.Controls.Add(Me.FSID2)
-        Panel2.Controls.Add(Me.RD2)
-        Panel2.Controls.Add(Me.DB2)
-        Panel2.Controls.Add(Me.BID2)
-        Panel2.Controls.Add(Me.UID2)
+        Panel2.Controls.Add(Me.FA1)
+        Panel2.Controls.Add(Me.FSID1)
+        Panel2.Controls.Add(Me.RD1)
+        Panel2.Controls.Add(Me.DB1)
+        Panel2.Controls.Add(Me.BID1)
+        Panel2.Controls.Add(Me.UID1)
         Panel2.Controls.Add(BBID2)
         Panel2.Controls.Add(ComboBox2)
         Panel2.Controls.Add(IconButton3)
@@ -551,51 +551,51 @@ Partial Class BorrowedBooks
         ' 
         ' FA2
         ' 
-        Me.FA2.Location = New Point(845, 693)
-        Me.FA2.Name = "FA2"
-        Me.FA2.Size = New Size(122, 31)
-        Me.FA2.TabIndex = 61
-        Me.FA2.Text = "Fine_Amount"
+        Me.FA1.Location = New Point(845, 693)
+        Me.FA1.Name = "FA2"
+        Me.FA1.Size = New Size(122, 31)
+        Me.FA1.TabIndex = 61
+        Me.FA1.Text = "Fine_Amount"
         ' 
         ' FSID2
         ' 
-        Me.FSID2.Location = New Point(973, 656)
-        Me.FSID2.Name = "FSID2"
-        Me.FSID2.Size = New Size(122, 31)
-        Me.FSID2.TabIndex = 60
-        Me.FSID2.Text = "Fine_Status_ID"
+        Me.FSID1.Location = New Point(973, 656)
+        Me.FSID1.Name = "FSID2"
+        Me.FSID1.Size = New Size(122, 31)
+        Me.FSID1.TabIndex = 60
+        Me.FSID1.Text = "Fine_Status_ID"
         ' 
         ' RD2
         ' 
-        Me.RD2.Location = New Point(845, 656)
-        Me.RD2.Name = "RD2"
-        Me.RD2.Size = New Size(122, 31)
-        Me.RD2.TabIndex = 59
-        Me.RD2.Text = "Return_Date"
+        Me.RD1.Location = New Point(845, 656)
+        Me.RD1.Name = "RD2"
+        Me.RD1.Size = New Size(122, 31)
+        Me.RD1.TabIndex = 59
+        Me.RD1.Text = "Return_Date"
         ' 
         ' DB2
         ' 
-        Me.DB2.Location = New Point(973, 619)
-        Me.DB2.Name = "DB2"
-        Me.DB2.Size = New Size(122, 31)
-        Me.DB2.TabIndex = 58
-        Me.DB2.Text = "Date_Borrowed"
+        Me.DB1.Location = New Point(973, 619)
+        Me.DB1.Name = "DB2"
+        Me.DB1.Size = New Size(122, 31)
+        Me.DB1.TabIndex = 58
+        Me.DB1.Text = "Date_Borrowed"
         ' 
         ' BID2
         ' 
-        Me.BID2.Location = New Point(845, 619)
-        Me.BID2.Name = "BID2"
-        Me.BID2.Size = New Size(122, 31)
-        Me.BID2.TabIndex = 57
-        Me.BID2.Text = "Book_ID"
+        Me.BID1.Location = New Point(845, 619)
+        Me.BID1.Name = "BID2"
+        Me.BID1.Size = New Size(122, 31)
+        Me.BID1.TabIndex = 57
+        Me.BID1.Text = "Book_ID"
         ' 
         ' UID2
         ' 
-        Me.UID2.Location = New Point(973, 582)
-        Me.UID2.Name = "UID2"
-        Me.UID2.Size = New Size(122, 31)
-        Me.UID2.TabIndex = 56
-        Me.UID2.Text = "User_ID"
+        Me.UID1.Location = New Point(973, 582)
+        Me.UID1.Name = "UID2"
+        Me.UID1.Size = New Size(122, 31)
+        Me.UID1.TabIndex = 56
+        Me.UID1.Text = "User_ID"
         ' 
         ' BBID2
         ' 
