@@ -1,5 +1,4 @@
 ﻿Imports System.Windows.Documents
-Imports Microsoft.SqlServer
 Imports MySql.Data.MySqlClient
 Public Class Dashboard
     Dim sqlQuery As String
@@ -10,12 +9,15 @@ Public Class Dashboard
         bksTable()
         BorStudTab()
         BorEmpTab()
-
+        FavTab()
         ArcBKTab()
+<<<<<<< HEAD
         UpdateProgressBar()
         UpdateProgressBar2()
         UpdateProgressBar3()
         UpdateProgressBar4()
+=======
+>>>>>>> 78edce19eaecd377039bc5e5ef68ec974331c84b
         Me.CenterToScreen()
 
         Me.BackColor = Color.FromArgb(152, 193, 217)
@@ -26,6 +28,7 @@ Public Class Dashboard
         borrowedStudTab.BackgroundColor = Color.FromArgb(61, 90, 128)
         Label4.ForeColor = Color.FromArgb(255, 255, 255)
         booksTable.BackgroundColor = Color.FromArgb(61, 90, 128)
+        favoritesTableLeft.BackgroundColor = Color.FromArgb(61, 90, 128)
         ArchiveBooksTable.BackgroundColor = Color.FromArgb(61, 90, 128)
     End Sub
 
@@ -115,6 +118,19 @@ Public Class Dashboard
         borrowedFacTab.DataSource = table
         con.Close()
     End Sub
+    Private Sub FavTab()
+        con.Open()
+        Dim Command As MySqlCommand
+        Dim sqlQuery As String
+        sqlQuery = "SELECT * FROM readhub.favorites"
+        Command = New MySqlCommand(sqlQuery, con)
+        Command.ExecuteNonQuery()
+        Dim table As New DataTable
+        Dim Adapter As New MySqlDataAdapter(Command)
+        Adapter.Fill(table)
+        favoritesTableLeft.DataSource = table
+        con.Close()
+    End Sub
     Private Sub ArcBKTab()
         con.Open()
         Dim Command As MySqlCommand
@@ -140,6 +156,7 @@ Public Class Dashboard
         Me.Hide()
         Login.Show()
     End Sub
+<<<<<<< HEAD
     Private Sub UpdateProgressBar()
         con.Open()
 
@@ -308,4 +325,6 @@ Public Class Dashboard
     End Sub
 
 
+=======
+>>>>>>> 78edce19eaecd377039bc5e5ef68ec974331c84b
 End Class
