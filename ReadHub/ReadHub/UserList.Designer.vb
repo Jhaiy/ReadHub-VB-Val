@@ -35,7 +35,6 @@ Partial Class UserList
         dashButton = New FontAwesome.Sharp.IconButton()
         Panel2 = New Panel()
         facultyTable = New DataGridView()
-        TextBox1 = New TextBox()
         IconButton6 = New FontAwesome.Sharp.IconButton()
         IconButton7 = New FontAwesome.Sharp.IconButton()
         IconButton5 = New FontAwesome.Sharp.IconButton()
@@ -256,7 +255,6 @@ Partial Class UserList
         ' Panel2
         ' 
         Panel2.Controls.Add(facultyTable)
-        Panel2.Controls.Add(TextBox1)
         Panel2.Controls.Add(IconButton6)
         Panel2.Controls.Add(IconButton7)
         Panel2.Controls.Add(IconButton5)
@@ -312,14 +310,6 @@ Partial Class UserList
         facultyTable.RowTemplate.Height = 25
         facultyTable.Size = New Size(1054, 280)
         facultyTable.TabIndex = 65
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Location = New Point(677, 68)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(290, 31)
-        TextBox1.TabIndex = 64
-        TextBox1.Text = "User_ID"
         ' 
         ' IconButton6
         ' 
@@ -799,6 +789,5 @@ Partial Class UserList
     Friend WithEvents IconButton5 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton6 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton7 As FontAwesome.Sharp.IconButton
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents facultyTable As DataGridView
 End Class
